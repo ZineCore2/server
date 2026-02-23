@@ -103,7 +103,7 @@ SPECTACULAR_SETTINGS = {
 # Path to canonical vocabulary JSON files
 VOCAB_CANONICAL_DIR = os.environ.get(
     "VOCAB_CANONICAL_DIR",
-    str(BASE_DIR.parent.parent / "spec" / "vocabularies" / "canonical"),
+    str(BASE_DIR.parent / "spec" / "vocabularies" / "canonical"),
 )
 
 STATIC_URL = "static/"

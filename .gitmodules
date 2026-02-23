@@ -1,0 +1,4 @@
+[submodule "spec"]
+	path = spec
+	url = git@github.com:ZineCore2/spec.git
+	branch = develop
