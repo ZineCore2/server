@@ -8,28 +8,35 @@ The spec repo is included as a **git submodule** at `spec/`. After cloning, run 
 
 ## Development Workflow
 
-Docker Compose runs **PostgreSQL only**. Django runs locally via `uv`.
-
+First-time setup uses the interactive onboarding TUI:
 ```bash
-docker compose up -d                    # Start Postgres
-cd backend
-uv sync                                 # Install deps
-DJANGO_SETTINGS_MODULE=zinecore.settings.development uv run manage.py runserver
+./onboarding.sh      # Sets up everything interactively
+./start.sh           # Start dev server (use after onboarding)
 ```
 
-For migrations: `uv run manage.py makemigrations <app>` then `uv run manage.py migrate`.
+Docker Compose runs **PostgreSQL only**. Django runs locally.
 
-To load vocabularies: `uv run manage.py load_vocabularies` (reads from `spec/vocabularies/canonical/`).
+For manage.py commands from the project root:
+```bash
+DJANGO_SETTINGS_MODULE=zinecore.settings.development \
+    .venv/bin/python backend/manage.py <command>
+```
+
+For migrations: `makemigrations <app>` then `migrate`.
+
+To load vocabularies: `load_vocabularies` (reads from `spec/vocabularies/canonical/`).
+
+To load sample data: `loaddata data/sample-data.json`.
 
 ## Package Management
 
-Use **uv** exclusively. Never use pip or system Python. Dependencies are in `backend/pyproject.toml`.
+Use **uv** exclusively. Never use pip or system Python.
+
+The root `pyproject.toml` defines a workspace with `backend/` as a member. Dependencies live in `backend/pyproject.toml`. `textual` is a dev dependency used by the onboarding TUI.
 
 ```bash
-cd backend
-uv add <package>      # Add a dependency
-uv sync               # Install/update
-uv run <command>      # Run in the venv
+uv sync               # Install/update from project root
+uv add --directory backend <package>   # Add a dependency
 ```
 
 ## Architecture

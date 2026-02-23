@@ -15,40 +15,47 @@ Django REST API backend implementing the ZineCore2 family of metadata profiles.
 - [uv](https://docs.astral.sh/uv/)
 - Docker & Docker Compose (for PostgreSQL)
 
-## Setup
+## Quick Start
 
 ```bash
-# Clone with the spec submodule
 git clone --recurse-submodules git@github.com:ZineCore2/server.git
 cd server
+./onboarding.sh     # Interactive setup wizard (sets up everything)
+./start.sh           # Start the dev server
+```
 
-# Or if already cloned without submodules
-git submodule update --init
+The onboarding script handles Docker, database, migrations, vocabularies, sample data, and superuser creation via an interactive TUI.
 
-# Start PostgreSQL
-docker compose up -d
+### Manual Setup
 
-# Install Python dependencies
-cd backend
-uv sync
+If you prefer to set up manually:
 
-# Run migrations and load vocabularies
-DJANGO_SETTINGS_MODULE=zinecore.settings.development uv run manage.py migrate
-DJANGO_SETTINGS_MODULE=zinecore.settings.development uv run manage.py load_vocabularies
+```bash
+git submodule update --init             # Pull spec submodule
+cp .env.example .env                    # Create .env
+docker compose up -d                    # Start PostgreSQL
+uv sync                                 # Install Python deps
 
-# Create a superuser
-DJANGO_SETTINGS_MODULE=zinecore.settings.development uv run manage.py createsuperuser
-
-# Start the dev server
-DJANGO_SETTINGS_MODULE=zinecore.settings.development uv run manage.py runserver
+DJANGO_SETTINGS_MODULE=zinecore.settings.development \
+    .venv/bin/python backend/manage.py migrate
+DJANGO_SETTINGS_MODULE=zinecore.settings.development \
+    .venv/bin/python backend/manage.py load_vocabularies
+DJANGO_SETTINGS_MODULE=zinecore.settings.development \
+    .venv/bin/python backend/manage.py loaddata data/sample-data.json
+DJANGO_SETTINGS_MODULE=zinecore.settings.development \
+    .venv/bin/python backend/manage.py createsuperuser
 ```
 
 ## Project Structure
 
 ```
 server/
+├── onboarding.sh               # Interactive setup wizard
+├── start.sh                    # Start dev server
 ├── docker-compose.yml          # PostgreSQL 17 (dev only)
 ├── .env.example
+├── data/
+│   └── sample-data.json        # Sample fixture data
 ├── spec/                       # Git submodule → ZineCore2/spec
 └── backend/
     ├── pyproject.toml          # uv-managed dependencies

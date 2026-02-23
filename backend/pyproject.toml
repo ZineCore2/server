@@ -11,5 +11,21 @@ dependencies = [
     "gunicorn",
 ]
 
-[tool.uv]
-dev-dependencies = []
+[dependency-groups]
+dev = [
+    "textual",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = [
+    "core",
+    "catalog",
+    "agents",
+    "repositories",
+    "holdings",
+    "zinecore",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
