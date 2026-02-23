@@ -1,24 +1,49 @@
 from django.contrib import admin
+from django.utils.translation import gettext_lazy as _
+from unfold.admin import ModelAdmin
 
 from .models import AccessStatus, DistroStatus, Holding
 
 
 @admin.register(Holding)
-class HoldingAdmin(admin.ModelAdmin):
+class HoldingAdmin(ModelAdmin):
     list_display = ["holding_id", "repository", "zine", "access_status", "digital_available"]
     list_filter = ["access_status", "distro_status", "digital_available"]
     search_fields = ["holding_id", "call_number", "barcode"]
     readonly_fields = ["created_at", "updated_at"]
     raw_id_fields = ["repository", "zine"]
+    fieldsets = [
+        (None, {"fields": ["holding_id", "repository", "zine"]}),
+        (_("Location"), {
+            "classes": ["tab"],
+            "fields": ["call_number", "location"],
+        }),
+        (_("Status"), {
+            "classes": ["tab"],
+            "fields": ["access_status", "condition", "copy_count", "barcode"],
+        }),
+        (_("Digital"), {
+            "classes": ["tab"],
+            "fields": ["digital_available", "digital_url"],
+        }),
+        (_("Distribution"), {
+            "classes": ["tab"],
+            "fields": ["distro_status", "notes"],
+        }),
+        (_("System"), {
+            "classes": ["tab"],
+            "fields": ["created_at", "updated_at"],
+        }),
+    ]
 
 
 @admin.register(AccessStatus)
-class AccessStatusAdmin(admin.ModelAdmin):
+class AccessStatusAdmin(ModelAdmin):
     list_display = ["code", "label"]
     search_fields = ["code", "label"]
 
 
 @admin.register(DistroStatus)
-class DistroStatusAdmin(admin.ModelAdmin):
+class DistroStatusAdmin(ModelAdmin):
     list_display = ["code", "label"]
     search_fields = ["code", "label"]

@@ -9,6 +9,7 @@ dependencies = [
     "drf-spectacular",
     "psycopg[binary]",
     "gunicorn",
+    "django-unfold",
 ]
 
 [dependency-groups]

@@ -52,6 +52,18 @@ wheels = [
 ]
 
 [[package]]
+name = "django-unfold"
+version = "0.80.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "django" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/18/99/bb6273b4d88afcc37e7f5fa3c8386265eda8c89312f50d751e7450bec7bd/django_unfold-0.80.2.tar.gz", hash = "sha256:6d9baa1694f9c3f8c451ea6e00537375ae1c7832d3ad0110d0f576bd47dae3d1", size = 1111081, upload-time = "2026-02-18T09:25:27.251Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/37/11/792187e14290dc7737a78905f6d7ab664da11bb2f29873b5152bdc14114a/django_unfold-0.80.2-py3-none-any.whl", hash = "sha256:9e9d98eb6bcbc58769a7e17b104fa17be88672fb0379e8ca26a4f978564b1b0b", size = 1226068, upload-time = "2026-02-18T09:25:28.853Z" },
+]
+
+[[package]]
 name = "djangorestframework"
 version = "3.16.1"
 source = { registry = "https://pypi.org/simple" }
@@ -448,6 +460,7 @@ source = { editable = "backend" }
 dependencies = [
     { name = "django" },
     { name = "django-filter" },
+    { name = "django-unfold" },
     { name = "djangorestframework" },
     { name = "drf-spectacular" },
     { name = "gunicorn" },
@@ -463,6 +476,7 @@ dev = [
 requires-dist = [
     { name = "django" },
     { name = "django-filter" },
+    { name = "django-unfold" },
     { name = "djangorestframework" },
     { name = "drf-spectacular" },
     { name = "gunicorn" },

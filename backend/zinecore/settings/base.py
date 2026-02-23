@@ -6,6 +6,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "insecure-dev-key-change-me")
 
 INSTALLED_APPS = [
+    "unfold",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -25,6 +26,11 @@ INSTALLED_APPS = [
     "repositories",
     "holdings",
 ]
+
+UNFOLD = {
+    "SITE_TITLE": "ZineCore2",
+    "SITE_HEADER": "ZineCore2 Admin",
+}
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
