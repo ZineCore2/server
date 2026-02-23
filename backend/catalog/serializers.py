@@ -25,6 +25,9 @@ class ZineSerializer(serializers.ModelSerializer):
     id = serializers.CharField(source="zine_id")
     subjects = SubjectSerializer(many=True, read_only=True)
     genres = GenreSerializer(many=True, read_only=True)
+    # Derived dcterms-compatible flat lists from M2M
+    subject = serializers.SerializerMethodField()
+    genre = serializers.SerializerMethodField()
 
     class Meta:
         model = Zine
@@ -38,7 +41,9 @@ class ZineSerializer(serializers.ModelSerializer):
             "creator",
             "contributor",
             "subject",
+            "subjects",
             "genre",
+            "genres",
             "abstract",
             "table_of_contents",
             "public_notes",
@@ -55,12 +60,16 @@ class ZineSerializer(serializers.ModelSerializer):
             "relation",
             "rights",
             "identifier",
-            "subjects",
-            "genres",
             "created_at",
             "updated_at",
         ]
         read_only_fields = ["created_at", "updated_at"]
+
+    def get_subject(self, obj):
+        return list(obj.subjects.values_list("label", flat=True))
+
+    def get_genre(self, obj):
+        return list(obj.genres.values_list("label", flat=True))
 
 
 class ZineWriteSerializer(serializers.ModelSerializer):
@@ -83,8 +92,6 @@ class ZineWriteSerializer(serializers.ModelSerializer):
             "alternative_title",
             "creator",
             "contributor",
-            "subject",
-            "genre",
             "abstract",
             "table_of_contents",
             "public_notes",

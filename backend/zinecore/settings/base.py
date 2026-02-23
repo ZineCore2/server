@@ -67,7 +67,7 @@ DATABASES = {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": os.environ.get("DATABASE_NAME", "zinecore"),
         "USER": os.environ.get("DATABASE_USER", "zinecore"),
-        "PASSWORD": os.environ.get("POSTGRES_PASSWORD", "zinecore_dev"),
+        "PASSWORD": os.environ.get("DATABASE_PASSWORD", "zinecore_dev"),
         "HOST": os.environ.get("DATABASE_HOST", "localhost"),
         "PORT": os.environ.get("DATABASE_PORT", "5433"),
     }

@@ -65,12 +65,9 @@ class Zine(TimestampedModel):
         default=list,
     )
 
-    # Subjects / genres: free-text arrays + optional controlled vocab links
-    subject = ArrayField(base_field=models.CharField(max_length=255))
-    subjects = models.ManyToManyField(Subject, related_name="zines", blank=True)
-
-    genre = ArrayField(base_field=models.CharField(max_length=255))
-    genres = models.ManyToManyField(Genre, related_name="zines", blank=True)
+    # Subjects / genres: controlled vocabulary links
+    subjects = models.ManyToManyField(Subject, related_name="zines")
+    genres = models.ManyToManyField(Genre, related_name="zines")
 
     # Descriptive text
     abstract = models.TextField(blank=True)

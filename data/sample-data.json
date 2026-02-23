@@ -1,5 +1,152 @@
 [
   {
+    "model": "catalog.subject",
+    "fields": {
+      "code": "feminism",
+      "label": "Feminism"
+    }
+  },
+  {
+    "model": "catalog.subject",
+    "fields": {
+      "code": "personal-narrative",
+      "label": "Personal Narrative"
+    }
+  },
+  {
+    "model": "catalog.subject",
+    "fields": {
+      "code": "daily-life",
+      "label": "Daily Life"
+    }
+  },
+  {
+    "model": "catalog.subject",
+    "fields": {
+      "code": "zine-making",
+      "label": "Zine Making"
+    }
+  },
+  {
+    "model": "catalog.subject",
+    "fields": {
+      "code": "diy",
+      "label": "DIY"
+    }
+  },
+  {
+    "model": "catalog.subject",
+    "fields": {
+      "code": "how-to",
+      "label": "How-To"
+    }
+  },
+  {
+    "model": "catalog.subject",
+    "fields": {
+      "code": "food",
+      "label": "Food"
+    }
+  },
+  {
+    "model": "catalog.subject",
+    "fields": {
+      "code": "humor",
+      "label": "Humor"
+    }
+  },
+  {
+    "model": "catalog.subject",
+    "fields": {
+      "code": "condiments",
+      "label": "Condiments"
+    }
+  },
+  {
+    "model": "catalog.subject",
+    "fields": {
+      "code": "parenting",
+      "label": "Parenting"
+    }
+  },
+  {
+    "model": "catalog.subject",
+    "fields": {
+      "code": "new-york-city",
+      "label": "New York City"
+    }
+  },
+  {
+    "model": "catalog.subject",
+    "fields": {
+      "code": "race",
+      "label": "Race"
+    }
+  },
+  {
+    "model": "catalog.subject",
+    "fields": {
+      "code": "punk",
+      "label": "Punk"
+    }
+  },
+  {
+    "model": "catalog.subject",
+    "fields": {
+      "code": "critical-theory",
+      "label": "Critical Theory"
+    }
+  },
+  {
+    "model": "catalog.subject",
+    "fields": {
+      "code": "activism",
+      "label": "Activism"
+    }
+  },
+  {
+    "model": "catalog.genre",
+    "fields": {
+      "code": "perzine",
+      "label": "Perzine"
+    }
+  },
+  {
+    "model": "catalog.genre",
+    "fields": {
+      "code": "instructional",
+      "label": "Instructional"
+    }
+  },
+  {
+    "model": "catalog.genre",
+    "fields": {
+      "code": "resource-guide",
+      "label": "Resource Guide"
+    }
+  },
+  {
+    "model": "catalog.genre",
+    "fields": {
+      "code": "art-zine",
+      "label": "Art Zine"
+    }
+  },
+  {
+    "model": "catalog.genre",
+    "fields": {
+      "code": "essay-zine",
+      "label": "Essay Zine"
+    }
+  },
+  {
+    "model": "catalog.genre",
+    "fields": {
+      "code": "political-zine",
+      "label": "Political Zine"
+    }
+  },
+  {
     "model": "agents.agent",
     "pk": 1,
     "fields": {
@@ -150,8 +297,8 @@
       "alternative_title": [],
       "creator": ["Cindy Crabb"],
       "contributor": [],
-      "subject": ["feminism", "personal-narrative", "daily-life"],
-      "genre": ["perzine"],
+      "subjects": [["feminism"], ["personal-narrative"], ["daily-life"]],
+      "genres": [["perzine"]],
       "abstract": "Personal reflections on community, healing, and everyday resistance. Cindy Crabb's long-running perzine continues with essays on navigating trauma, gardening, and mutual aid.",
       "table_of_contents": "",
       "public_notes": [],
@@ -184,8 +331,8 @@
       "alternative_title": ["SSR 4"],
       "creator": ["Alex Wrekk"],
       "contributor": [],
-      "subject": ["zine-making", "diy", "how-to"],
-      "genre": ["instructional", "resource-guide"],
+      "subjects": [["zine-making"], ["diy"], ["how-to"]],
+      "genres": [["instructional"], ["resource-guide"]],
       "abstract": "A comprehensive guide to making, distributing, and appreciating zines. Includes tips on layout, printing, distro, and zine community building.",
       "table_of_contents": "",
       "public_notes": ["Updated and expanded edition."],
@@ -218,8 +365,8 @@
       "alternative_title": [],
       "creator": ["Anonymous"],
       "contributor": [],
-      "subject": ["food", "humor", "condiments"],
-      "genre": ["perzine", "art-zine"],
+      "subjects": [["food"], ["humor"], ["condiments"]],
+      "genres": [["perzine"], ["art-zine"]],
       "abstract": "A one-shot zine celebrating the glory and versatility of mayonnaise. Features recipes, illustrations, and personal essays about the world's most polarizing condiment.",
       "table_of_contents": "",
       "public_notes": ["Found in the free pile at Portland Zine Symposium 2018."],
@@ -252,8 +399,8 @@
       "alternative_title": ["EVI"],
       "creator": ["Ayun Halliday"],
       "contributor": ["India Halliday", "Milo Halliday"],
-      "subject": ["parenting", "new-york-city", "personal-narrative"],
-      "genre": ["perzine"],
+      "subjects": [["parenting"], ["new-york-city"], ["personal-narrative"]],
+      "genres": [["perzine"]],
       "abstract": "Ongoing chronicles of raising kids in New York City by theater artist and writer Ayun Halliday. Features hand-drawn illustrations, neighborhood observations, and family adventures.",
       "table_of_contents": "",
       "public_notes": [],
@@ -286,8 +433,8 @@
       "alternative_title": [],
       "creator": ["Mimi Thi Nguyen"],
       "contributor": [],
-      "subject": ["race", "punk", "critical-theory", "activism"],
-      "genre": ["essay-zine", "political-zine"],
+      "subjects": [["race"], ["punk"], ["critical-theory"], ["activism"]],
+      "genres": [["essay-zine"], ["political-zine"]],
       "abstract": "Critical essays on race, punk, and the politics of visibility. Engages with questions of who gets counted, who gets represented, and the limits of inclusion.",
       "table_of_contents": "",
       "public_notes": [],

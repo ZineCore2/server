@@ -28,6 +28,22 @@ MANAGE_PY = ".venv/bin/python backend/manage.py"
 DJANGO_ENV = {"DJANGO_SETTINGS_MODULE": "zinecore.settings.development"}
 
 
+def _load_dotenv() -> dict[str, str]:
+    """Read key=value pairs from .env (ignoring comments and blank lines)."""
+    env_path = PROJECT_ROOT / ".env"
+    if not env_path.exists():
+        return {}
+    result = {}
+    for line in env_path.read_text().splitlines():
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        if "=" in line:
+            key, _, value = line.partition("=")
+            result[key.strip()] = value.strip()
+    return result
+
+
 # ---------------------------------------------------------------------------
 # Step model
 # ---------------------------------------------------------------------------
@@ -215,7 +231,7 @@ class OnboardingApp(App):
         env: dict[str, str] | None = None,
         check: bool = True,
     ) -> int:
-        merged_env = {**os.environ, **DJANGO_ENV, **(env or {})}
+        merged_env = {**os.environ, **_load_dotenv(), **DJANGO_ENV, **(env or {})}
         proc = await asyncio.create_subprocess_shell(
             cmd,
             stdout=asyncio.subprocess.PIPE,
@@ -360,22 +376,36 @@ class OnboardingApp(App):
 
 
 async def check_docker_volumes(app: OnboardingApp) -> bool:
-    proc = await asyncio.create_subprocess_shell(
+    # Check for any containers (running or stopped) from this compose project
+    proc_ps = await asyncio.create_subprocess_shell(
+        "docker compose ps -a -q",
+        stdout=asyncio.subprocess.PIPE,
+        stderr=asyncio.subprocess.DEVNULL,
+        cwd=str(PROJECT_ROOT),
+    )
+    stdout_ps, _ = await proc_ps.communicate()
+    has_containers = bool(stdout_ps.decode().strip())
+
+    # Check for volumes matching this compose project
+    proc_vol = await asyncio.create_subprocess_shell(
         "docker volume ls --format '{{.Name}}'",
         stdout=asyncio.subprocess.PIPE,
         stderr=asyncio.subprocess.DEVNULL,
         cwd=str(PROJECT_ROOT),
     )
-    stdout, _ = await proc.communicate()
-    names = stdout.decode().strip().splitlines()
-    # Match volumes created by this project's docker-compose
-    found = [n for n in names if "postgres_data" in n and "server" in n]
-    if found:
-        app.log_message("Found existing docker volumes:")
-        for name in found:
-            app.log_message(f"  {name}")
+    stdout_vol, _ = await proc_vol.communicate()
+    names = stdout_vol.decode().strip().splitlines()
+    found = [n for n in names if n.startswith("zinecore2_")]
+
+    if has_containers or found:
+        if found:
+            app.log_message("Found existing data volumes:")
+            for name in found:
+                app.log_message(f"  {name}")
+        if has_containers:
+            app.log_message("Found existing compose containers.")
         return True
-    app.log_message("No existing docker volumes found.")
+    app.log_message("No existing docker volumes or containers found.")
     return False
 
 
@@ -438,8 +468,8 @@ async def step_env(app: OnboardingApp, user_said_yes: bool | None) -> None:
         flags=re.MULTILINE,
     )
     content = re.sub(
-        r"^POSTGRES_PASSWORD=.*$",
-        f"POSTGRES_PASSWORD={postgres_password}",
+        r"^DATABASE_PASSWORD=.*$",
+        f"DATABASE_PASSWORD={postgres_password}",
         content,
         flags=re.MULTILINE,
     )
@@ -447,7 +477,7 @@ async def step_env(app: OnboardingApp, user_said_yes: bool | None) -> None:
     env_path.write_text(content)
     app.log_message("[green]\u2713 .env written with new secrets[/green]")
     app.log_message(f"  DJANGO_SECRET_KEY={secret_key[:12]}...")
-    app.log_message(f"  POSTGRES_PASSWORD={postgres_password[:12]}...")
+    app.log_message(f"  DATABASE_PASSWORD={postgres_password[:12]}...")
 
 
 async def step_spec_submodule(app: OnboardingApp, _user_said_yes: bool | None) -> None:
@@ -476,6 +506,19 @@ async def step_python_venv(app: OnboardingApp, user_said_yes: bool | None) -> No
 
 
 async def step_database(app: OnboardingApp, _user_said_yes: bool | None) -> None:
+    app.log_message("Waiting for PostgreSQL to accept connections...")
+    for attempt in range(10):
+        ret = await app.run_command(
+            "docker compose exec db pg_isready -U zinecore",
+            check=False,
+        )
+        if ret == 0:
+            break
+        app.log_message(f"  Attempt {attempt + 1}/10 — waiting 3s...")
+        await asyncio.sleep(3)
+    else:
+        raise RuntimeError("PostgreSQL did not become ready in time")
+
     app.log_message("Running migrations...")
     await app.run_command(f"{MANAGE_PY} migrate")
     app.log_message("[green]\u2713 Database migrations complete[/green]")
@@ -515,15 +558,19 @@ async def step_import_sample_data(app: OnboardingApp, _user_said_yes: bool | Non
 
 
 async def step_create_superuser(app: OnboardingApp, _user_said_yes: bool | None) -> None:
-    app.log_message("Creating admin superuser (username: admin, password: admin)...")
-    returncode = await app.run_command(
-        f"{MANAGE_PY} createsuperuser "
-        "--username admin --email admin@example.com --noinput",
-        env={"DJANGO_SUPERUSER_PASSWORD": "admin"},
-        check=False,
+    app.log_message("Ensuring admin superuser (username: admin, password: admin)...")
+    await app.run_command(
+        f'{MANAGE_PY} shell -c "'
+        "from django.contrib.auth import get_user_model;"
+        "User = get_user_model();"
+        "u, created = User.objects.get_or_create(username='admin', defaults={'email': 'admin@example.com', 'is_staff': True, 'is_superuser': True});"
+        "u.set_password('admin');"
+        "u.is_staff = True;"
+        "u.is_superuser = True;"
+        "u.save();"
+        "print('Created' if created else 'Reset password for', 'admin superuser')"
+        '"',
     )
-    if returncode != 0:
-        app.log_message("[yellow]Superuser 'admin' may already exist[/yellow]")
     app.log_message("[green]\u2713 Superuser ready[/green]")
 
 

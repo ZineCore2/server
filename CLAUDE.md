@@ -99,7 +99,9 @@ The `load_vocabularies` management command in `catalog/management/commands/` rea
 ## Environment Variables
 
 See `.env.example`:
-- `POSTGRES_PASSWORD` — Database password (default: `zinecore_dev`)
+- `DATABASE_NAME` — Database name (default: `zinecore`)
+- `DATABASE_USER` — Database user (default: `zinecore`)
+- `DATABASE_PASSWORD` — Database password (default: `zinecore_dev`)
 - `DJANGO_SECRET_KEY` — Django secret key
 - `DATABASE_HOST` — Database host (default: `localhost`)
 - `DATABASE_PORT` — Database port (default: `5433`)

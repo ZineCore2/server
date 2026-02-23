@@ -26,7 +26,7 @@ class ZineAdmin(ModelAdmin):
         }),
         (_("Classification"), {
             "classes": ["tab"],
-            "fields": ["subject", "subjects", "genre", "genres"],
+            "fields": ["subjects", "genres"],
         }),
         (_("Description"), {
             "classes": ["tab"],

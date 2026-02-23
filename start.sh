@@ -5,6 +5,13 @@ echo "Starting ZineCore2 Development Server"
 echo "======================================"
 echo ""
 
+# Load .env so Django and docker compose share the same config
+if [ -f .env ]; then
+    set -a
+    source .env
+    set +a
+fi
+
 # Colors for output
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
