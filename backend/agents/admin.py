@@ -2,6 +2,8 @@ from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
 from unfold.admin import ModelAdmin
 
+from core.admin import ExternalIdentifierInline, ExternalUriInline
+
 from .models import Agent, AgentKind, AgentRole
 
 
@@ -12,15 +14,12 @@ class AgentAdmin(ModelAdmin):
     search_fields = ["agent_id", "display_name", "aliases"]
     autocomplete_fields = ["kind", "location"]
     readonly_fields = ["agent_id", "created_at", "updated_at"]
+    inlines = [ExternalIdentifierInline, ExternalUriInline]
     fieldsets = [
         (None, {"fields": ["agent_id", "display_name", "kind", "location"]}),
         (_("Identity"), {
             "classes": ["tab"],
             "fields": ["legal_name", "aliases"],
-        }),
-        (_("Links"), {
-            "classes": ["tab"],
-            "fields": ["website", "orcid", "wikidata_id"],
         }),
         (_("Visibility & Notes"), {
             "classes": ["tab"],

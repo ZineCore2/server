@@ -36,8 +36,6 @@ class Repository(TimestampedModel):
         help_text="Repository type: 'library', 'archive', 'zine-library', 'distro', etc.",
     )
 
-    homepage = models.URLField(blank=True)
-
     address = models.TextField(blank=True)
     location = models.ForeignKey(
         GeoPlace,
@@ -47,27 +45,6 @@ class Repository(TimestampedModel):
         related_name="repositories",
         help_text="Geographic location from GeoNames hierarchy.",
     )
-
-    # External identifiers
-    marc_org_code = models.CharField(
-        max_length=16, 
-        blank=True,
-        verbose_name="MARC Organization Code",
-        help_text="<a href='https://www.loc.gov/marc/organizations/org-search.php' target='_blank'>Library of Congress MARC Record ID</a>)",
-    )
-    isil = models.CharField(
-        max_length=32, 
-        blank=True,
-        verbose_name="ISIL Code",
-        help_text="International Standard Identifier for Libraries and Related Organizations / ISO 15511 (<a href='https://www.loc.gov/marc/organizations/org-search.php' target='_blank'>LOC Lookup</a>)",
-    )
-
-    ror_id = models.URLField(
-        blank=True,
-        verbose_name="ROR Code",
-        help_text="<a href='https://ror.org/' target='_blank'>Research Organization Registry Codes</a>",
-
-        )
 
     access_policy = models.TextField(blank=True)
     hours = models.TextField(blank=True)

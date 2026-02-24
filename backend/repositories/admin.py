@@ -2,6 +2,8 @@ from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
 from unfold.admin import ModelAdmin
 
+from core.admin import ExternalIdentifierInline, ExternalUriInline
+
 from .models import RepoKind, Repository
 
 
@@ -12,18 +14,12 @@ class RepositoryAdmin(ModelAdmin):
     search_fields = ["repo_id", "name", "location__name"]
     autocomplete_fields = ["kind", "location"]
     readonly_fields = ["repo_id", "created_at", "updated_at"]
+    inlines = [ExternalIdentifierInline, ExternalUriInline]
     fieldsets = [
         (None, {"fields": ["repo_id", "name", "kind"]}),
         (_("Location"), {
             "classes": ["tab"],
-            "fields": [
-                "address", 
-                ("location","homepage"),
-            ],
-        }),
-        (_("Identifiers"), {
-            "classes": ["tab"],
-            "fields": [("marc_org_code", "isil", "ror_id"),],
+            "fields": ["location", "address"],
         }),
         (_("Operations"), {
             "classes": ["tab"],

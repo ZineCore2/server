@@ -9,6 +9,8 @@ from django.core.management.base import BaseCommand
 DATA_MODELS = [
     "agents.Agent",
     "repositories.Repository",
+    "core.ExternalIdentifier",
+    "core.ExternalUri",
     "catalog.Zine",
     "catalog.ZineCreator",
     "catalog.ZineContributor",

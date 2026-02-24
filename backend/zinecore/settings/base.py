@@ -126,6 +126,16 @@ UNFOLD = {
                         "link": "/admin/repositories/repokind/",
                     },
                     {
+                        "title": "External ID Systems",
+                        "icon": "fingerprint",
+                        "link": "/admin/core/externalidsystem/",
+                    },
+                    {
+                        "title": "External URI Types",
+                        "icon": "link",
+                        "link": "/admin/core/externaluritype/",
+                    },
+                    {
                         "title": "Geographic Places",
                         "icon": "public",
                         "link": "/admin/geography/geoplace/",

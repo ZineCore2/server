@@ -6,6 +6,20 @@ from django.apps import apps
 from django.conf import settings
 from django.core.management.base import BaseCommand, CommandError
 
+# Extra fields to check on vocabulary models beyond code/label.
+# Maps model attribute name -> canonical JSON term key.
+_EXTRA_FIELD_MAP = {
+    "uri": "uri",
+    "description": "description",
+    "lookup_uri": "lookup_uri",
+    "info_uri": "info_uri",
+    "owner_uri": "owner_uri",
+    "applicable_to": "applicable_to",
+    "base_uri": "base_uri",
+    "category": "category",
+    "icon": "icon",
+}
+
 # Vocabularies available from zinecore.org API (excluding languages and countries)
 API_VOCABS = [
     "subjects",
@@ -16,6 +30,8 @@ API_VOCABS = [
     "repo_kinds",
     "holding_access_statuses",
     "holding_distro_statuses",
+    "external_id_systems",
+    "external_uri_types",
 ]
 
 # Maps canonical JSON file stem -> (app_label, model_name)
@@ -30,6 +46,8 @@ VOCAB_MAP = {
     "repo_kinds": ("repositories", "RepoKind"),
     "holding_access_statuses": ("holdings", "AccessStatus"),
     "holding_distro_statuses": ("holdings", "DistroStatus"),
+    "external_id_systems": ("core", "ExternalIdSystem"),
+    "external_uri_types": ("core", "ExternalUriType"),
 }
 
 
@@ -165,17 +183,43 @@ class Command(BaseCommand):
             self.stderr.write(self.style.WARNING(f"No terms found in {vocab_name}"))
             return False
 
+        # Pre-resolve authority_scope GeoPlaces if the model has that field
+        has_authority_scope = hasattr(Model, "authority_scope")
+        geo_cache: dict[str, object] = {}
+        if has_authority_scope:
+            GeoPlace = apps.get_model("geography", "GeoPlace")
+            country_codes = {
+                t.get("authority_scope_country_code")
+                for t in terms
+                if t.get("authority_scope_country_code")
+            }
+            for cc in country_codes:
+                try:
+                    geo_cache[cc] = GeoPlace.objects.get(
+                        country_code=cc, feature_code="PCLI"
+                    )
+                except GeoPlace.DoesNotExist:
+                    self.stderr.write(
+                        self.style.WARNING(
+                            f"GeoPlace country not found for code '{cc}'"
+                        )
+                    )
+
         created_count = 0
         updated_count = 0
 
         for term in terms:
             defaults = {"label": term["label"]}
 
-            # Add extra fields for models that have them (e.g. RightsStatement)
-            if hasattr(Model, "uri"):
-                defaults["uri"] = term.get("uri", "")
-            if hasattr(Model, "description"):
-                defaults["description"] = term.get("description", "")
+            # Add extra fields for models that have them
+            for model_attr, json_key in _EXTRA_FIELD_MAP.items():
+                if hasattr(Model, model_attr):
+                    defaults[model_attr] = term.get(json_key, "")
+
+            # Resolve authority_scope FK from country code
+            if has_authority_scope:
+                cc = term.get("authority_scope_country_code")
+                defaults["authority_scope"] = geo_cache.get(cc) if cc else None
 
             _, created = Model.objects.update_or_create(
                 code=term["code"],

@@ -30,7 +30,7 @@ To load ISO 639-1 language codes from Library of Congress: `load_languages` (fet
 
 To load ISO 3166-1 country codes from Library of Congress: `load_countries` (fetches from `id.loc.gov`).
 
-To load sample data: `loaddata data/sample-data.json`.
+To load sample data: `loaddata data/fixtures.json`. **Must run after** `load_vocabularies`, `load_languages`, and `load_countries` — fixtures use natural foreign keys that reference vocabulary and geography records.
 
 ## Package Management
 
@@ -54,10 +54,10 @@ Each app follows the pattern: `models.py`, `serializers.py`, `views.py`, `urls.p
 
 | App | Profile | Models |
 |---|---|---|
-| `core` | (shared) | `TimestampedModel` (abstract), `BaseVocabulary` (abstract) |
+| `core` | (shared) | `TimestampedModel` (abstract), `BaseVocabulary` (abstract), `ExternalIdSystem`, `ExternalIdentifier`, `ExternalUriType`, `ExternalUri` |
 | `catalog` | ZineCore2 | `Zine`, `Subject`, `Genre`, `RightsStatement`, `Language` |
 | `agents` | AgentCore2 | `Agent`, `AgentKind`, `AgentRole` |
-| `repositories` | RepoCore2 | `Repository`, `RepoKind`, `Country` |
+| `repositories` | RepoCore2 | `Repository`, `RepoKind` |
 | `holdings` | HoldingCore2 | `Holding`, `AccessStatus`, `DistroStatus` |
 
 ### Model Patterns
@@ -65,6 +65,7 @@ Each app follows the pattern: `models.py`, `serializers.py`, `views.py`, `urls.p
 - All vocabulary models inherit `BaseVocabulary` (provides `code`, `label`)
 - Integer BigAutoField PKs internally + separate unique CharField for external IDs (`zine_id`, `agent_id`, `repo_id`, `holding_id`)
 - PostgreSQL `ArrayField` for repeatable metadata elements (requires `django.contrib.postgres`)
+- External identifiers and URIs use dynamic one-to-many pivot tables (`ExternalIdentifier`, `ExternalUri`) backed by controlled vocabularies (`ExternalIdSystem`, `ExternalUriType`) in the `core` app. Both pivot models use a `CheckConstraint` to enforce exactly one of `agent` or `repository` is set.
 
 ### Serializer Patterns
 - External `id` field maps to internal `*_id` field: `id = serializers.CharField(source="zine_id")`
@@ -92,6 +93,8 @@ Each app follows the pattern: `models.py`, `serializers.py`, `views.py`, `urls.p
 /api/vocabularies/repo-kinds/
 /api/vocabularies/access-statuses/
 /api/vocabularies/distro-statuses/
+/api/vocabularies/external-id-systems/
+/api/vocabularies/external-uri-types/
 /api/auth/                     → DRF browsable API login
 /api/auth/token/               → obtain_auth_token
 /api/schema/                   → OpenAPI schema
@@ -100,7 +103,7 @@ Each app follows the pattern: `models.py`, `serializers.py`, `views.py`, `urls.p
 
 ## Vocabulary Loading
 
-The `load_vocabularies` management command fetches controlled vocabularies from the zinecore.org API (`https://zinecore.org/api/vocabularies/{vocab}`). It loads: subjects, genres, rights_statements, agent_kinds, agent_roles, repo_kinds, holding_access_statuses, and holding_distro_statuses. Use `--local` to load from `spec/vocabularies/canonical/` instead. The `VOCAB_MAP` dict must stay aligned with the spec repo's `scripts/build-vocabularies.js` `DJANGO_MODELS` mapping.
+The `load_vocabularies` management command fetches controlled vocabularies from the zinecore.org API (`https://zinecore.org/api/vocabularies/{vocab}`). It loads: subjects, genres, rights_statements, agent_kinds, agent_roles, repo_kinds, holding_access_statuses, holding_distro_statuses, external_id_systems, and external_uri_types. Use `--local` to load from `spec/vocabularies/canonical/` instead. The `VOCAB_MAP` dict must stay aligned with the spec repo's `scripts/build-vocabularies.js` `DJANGO_MODELS` mapping.
 
 The `load_languages` management command fetches ISO 639-1 language codes directly from the Library of Congress vocabulary API (`id.loc.gov/vocabulary/iso639-1.json`). Run with `--dry-run` to preview without saving. This is separate from the spec-based vocabularies since languages use an external authoritative source.
 

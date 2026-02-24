@@ -50,10 +50,6 @@ class Agent(TimestampedModel):
         default=list,
     )
 
-    website = models.URLField(blank=True)
-    orcid = models.URLField(blank=True)
-    wikidata_id = models.CharField(max_length=32, blank=True)
-
     location = models.ForeignKey(
         GeoPlace,
         on_delete=models.SET_NULL,

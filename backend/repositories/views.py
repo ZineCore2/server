@@ -5,7 +5,9 @@ from .serializers import RepoKindSerializer, RepositorySerializer, RepositoryWri
 
 
 class RepositoryViewSet(viewsets.ModelViewSet):
-    queryset = Repository.objects.select_related("location", "kind").all()
+    queryset = Repository.objects.select_related("location", "kind").prefetch_related(
+        "external_ids__system", "external_uris__uri_type"
+    ).all()
     search_fields = ["name", "location__name"]
     ordering_fields = ["name", "created_at", "updated_at"]
     ordering = ["-created_at"]
