@@ -1,7 +1,7 @@
 from rest_framework import viewsets
 
-from .models import RepoKind, Repository
-from .serializers import RepoKindSerializer, RepositorySerializer
+from .models import Country, RepoKind, Repository
+from .serializers import CountrySerializer, RepoKindSerializer, RepositorySerializer
 
 
 class RepositoryViewSet(viewsets.ModelViewSet):
@@ -17,4 +17,12 @@ class RepoKindViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = RepoKind.objects.all()
     serializer_class = RepoKindSerializer
     lookup_field = "code"
+    pagination_class = None
+
+
+class CountryViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Country.objects.all()
+    serializer_class = CountrySerializer
+    lookup_field = "code"
+    search_fields = ["code", "label"]
     pagination_class = None

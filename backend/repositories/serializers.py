@@ -1,11 +1,17 @@
 from rest_framework import serializers
 
-from .models import RepoKind, Repository
+from .models import Country, RepoKind, Repository
 
 
 class RepoKindSerializer(serializers.ModelSerializer):
     class Meta:
         model = RepoKind
+        fields = ["code", "label"]
+
+
+class CountrySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Country
         fields = ["code", "label"]
 
 

@@ -360,6 +360,14 @@ class OnboardingApp(App):
                 run=step_load_vocabularies,
             ),
             OnboardingStep(
+                name="Load ISO 639-1 Languages",
+                run=step_load_languages,
+            ),
+            OnboardingStep(
+                name="Load ISO 3166-1 Countries",
+                run=step_load_countries,
+            ),
+            OnboardingStep(
                 name="Import Sample Data",
                 run=step_import_sample_data,
             ),
@@ -525,21 +533,51 @@ async def step_database(app: OnboardingApp, _user_said_yes: bool | None) -> None
 
 
 async def step_load_vocabularies(app: OnboardingApp, _user_said_yes: bool | None) -> None:
-    spec_vocab_dir = PROJECT_ROOT / "spec" / "vocabularies" / "canonical"
-    if not spec_vocab_dir.is_dir():
+    app.log_message("Fetching controlled vocabularies from zinecore.org API...")
+    try:
+        await app.run_command(f"{MANAGE_PY} load_vocabularies")
+        app.log_message("[green]\u2713 Vocabularies loaded[/green]")
+    except RuntimeError:
         app.log_message(
-            "[yellow]Spec vocabularies not found. "
-            "Ensure spec submodule is initialized.[/yellow]"
+            "[yellow]Warning: Failed to fetch vocabularies from zinecore.org. "
+            "You can retry later with: ./manage.py load_vocabularies[/yellow]"
         )
         for s in app.steps:
             if s.name == "Load Vocabularies":
                 s.status = StepStatus.SKIPPED
                 break
-        return
 
-    app.log_message("Loading controlled vocabularies from spec repo...")
-    await app.run_command(f"{MANAGE_PY} load_vocabularies")
-    app.log_message("[green]\u2713 Vocabularies loaded[/green]")
+
+async def step_load_languages(app: OnboardingApp, _user_said_yes: bool | None) -> None:
+    app.log_message("Fetching ISO 639-1 language codes from Library of Congress...")
+    try:
+        await app.run_command(f"{MANAGE_PY} load_languages")
+        app.log_message("[green]\u2713 ISO 639-1 languages loaded[/green]")
+    except RuntimeError:
+        app.log_message(
+            "[yellow]Warning: Failed to fetch languages from LOC. "
+            "You can retry later with: ./manage.py load_languages[/yellow]"
+        )
+        for s in app.steps:
+            if s.name == "Load ISO 639-1 Languages":
+                s.status = StepStatus.SKIPPED
+                break
+
+
+async def step_load_countries(app: OnboardingApp, _user_said_yes: bool | None) -> None:
+    app.log_message("Fetching ISO 3166-1 country codes from Library of Congress...")
+    try:
+        await app.run_command(f"{MANAGE_PY} load_countries")
+        app.log_message("[green]\u2713 ISO 3166-1 countries loaded[/green]")
+    except RuntimeError:
+        app.log_message(
+            "[yellow]Warning: Failed to fetch countries from LOC. "
+            "You can retry later with: ./manage.py load_countries[/yellow]"
+        )
+        for s in app.steps:
+            if s.name == "Load ISO 3166-1 Countries":
+                s.status = StepStatus.SKIPPED
+                break
 
 
 async def step_import_sample_data(app: OnboardingApp, _user_said_yes: bool | None) -> None:

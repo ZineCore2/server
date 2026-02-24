@@ -11,6 +11,13 @@ class RepoKind(BaseVocabulary):
         verbose_name_plural = "Repository Kinds"
 
 
+class Country(BaseVocabulary):
+    class Meta(BaseVocabulary.Meta):
+        db_table = "countries"
+        verbose_name = "Country"
+        verbose_name_plural = "Countries"
+
+
 class Repository(TimestampedModel):
     """RepoCore2: a repository (place that holds zines)."""
 

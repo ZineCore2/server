@@ -24,7 +24,11 @@ DJANGO_SETTINGS_MODULE=zinecore.settings.development \
 
 For migrations: `makemigrations <app>` then `migrate`.
 
-To load vocabularies: `load_vocabularies` (reads from `spec/vocabularies/canonical/`).
+To load vocabularies: `load_vocabularies` (fetches from `zinecore.org/api/vocabularies/`).
+
+To load ISO 639-1 language codes from Library of Congress: `load_languages` (fetches from `id.loc.gov`).
+
+To load ISO 3166-1 country codes from Library of Congress: `load_countries` (fetches from `id.loc.gov`).
 
 To load sample data: `loaddata data/sample-data.json`.
 
@@ -51,9 +55,9 @@ Each app follows the pattern: `models.py`, `serializers.py`, `views.py`, `urls.p
 | App | Profile | Models |
 |---|---|---|
 | `core` | (shared) | `TimestampedModel` (abstract), `BaseVocabulary` (abstract) |
-| `catalog` | ZineCore2 | `Zine`, `Subject`, `Genre`, `RightsStatement` |
+| `catalog` | ZineCore2 | `Zine`, `Subject`, `Genre`, `RightsStatement`, `Language` |
 | `agents` | AgentCore2 | `Agent`, `AgentKind`, `AgentRole` |
-| `repositories` | RepoCore2 | `Repository`, `RepoKind` |
+| `repositories` | RepoCore2 | `Repository`, `RepoKind`, `Country` |
 | `holdings` | HoldingCore2 | `Holding`, `AccessStatus`, `DistroStatus` |
 
 ### Model Patterns
@@ -81,6 +85,8 @@ Each app follows the pattern: `models.py`, `serializers.py`, `views.py`, `urls.p
 /api/vocabularies/subjects/    → catalog.SubjectViewSet (read-only)
 /api/vocabularies/genres/      → catalog.GenreViewSet (read-only)
 /api/vocabularies/rights-statements/
+/api/vocabularies/languages/   → catalog.LanguageViewSet (read-only, ISO 639-1)
+/api/vocabularies/countries/   → repositories.CountryViewSet (read-only, ISO 3166-1)
 /api/vocabularies/agent-kinds/
 /api/vocabularies/agent-roles/
 /api/vocabularies/repo-kinds/
@@ -94,7 +100,11 @@ Each app follows the pattern: `models.py`, `serializers.py`, `views.py`, `urls.p
 
 ## Vocabulary Loading
 
-The `load_vocabularies` management command in `catalog/management/commands/` reads canonical JSON from `spec/vocabularies/canonical/` and uses `update_or_create` on `code`. The `VOCAB_MAP` dict must stay aligned with the spec repo's `scripts/build-vocabularies.js` `DJANGO_MODELS` mapping.
+The `load_vocabularies` management command fetches controlled vocabularies from the zinecore.org API (`https://zinecore.org/api/vocabularies/{vocab}`). It loads: subjects, genres, rights_statements, agent_kinds, agent_roles, repo_kinds, holding_access_statuses, and holding_distro_statuses. Use `--local` to load from `spec/vocabularies/canonical/` instead. The `VOCAB_MAP` dict must stay aligned with the spec repo's `scripts/build-vocabularies.js` `DJANGO_MODELS` mapping.
+
+The `load_languages` management command fetches ISO 639-1 language codes directly from the Library of Congress vocabulary API (`id.loc.gov/vocabulary/iso639-1.json`). Run with `--dry-run` to preview without saving. This is separate from the spec-based vocabularies since languages use an external authoritative source.
+
+The `load_countries` management command fetches ISO 3166-1 alpha-2 country codes from the Library of Congress MARC Countries vocabulary (`id.loc.gov/vocabulary/countries.json`). Only 2-character codes are loaded by default (excluding US states and Canadian provinces). Use `--include-subdivisions` to load all codes, or `--dry-run` to preview.
 
 ## Environment Variables
 

@@ -11,5 +11,10 @@ router.register(
     views.RightsStatementViewSet,
     basename="rights-statement",
 )
+router.register(
+    r"vocabularies/languages",
+    views.LanguageViewSet,
+    basename="language",
+)
 
 urlpatterns = router.urls

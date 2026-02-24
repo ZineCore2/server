@@ -10,6 +10,7 @@ dependencies = [
     "psycopg[binary]",
     "gunicorn",
     "django-unfold",
+    "requests",
 ]
 
 [dependency-groups]

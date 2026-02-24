@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
 from unfold.admin import ModelAdmin
 
-from .models import RepoKind, Repository
+from .models import Country, RepoKind, Repository
 
 
 @admin.register(Repository)
@@ -34,5 +34,11 @@ class RepositoryAdmin(ModelAdmin):
 
 @admin.register(RepoKind)
 class RepoKindAdmin(ModelAdmin):
+    list_display = ["code", "label"]
+    search_fields = ["code", "label"]
+
+
+@admin.register(Country)
+class CountryAdmin(ModelAdmin):
     list_display = ["code", "label"]
     search_fields = ["code", "label"]

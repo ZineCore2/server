@@ -1,8 +1,9 @@
 from rest_framework import viewsets
 
-from .models import Genre, RightsStatement, Subject, Zine
+from .models import Genre, Language, RightsStatement, Subject, Zine
 from .serializers import (
     GenreSerializer,
+    LanguageSerializer,
     RightsStatementSerializer,
     SubjectSerializer,
     ZineSerializer,
@@ -42,6 +43,14 @@ class GenreViewSet(viewsets.ReadOnlyModelViewSet):
 class RightsStatementViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = RightsStatement.objects.all()
     serializer_class = RightsStatementSerializer
+    lookup_field = "code"
+    search_fields = ["code", "label"]
+    pagination_class = None
+
+
+class LanguageViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Language.objects.all()
+    serializer_class = LanguageSerializer
     lookup_field = "code"
     search_fields = ["code", "label"]
     pagination_class = None
