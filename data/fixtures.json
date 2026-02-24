@@ -1,0 +1,289 @@
+[
+{
+  "model": "agents.agent",
+  "pk": 1,
+  "fields": {
+    "created_at": "2026-02-24T19:27:27.741Z",
+    "updated_at": "2026-02-24T19:27:27.741Z",
+    "agent_id": "a-pink-rose-society",
+    "kind": [
+      "collective"
+    ],
+    "display_name": "Pink Rose Society",
+    "legal_name": null,
+    "aliases": "[]",
+    "website": "https://pinkrosesociety.org",
+    "orcid": "",
+    "wikidata_id": "",
+    "location": [
+      6252001
+    ],
+    "public": true,
+    "notes": "[]"
+  }
+},
+{
+  "model": "repositories.repository",
+  "pk": 1,
+  "fields": {
+    "created_at": "2026-02-24T18:40:06.520Z",
+    "updated_at": "2026-02-24T18:50:50.295Z",
+    "repo_id": "r-brown-recluse-zine-distro",
+    "name": "Brown Recluse Zine Distro",
+    "kind": [
+      "distro"
+    ],
+    "homepage": "https://www.brownreclusezinedistro.com/",
+    "address": "PO Box 22281\r\nOakland, CA 94623",
+    "location": [
+      5378538
+    ],
+    "marc_org_code": "",
+    "isil": "",
+    "ror_id": "",
+    "access_policy": "",
+    "hours": "",
+    "notes": "[\"Brown Recluse Zine Distro was created to support and center zines written predominantly by POC folks of all identities. This project was born out of passion for zines and frustration at the lack of representation and meaningful zine material for People of Color. I scoured through zine distros with a fine tooth comb and found that just like everywhere else in the dominant culture there was a serious lack of material written by POC folks in these distros. This is not because there is a lack of zines written by People of Color\", \"because there are hundreds of self-published works written by People of Color. My personal zine collection is full of POC zines and zines that are of interest to us.\\r\\n\\r\\nSo after many years of reading zines\", \"writing zines and observing zine culture I decided to start a zine distro that centers our voices and presents our large contribution to zine and DIY culture. BRZD is dedicated to our struggles\", \"our projects and our zines. Brown Recluse Zine Distro was born in the spirit of visibility and in the spirit of celebrating our cultures and inter-sectionality. BRZD exists to strengthen our ties and highlight out inter-sectional relateable experiences. BRZD is here to offer a place to locate POC zines without spending hours browsing the internet.\"]"
+  }
+},
+{
+  "model": "repositories.repository",
+  "pk": 2,
+  "fields": {
+    "created_at": "2026-02-24T18:50:10.208Z",
+    "updated_at": "2026-02-24T18:50:10.208Z",
+    "repo_id": "r-portland-button-works-and-zine-distro",
+    "name": "Portland Button Works and Zine Distro",
+    "kind": [
+      "distro"
+    ],
+    "homepage": "https://portlandbuttonworks.com/",
+    "address": "PBW Zine Distro\r\n5307 N Minnesota Ave.\r\nPortland, Oregon 97217",
+    "location": [
+      5746545
+    ],
+    "marc_org_code": "",
+    "isil": "",
+    "ror_id": "",
+    "access_policy": "",
+    "hours": "",
+    "notes": "[\"We are interested in zines that are based in DIY and punk ethics in regards to politics\", \"content\", \"production\", \"and pricing. In an effort to keep zines accessible we prefer zines that are $5 retail or less.\\r\\n\\r\\nKinds of zines we are interested in:\\r\\n-Perzines that fall into the “personal is political” with thoughtful narratives\", \"especially zines with interesting and creative design & layout that suits the writing.\\r\\n-Witchcraft zines that are not Wiccan and that are preferably secular witch friendly (also culturally sensitive\", \"non-appropriative\", \"historically accurate\", \"and do not express views of gender essentialism.)\\r\\n-Zines that cover a single issue that are well researched and explore unique topics and perspectives\\r\\n-Thoughtfully put together zines exploring self-care\\r\\n-Vegan cook zines\\r\\n-DIY project zines\\r\\n-Independently produced tarot and oracle decks\\r\\n\\r\\nKinds of zines that we are not particularly interested:\\r\\n-Comics (unless you consider it a zine and the focus is a topics listed above)\", \"Poetry\", \"Fiction\", \"Photo\", \"Art zines\", \"Chapbooks\\r\\nWe hope it goes without saying that are not interested in zines expressing views of racism\", \"sexism\", \"classism\", \"ableism\", \"homophobia\", \"transphobia\", \"religious intolerance\", \"ageism\", \"sizeism\", \"and all other forms of discrimination.\\r\\nIf you think your zine might be a good fit with us please send one actual physical copy for distro consideration (no digital files) to the address below with a note stating the retail price\", \"a short description of your zine\", \"and a way to contact you. If there is no note we will assume you are just randomly sending a zine and we will donate it to a zine library.\"]"
+  }
+},
+{
+  "model": "repositories.repository",
+  "pk": 3,
+  "fields": {
+    "created_at": "2026-02-24T18:51:23.945Z",
+    "updated_at": "2026-02-24T19:14:37.329Z",
+    "repo_id": "r-antiquated-future",
+    "name": "Antiquated Future",
+    "kind": [
+      "distro"
+    ],
+    "homepage": "https://www.antiquatedfuture.com",
+    "address": "P.O. Box 42081 Portland, OR 97211",
+    "location": [
+      5746545
+    ],
+    "marc_org_code": "",
+    "isil": "",
+    "ror_id": "",
+    "access_policy": "",
+    "hours": "",
+    "notes": "[\"An eclectic zine distro\", \"tape label\", \"and online store of books\", \"records\", \"and handmade odds and ends out of Portland\", \"Oregon. We carry over 500 items at any given time\", \"and over 250 different zine titles.\\r\\n\\r\\nIn terms of zines\", \"we try to carry a wide range of zines\", \"while still maintaining a curated selection. Personal\", \"historical\", \"humor\", \"personal-as-political\", \"literary\", \"how-to\", \"and music are all zine genres we find ourselves especially drawn to. We also try to carry a range of zines in terms of cost and production quality—both simply designed\", \"affordable zines (that nod to the ’90s zine heyday we came up in) and high-production value art-focused zines and workbook zines that reflect where people have taken the zine format in recent years. We hope to offer a lot of entry points into falling in love with zines.\"]"
+  }
+},
+{
+  "model": "repositories.repository",
+  "pk": 4,
+  "fields": {
+    "created_at": "2026-02-24T19:15:48.026Z",
+    "updated_at": "2026-02-24T19:15:59.903Z",
+    "repo_id": "r-the-word-distribution",
+    "name": "The Word Distribution",
+    "kind": [
+      "distro"
+    ],
+    "homepage": "https://theworddistribution.com/",
+    "address": "319 8th St., Apt 4R\r\nJersey City, NJ 07302",
+    "location": [
+      5099836
+    ],
+    "marc_org_code": "",
+    "isil": "",
+    "ror_id": "",
+    "access_policy": "",
+    "hours": "",
+    "notes": "[\"Focusing on the lighter side of things – cats\", \"food\", \"sports\", \"music\", \"etc. Fully supportive of zine culture and all things zine related. DIY till you Die!\"]"
+  }
+},
+{
+  "model": "repositories.repository",
+  "pk": 5,
+  "fields": {
+    "created_at": "2026-02-24T19:16:51.212Z",
+    "updated_at": "2026-02-24T19:16:51.212Z",
+    "repo_id": "r-silver-sproket",
+    "name": "Silver Sproket",
+    "kind": [
+      "distro"
+    ],
+    "homepage": "https://www.silversprocket.net",
+    "address": "1038 Valencia St, San Francisco, CA 94110",
+    "location": [
+      5391959
+    ],
+    "marc_org_code": "",
+    "isil": "",
+    "ror_id": "",
+    "access_policy": "",
+    "hours": "",
+    "notes": "[\"Silver Sprocket is a radical indie publisher\", \"art-crew\", \"gallery\", \"and comic shop focused on indie comics and comic zines\", \"but we distro plenty of non-comic zines too whenever someone who works here gets excited about something.\\r\\n\\r\\nWe strive to build a better world without forgetting to have a good time.\"]"
+  }
+},
+{
+  "model": "repositories.repository",
+  "pk": 6,
+  "fields": {
+    "created_at": "2026-02-24T19:17:59.980Z",
+    "updated_at": "2026-02-24T19:17:59.980Z",
+    "repo_id": "r-crapandemic",
+    "name": "CRAPANDEMIC",
+    "kind": [
+      "distro"
+    ],
+    "homepage": "http://crapandemic.storenvy.com",
+    "address": "",
+    "location": [
+      5110629
+    ],
+    "marc_org_code": "",
+    "isil": "",
+    "ror_id": "",
+    "access_policy": "",
+    "hours": "",
+    "notes": "[\"Cut-and-pastey\", \"text-heavy perzine/fanzine distro for mallgoths of the internet\", \"the darkly inclined\", \"and the goth-at-heart\", \"run out of the Midwest by julia eff & friends. Nothing over $6\", \"vast majority under $5\", \"with all items available on sliding scale pricing (just email/DM). We have patches & stickers & pins & stuff too. Submissions always open!\"]"
+  }
+},
+{
+  "model": "repositories.repository",
+  "pk": 7,
+  "fields": {
+    "created_at": "2026-02-24T19:18:50.116Z",
+    "updated_at": "2026-02-24T19:19:02.432Z",
+    "repo_id": "r-wasted-ink-zine-distro",
+    "name": "Wasted Ink Zine Distro",
+    "kind": [
+      "distro"
+    ],
+    "homepage": "https://www.wizd-az.com/",
+    "address": "The Hive – 2222 N 16th St, Phoenix, AZ 85006",
+    "location": [
+      5308655
+    ],
+    "marc_org_code": "",
+    "isil": "",
+    "ror_id": "",
+    "access_policy": "",
+    "hours": "",
+    "notes": "[\"Founded by Charissa Lucille\", \"WIZD was born from a deficit of creative spaces that voice the self-expressions of our desert-dwelling community. We work to highlight zines from underrepresented communities such as the POC\", \"LGBTQIA\", \"and disabled folks. This has led to representing 200+ zine makers and their variety of works – from comics\", \"fan-zines\", \"per-zines\", \"poetry\", \"prose\", \"to postcards\", \"stickers\", \"and buttons.\"]"
+  }
+},
+{
+  "model": "repositories.repository",
+  "pk": 8,
+  "fields": {
+    "created_at": "2026-02-24T19:20:08.541Z",
+    "updated_at": "2026-02-24T19:23:21.801Z",
+    "repo_id": "r-take-care",
+    "name": "Take Care",
+    "kind": [
+      "distro"
+    ],
+    "homepage": "http://takecarezinedistro.com",
+    "address": "PO Box 4, Enmore NSW 2042, Australia",
+    "location": [
+      2155400
+    ],
+    "marc_org_code": "",
+    "isil": "",
+    "ror_id": "",
+    "access_policy": "",
+    "hours": "",
+    "notes": "[\"Take Care was founded on 1 January 2010 by Tim and Emma\", \"in Eora (Sydney)\", \"Australia. We stock zines that we’ve made\", \"some by good friends and comrades\", \"and some that we just really like. We stock perzines\", \"experimental writing\", \"cut n paste\", \"free zines\", \"the occasional comic\", \"punk zines\", \"art zines\", \"travel zines and other zines that are conceptually\", \"technically or thematically interesting\", \"and that aren’t overpriced. We like zines that explore intersectional anti-capitalist/communist/anarchist politics\", \"DIY ethics\", \"uninstitutionalised art practices\", \"pop-culture and everyday life. We don’t currently have an open submission policy\", \"but if you think your zine might fit really well with our current roster please feel free to get in touch – no promises though; we’re just a little distro and don’t have heaps of time or space to keep loads of stock 🙂\"]"
+  }
+},
+{
+  "model": "repositories.repository",
+  "pk": 9,
+  "fields": {
+    "created_at": "2026-02-24T19:21:59.450Z",
+    "updated_at": "2026-02-24T19:26:52.290Z",
+    "repo_id": "r-bus-stop-press",
+    "name": "Bus Stop Press",
+    "kind": [
+      "distro"
+    ],
+    "homepage": "https://busstoppress.weebly.com",
+    "address": "Giz c/o CIRA\r\n50, rue Consolat\r\n13001 Marseille\r\nFrance",
+    "location": [
+      2995469
+    ],
+    "marc_org_code": "",
+    "isil": "",
+    "ror_id": "",
+    "access_policy": "",
+    "hours": "",
+    "notes": "[\"Publisher and distributor of pamphlets\", \"zines\", \"books\", \"tapes & records since 2010. Everything on a “pay what you want basis”. Punkpost is encouraged but we can work around that. Original zines include the Cheaptoys & Papercore series. The distro has a permanent kiosque at the CIRA-Marseille (International Center for Research on Anarchism).\"]"
+  }
+},
+{
+  "model": "repositories.repository",
+  "pk": 10,
+  "fields": {
+    "created_at": "2026-02-24T19:22:47.474Z",
+    "updated_at": "2026-02-24T19:22:47.474Z",
+    "repo_id": "r-pen-fight",
+    "name": "Pen Fight",
+    "kind": [
+      "distro"
+    ],
+    "homepage": "http://www.penfightdistro.com/",
+    "address": "",
+    "location": [
+      2643123
+    ],
+    "marc_org_code": "",
+    "isil": "",
+    "ror_id": "",
+    "access_policy": "",
+    "hours": "",
+    "notes": "[\"Pen Fight is a feminist and queer zine and bookshop and small press based out of Manchester\", \"UK. Independently run since 2015\", \"we sell zines\", \"radical books\", \"badges\", \"and other DIY and small-run art and craft.\\r\\n\\r\\nWe stock work on feminist and women’s rights\", \"disability and mental health\", \"food\", \"veganism\", \"gardening\", \"politics\", \"race\", \"class\", \"art\", \"friendship\", \"music\", \"fanzines\", \"and anything else with an ace DIY ethic.\\r\\n\\r\\nWe also operate a small press\", \"printing zine titles by women\", \"non-binary and LGBTQIA+ folks\", \"we want to amplify the voices and creative work of the marginalised and new artists and zinemakers.\"]"
+  }
+},
+{
+  "model": "repositories.repository",
+  "pk": 11,
+  "fields": {
+    "created_at": "2026-02-24T19:26:39.166Z",
+    "updated_at": "2026-02-24T19:26:39.166Z",
+    "repo_id": "r-ohio-state-university-rare-books-manuscript-library",
+    "name": "Ohio State University Rare Books & Manuscript Library",
+    "kind": [
+      "academic-library"
+    ],
+    "homepage": "https://library.osu.edu/rbml/featured-collections",
+    "address": "Thompson Library\r\n1858 Neil Avenue Mall\r\nColumbus, Ohio 43210-1286",
+    "location": [
+      4509177
+    ],
+    "marc_org_code": "ohcourb",
+    "isil": "US-ohcourb",
+    "ror_id": "",
+    "access_policy": "",
+    "hours": "",
+    "notes": "[]"
+  }
+}
+]
