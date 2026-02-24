@@ -4,7 +4,7 @@ from pathlib import Path
 import requests
 from django.apps import apps
 from django.conf import settings
-from django.core.management.base import BaseCommand
+from django.core.management.base import BaseCommand, CommandError
 
 # Vocabularies available from zinecore.org API (excluding languages and countries)
 API_VOCABS = [
@@ -88,16 +88,29 @@ class Command(BaseCommand):
                 )
                 return
 
+        success_count = 0
+        failure_count = 0
+
         for filename, (app_label, model_name) in vocabs_to_load.items():
             if use_local:
                 success = self._load_from_local(filename, app_label, model_name, vocab_dir)
             else:
                 success = self._load_from_api(filename, app_label, model_name, api_url)
 
-            if not success:
+            if success:
+                success_count += 1
+            else:
+                failure_count += 1
                 self.stderr.write(
                     self.style.WARNING(f"Failed to load {filename}")
                 )
+
+        # Raise error if all vocabularies failed to load
+        if failure_count > 0 and success_count == 0:
+            raise CommandError(
+                f"Failed to load all {failure_count} vocabularies. "
+                "Check network connection and API availability."
+            )
 
     def _load_from_api(self, vocab_name: str, app_label: str, model_name: str, base_url: str) -> bool:
         """Load vocabulary from zinecore.org API."""

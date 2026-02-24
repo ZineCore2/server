@@ -1,7 +1,7 @@
 import json
 
 import requests
-from django.core.management.base import BaseCommand
+from django.core.management.base import BaseCommand, CommandError
 
 from catalog.models import Language
 
@@ -35,18 +35,15 @@ class Command(BaseCommand):
             response = requests.get(url, timeout=30)
             response.raise_for_status()
         except requests.RequestException as e:
-            self.stderr.write(self.style.ERROR(f"Failed to fetch vocabulary: {e}"))
-            return
+            raise CommandError(f"Failed to fetch vocabulary: {e}")
 
         try:
             data = response.json()
         except json.JSONDecodeError as e:
-            self.stderr.write(self.style.ERROR(f"Failed to parse JSON: {e}"))
-            return
+            raise CommandError(f"Failed to parse JSON: {e}")
 
         if not isinstance(data, list):
-            self.stderr.write(self.style.ERROR("Expected JSON array at top level"))
-            return
+            raise CommandError("Expected JSON array at top level")
 
         created_count = 0
         updated_count = 0
