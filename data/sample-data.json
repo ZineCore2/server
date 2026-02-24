@@ -147,6 +147,31 @@
     }
   },
   {
+    "model": "catalog.language",
+    "fields": {
+      "code": "en",
+      "label": "English"
+    }
+  },
+  {
+    "model": "catalog.rightsstatement",
+    "fields": {
+      "code": "anti-copyright",
+      "label": "Anti-Copyright",
+      "uri": "",
+      "description": "Free to copy and distribute"
+    }
+  },
+  {
+    "model": "catalog.rightsstatement",
+    "fields": {
+      "code": "all-rights-reserved",
+      "label": "All Rights Reserved",
+      "uri": "",
+      "description": "Traditional copyright - all rights reserved"
+    }
+  },
+  {
     "model": "agents.agent",
     "pk": 1,
     "fields": {
@@ -169,17 +194,17 @@
     "model": "agents.agent",
     "pk": 2,
     "fields": {
-      "agent_id": "agent_stolen_sharpie_rev",
-      "kind": "collective",
-      "display_name": "Stolen Sharpie Revolution",
+      "agent_id": "agent_alex_wrekk",
+      "kind": "person",
+      "display_name": "Alex Wrekk",
       "legal_name": null,
-      "aliases": ["SSR", "Alex Wrekk"],
-      "roles": ["creator", "publisher", "distributor"],
+      "aliases": [],
+      "roles": ["creator", "publisher"],
       "website": "https://stolensharpierevolution.org/",
       "orcid": "",
       "wikidata_id": "",
       "public": true,
-      "notes": ["Collective focused on zine-making guides and resources."],
+      "notes": [],
       "created_at": "2026-01-01T00:00:00Z",
       "updated_at": "2026-01-01T00:00:00Z"
     }
@@ -218,6 +243,120 @@
       "wikidata_id": "",
       "public": false,
       "notes": ["Unknown creator; zine found without attribution."],
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "agents.agent",
+    "pk": 5,
+    "fields": {
+      "agent_id": "agent_ayun_halliday",
+      "kind": "person",
+      "display_name": "Ayun Halliday",
+      "legal_name": null,
+      "aliases": [],
+      "roles": ["creator", "author"],
+      "website": "",
+      "orcid": "",
+      "wikidata_id": "",
+      "public": true,
+      "notes": [],
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "agents.agent",
+    "pk": 6,
+    "fields": {
+      "agent_id": "agent_india_halliday",
+      "kind": "person",
+      "display_name": "India Halliday",
+      "legal_name": null,
+      "aliases": [],
+      "roles": ["contributor"],
+      "website": "",
+      "orcid": "",
+      "wikidata_id": "",
+      "public": true,
+      "notes": [],
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "agents.agent",
+    "pk": 7,
+    "fields": {
+      "agent_id": "agent_milo_halliday",
+      "kind": "person",
+      "display_name": "Milo Halliday",
+      "legal_name": null,
+      "aliases": [],
+      "roles": ["contributor"],
+      "website": "",
+      "orcid": "",
+      "wikidata_id": "",
+      "public": true,
+      "notes": [],
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "agents.agent",
+    "pk": 8,
+    "fields": {
+      "agent_id": "agent_mimi_thi_nguyen",
+      "kind": "person",
+      "display_name": "Mimi Thi Nguyen",
+      "legal_name": null,
+      "aliases": ["Mimi Nguyen"],
+      "roles": ["creator", "scholar"],
+      "website": "",
+      "orcid": "",
+      "wikidata_id": "",
+      "public": true,
+      "notes": [],
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "agents.agent",
+    "pk": 9,
+    "fields": {
+      "agent_id": "agent_doris_press",
+      "kind": "organization",
+      "display_name": "Doris Press",
+      "legal_name": null,
+      "aliases": [],
+      "roles": ["publisher"],
+      "website": "",
+      "orcid": "",
+      "wikidata_id": "",
+      "public": true,
+      "notes": [],
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "agents.agent",
+    "pk": 10,
+    "fields": {
+      "agent_id": "agent_stolen_sharpie_rev",
+      "kind": "collective",
+      "display_name": "Stolen Sharpie Revolution",
+      "legal_name": null,
+      "aliases": ["SSR"],
+      "roles": ["publisher", "distributor"],
+      "website": "https://stolensharpierevolution.org/",
+      "orcid": "",
+      "wikidata_id": "",
+      "public": true,
+      "notes": ["Collective focused on zine-making guides and resources."],
       "created_at": "2026-01-01T00:00:00Z",
       "updated_at": "2026-01-01T00:00:00Z"
     }
@@ -291,29 +430,23 @@
     "fields": {
       "zine_id": "zine_doris_28",
       "title": "Doris #28",
-      "series_title": ["Doris"],
+      "series_title": "Doris",
       "issue_designation": "28",
-      "edition_statement": [],
+      "edition_statement": "",
       "alternative_title": [],
-      "creator": ["Cindy Crabb"],
-      "contributor": [],
-      "subjects": [["feminism"], ["personal-narrative"], ["daily-life"]],
-      "genres": [["perzine"]],
       "abstract": "Personal reflections on community, healing, and everyday resistance. Cindy Crabb's long-running perzine continues with essays on navigating trauma, gardening, and mutual aid.",
       "table_of_contents": "",
       "public_notes": [],
-      "publisher": ["Doris Press"],
-      "date": ["2009"],
+      "publish_date": "2009-01-01",
       "physical_dimensions": "5.5 x 8.5 in",
       "number_of_pages": "56",
-      "format": ["half-letter"],
-      "binding_features": ["saddle-stapled"],
-      "language": ["en"],
-      "place_of_publication": ["Asheville, NC"],
+      "format": "half-letter",
+      "binding_features": "saddle-stapled",
+      "place_of_publication": "Asheville, NC",
       "coverage": [],
       "source": [],
       "relation": [],
-      "rights": ["anti-copyright"],
+      "rights_statement": 1,
       "identifier": [],
       "created_at": "2026-01-01T00:00:00Z",
       "updated_at": "2026-01-01T00:00:00Z"
@@ -325,29 +458,23 @@
     "fields": {
       "zine_id": "zine_stolen_sharpie_4",
       "title": "Stolen Sharpie Revolution #4",
-      "series_title": ["Stolen Sharpie Revolution"],
+      "series_title": "Stolen Sharpie Revolution",
       "issue_designation": "4",
-      "edition_statement": [],
+      "edition_statement": "",
       "alternative_title": ["SSR 4"],
-      "creator": ["Alex Wrekk"],
-      "contributor": [],
-      "subjects": [["zine-making"], ["diy"], ["how-to"]],
-      "genres": [["instructional"], ["resource-guide"]],
       "abstract": "A comprehensive guide to making, distributing, and appreciating zines. Includes tips on layout, printing, distro, and zine community building.",
       "table_of_contents": "",
       "public_notes": ["Updated and expanded edition."],
-      "publisher": ["Stolen Sharpie Revolution"],
-      "date": ["2014"],
+      "publish_date": "2014-01-01",
       "physical_dimensions": "5.5 x 8.5 in",
       "number_of_pages": "128",
-      "format": ["half-letter"],
-      "binding_features": ["perfect-bound"],
-      "language": ["en"],
-      "place_of_publication": ["Portland, OR"],
+      "format": "half-letter",
+      "binding_features": "perfect-bound",
+      "place_of_publication": "Portland, OR",
       "coverage": [],
       "source": [],
       "relation": [],
-      "rights": ["all-rights-reserved"],
+      "rights_statement": 2,
       "identifier": ["ISBN:978-0-9788436-3-0"],
       "created_at": "2026-01-01T00:00:00Z",
       "updated_at": "2026-01-01T00:00:00Z"
@@ -359,29 +486,23 @@
     "fields": {
       "zine_id": "zine_heavy_mayo_1",
       "title": "Heavy Mayo",
-      "series_title": [],
+      "series_title": "",
       "issue_designation": null,
-      "edition_statement": [],
+      "edition_statement": "",
       "alternative_title": [],
-      "creator": ["Anonymous"],
-      "contributor": [],
-      "subjects": [["food"], ["humor"], ["condiments"]],
-      "genres": [["perzine"], ["art-zine"]],
       "abstract": "A one-shot zine celebrating the glory and versatility of mayonnaise. Features recipes, illustrations, and personal essays about the world's most polarizing condiment.",
       "table_of_contents": "",
       "public_notes": ["Found in the free pile at Portland Zine Symposium 2018."],
-      "publisher": [],
-      "date": ["2018"],
+      "publish_date": "2018-01-01",
       "physical_dimensions": "4.25 x 5.5 in",
       "number_of_pages": "16",
-      "format": ["quarter-letter"],
-      "binding_features": ["saddle-stapled"],
-      "language": ["en"],
-      "place_of_publication": [],
+      "format": "quarter-letter",
+      "binding_features": "saddle-stapled",
+      "place_of_publication": "",
       "coverage": [],
       "source": [],
       "relation": [],
-      "rights": ["anti-copyright"],
+      "rights_statement": 1,
       "identifier": [],
       "created_at": "2026-01-01T00:00:00Z",
       "updated_at": "2026-01-01T00:00:00Z"
@@ -393,29 +514,23 @@
     "fields": {
       "zine_id": "zine_east_village_inky_53",
       "title": "The East Village Inky #53",
-      "series_title": ["The East Village Inky"],
+      "series_title": "The East Village Inky",
       "issue_designation": "53",
-      "edition_statement": [],
+      "edition_statement": "",
       "alternative_title": ["EVI"],
-      "creator": ["Ayun Halliday"],
-      "contributor": ["India Halliday", "Milo Halliday"],
-      "subjects": [["parenting"], ["new-york-city"], ["personal-narrative"]],
-      "genres": [["perzine"]],
       "abstract": "Ongoing chronicles of raising kids in New York City by theater artist and writer Ayun Halliday. Features hand-drawn illustrations, neighborhood observations, and family adventures.",
       "table_of_contents": "",
       "public_notes": [],
-      "publisher": [],
-      "date": ["2016"],
+      "publish_date": "2016-01-01",
       "physical_dimensions": "5.5 x 8.5 in",
       "number_of_pages": "24",
-      "format": ["half-letter"],
-      "binding_features": ["saddle-stapled"],
-      "language": ["en"],
-      "place_of_publication": ["New York, NY"],
+      "format": "half-letter",
+      "binding_features": "saddle-stapled",
+      "place_of_publication": "New York, NY",
       "coverage": [],
       "source": [],
       "relation": [],
-      "rights": ["all-rights-reserved"],
+      "rights_statement": 2,
       "identifier": [],
       "created_at": "2026-01-01T00:00:00Z",
       "updated_at": "2026-01-01T00:00:00Z"
@@ -427,32 +542,285 @@
     "fields": {
       "zine_id": "zine_quantify",
       "title": "Quantify",
-      "series_title": [],
+      "series_title": "",
       "issue_designation": null,
-      "edition_statement": [],
+      "edition_statement": "",
       "alternative_title": [],
-      "creator": ["Mimi Thi Nguyen"],
-      "contributor": [],
-      "subjects": [["race"], ["punk"], ["critical-theory"], ["activism"]],
-      "genres": [["essay-zine"], ["political-zine"]],
       "abstract": "Critical essays on race, punk, and the politics of visibility. Engages with questions of who gets counted, who gets represented, and the limits of inclusion.",
       "table_of_contents": "",
       "public_notes": [],
-      "publisher": [],
-      "date": ["2012"],
+      "publish_date": "2012-01-01",
       "physical_dimensions": "5.5 x 8.5 in",
       "number_of_pages": "32",
-      "format": ["half-letter"],
-      "binding_features": ["saddle-stapled"],
-      "language": ["en"],
-      "place_of_publication": ["Chicago, IL"],
+      "format": "half-letter",
+      "binding_features": "saddle-stapled",
+      "place_of_publication": "Chicago, IL",
       "coverage": [],
       "source": [],
       "relation": [],
-      "rights": ["anti-copyright"],
+      "rights_statement": 1,
       "identifier": [],
       "created_at": "2026-01-01T00:00:00Z",
       "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "catalog.zine_subjects",
+    "fields": {
+      "zine_id": 1,
+      "subject_id": 1
+    }
+  },
+  {
+    "model": "catalog.zine_subjects",
+    "fields": {
+      "zine_id": 1,
+      "subject_id": 2
+    }
+  },
+  {
+    "model": "catalog.zine_subjects",
+    "fields": {
+      "zine_id": 1,
+      "subject_id": 3
+    }
+  },
+  {
+    "model": "catalog.zine_subjects",
+    "fields": {
+      "zine_id": 2,
+      "subject_id": 4
+    }
+  },
+  {
+    "model": "catalog.zine_subjects",
+    "fields": {
+      "zine_id": 2,
+      "subject_id": 5
+    }
+  },
+  {
+    "model": "catalog.zine_subjects",
+    "fields": {
+      "zine_id": 2,
+      "subject_id": 6
+    }
+  },
+  {
+    "model": "catalog.zine_subjects",
+    "fields": {
+      "zine_id": 3,
+      "subject_id": 7
+    }
+  },
+  {
+    "model": "catalog.zine_subjects",
+    "fields": {
+      "zine_id": 3,
+      "subject_id": 8
+    }
+  },
+  {
+    "model": "catalog.zine_subjects",
+    "fields": {
+      "zine_id": 3,
+      "subject_id": 9
+    }
+  },
+  {
+    "model": "catalog.zine_subjects",
+    "fields": {
+      "zine_id": 4,
+      "subject_id": 10
+    }
+  },
+  {
+    "model": "catalog.zine_subjects",
+    "fields": {
+      "zine_id": 4,
+      "subject_id": 11
+    }
+  },
+  {
+    "model": "catalog.zine_subjects",
+    "fields": {
+      "zine_id": 4,
+      "subject_id": 2
+    }
+  },
+  {
+    "model": "catalog.zine_subjects",
+    "fields": {
+      "zine_id": 5,
+      "subject_id": 12
+    }
+  },
+  {
+    "model": "catalog.zine_subjects",
+    "fields": {
+      "zine_id": 5,
+      "subject_id": 13
+    }
+  },
+  {
+    "model": "catalog.zine_subjects",
+    "fields": {
+      "zine_id": 5,
+      "subject_id": 14
+    }
+  },
+  {
+    "model": "catalog.zine_subjects",
+    "fields": {
+      "zine_id": 5,
+      "subject_id": 15
+    }
+  },
+  {
+    "model": "catalog.zine_genres",
+    "fields": {
+      "zine_id": 1,
+      "genre_id": 1
+    }
+  },
+  {
+    "model": "catalog.zine_genres",
+    "fields": {
+      "zine_id": 2,
+      "genre_id": 2
+    }
+  },
+  {
+    "model": "catalog.zine_genres",
+    "fields": {
+      "zine_id": 2,
+      "genre_id": 3
+    }
+  },
+  {
+    "model": "catalog.zine_genres",
+    "fields": {
+      "zine_id": 3,
+      "genre_id": 1
+    }
+  },
+  {
+    "model": "catalog.zine_genres",
+    "fields": {
+      "zine_id": 3,
+      "genre_id": 4
+    }
+  },
+  {
+    "model": "catalog.zine_genres",
+    "fields": {
+      "zine_id": 4,
+      "genre_id": 1
+    }
+  },
+  {
+    "model": "catalog.zine_genres",
+    "fields": {
+      "zine_id": 5,
+      "genre_id": 5
+    }
+  },
+  {
+    "model": "catalog.zine_genres",
+    "fields": {
+      "zine_id": 5,
+      "genre_id": 6
+    }
+  },
+  {
+    "model": "catalog.zine_languages",
+    "fields": {
+      "zine_id": 1,
+      "language_id": 1
+    }
+  },
+  {
+    "model": "catalog.zine_languages",
+    "fields": {
+      "zine_id": 2,
+      "language_id": 1
+    }
+  },
+  {
+    "model": "catalog.zine_languages",
+    "fields": {
+      "zine_id": 3,
+      "language_id": 1
+    }
+  },
+  {
+    "model": "catalog.zine_languages",
+    "fields": {
+      "zine_id": 4,
+      "language_id": 1
+    }
+  },
+  {
+    "model": "catalog.zine_languages",
+    "fields": {
+      "zine_id": 5,
+      "language_id": 1
+    }
+  },
+  {
+    "model": "catalog.zinecreator",
+    "fields": {
+      "zine_id": 1,
+      "agent_id": 1,
+      "order": 0
+    }
+  },
+  {
+    "model": "catalog.zinecreator",
+    "fields": {
+      "zine_id": 2,
+      "agent_id": 2,
+      "order": 0
+    }
+  },
+  {
+    "model": "catalog.zinecreator",
+    "fields": {
+      "zine_id": 3,
+      "agent_id": 4,
+      "order": 0
+    }
+  },
+  {
+    "model": "catalog.zinecreator",
+    "fields": {
+      "zine_id": 4,
+      "agent_id": 5,
+      "order": 0
+    }
+  },
+  {
+    "model": "catalog.zinecreator",
+    "fields": {
+      "zine_id": 5,
+      "agent_id": 8,
+      "order": 0
+    }
+  },
+  {
+    "model": "catalog.zinepublisher",
+    "fields": {
+      "zine_id": 1,
+      "agent_id": 9,
+      "order": 0
+    }
+  },
+  {
+    "model": "catalog.zinepublisher",
+    "fields": {
+      "zine_id": 2,
+      "agent_id": 10,
+      "order": 0
     }
   },
   {
