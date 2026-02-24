@@ -1,7 +1,9 @@
 from django.contrib.postgres.fields import ArrayField
 from django.db import models
+from django_extensions.db.fields import AutoSlugField
 
 from core.models import BaseVocabulary, TimestampedModel
+from geography.models import GeoPlace
 
 
 class RepoKind(BaseVocabulary):
@@ -11,20 +13,19 @@ class RepoKind(BaseVocabulary):
         verbose_name_plural = "Repository Kinds"
 
 
-class Country(BaseVocabulary):
-    class Meta(BaseVocabulary.Meta):
-        db_table = "countries"
-        verbose_name = "Country"
-        verbose_name_plural = "Countries"
+class RepositoryManager(models.Manager):
+    def get_by_natural_key(self, repo_id):
+        return self.get(repo_id=repo_id)
 
 
 class Repository(TimestampedModel):
     """RepoCore2: a repository (place that holds zines)."""
 
-    repo_id = models.CharField(
+    repo_id = AutoSlugField(
         max_length=64,
         unique=True,
-        help_text="Stable external identifier (e.g. 'repo_qzap').",
+        populate_from="slug_source",
+        help_text="Auto-generated slug (e.g. 'r-qzap').",
     )
 
     name = models.CharField(max_length=255)
@@ -37,18 +38,36 @@ class Repository(TimestampedModel):
 
     homepage = models.URLField(blank=True)
 
-    city = models.CharField(max_length=255, blank=True)
-    region = models.CharField(max_length=255, blank=True)
-    country = models.ForeignKey(
-        Country,
+    address = models.TextField(blank=True)
+    location = models.ForeignKey(
+        GeoPlace,
         on_delete=models.PROTECT,
+        null=True,
+        blank=True,
         related_name="repositories",
+        help_text="Geographic location from GeoNames hierarchy.",
     )
 
     # External identifiers
-    marc_org_code = models.CharField(max_length=16, blank=True)
-    isil = models.CharField(max_length=32, blank=True)
-    ror_id = models.URLField(blank=True)
+    marc_org_code = models.CharField(
+        max_length=16, 
+        blank=True,
+        verbose_name="MARC Organization Code",
+        help_text="<a href='https://www.loc.gov/marc/organizations/org-search.php' target='_blank'>Library of Congress MARC Record ID</a>)",
+    )
+    isil = models.CharField(
+        max_length=32, 
+        blank=True,
+        verbose_name="ISIL Code",
+        help_text="International Standard Identifier for Libraries and Related Organizations / ISO 15511 (<a href='https://www.loc.gov/marc/organizations/org-search.php' target='_blank'>LOC Lookup</a>)",
+    )
+
+    ror_id = models.URLField(
+        blank=True,
+        verbose_name="ROR Code",
+        help_text="<a href='https://ror.org/' target='_blank'>Research Organization Registry Codes</a>",
+
+        )
 
     access_policy = models.TextField(blank=True)
     hours = models.TextField(blank=True)
@@ -58,6 +77,8 @@ class Repository(TimestampedModel):
         default=list,
     )
 
+    objects = RepositoryManager()
+
     class Meta:
         db_table = "repositories"
         verbose_name = "Repository"
@@ -66,6 +87,12 @@ class Repository(TimestampedModel):
             models.Index(fields=["repo_id"]),
             models.Index(fields=["name"]),
         ]
+
+    def natural_key(self):
+        return (self.repo_id,)
+
+    def slug_source(self):
+        return f"r {self.name}"
 
     def __str__(self):
         return self.name

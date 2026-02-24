@@ -1,7 +1,9 @@
 from django.contrib.postgres.fields import ArrayField
 from django.db import models
+from django_extensions.db.fields import AutoSlugField
 
 from core.models import BaseVocabulary, TimestampedModel
+from geography.models import GeoPlace
 
 
 class Subject(BaseVocabulary):
@@ -35,13 +37,19 @@ class Language(BaseVocabulary):
         verbose_name_plural = "Languages"
 
 
+class ZineManager(models.Manager):
+    def get_by_natural_key(self, zine_id):
+        return self.get(zine_id=zine_id)
+
+
 class Zine(TimestampedModel):
     """ZineCore2: single zine issue description."""
 
-    zine_id = models.CharField(
+    zine_id = AutoSlugField(
         max_length=64,
         unique=True,
-        help_text="Stable external identifier (e.g. 'zine_mutate_3_1st').",
+        populate_from="slug_source",
+        help_text="Auto-generated slug (e.g. 'z-mutate-3').",
     )
 
     title = models.CharField(max_length=512)
@@ -100,7 +108,14 @@ class Zine(TimestampedModel):
 
     # Language & coverage
     languages = models.ManyToManyField(Language, related_name="zines", blank=True)
-    place_of_publication = models.CharField(max_length=255, blank=True, default="")
+    place_of_publication = models.ForeignKey(
+        GeoPlace,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name="zines_published_here",
+        help_text="Place of publication from GeoNames hierarchy.",
+    )
     coverage = ArrayField(
         base_field=models.CharField(max_length=255),
         blank=True,
@@ -131,6 +146,8 @@ class Zine(TimestampedModel):
         default=list,
     )
 
+    objects = ZineManager()
+
     class Meta:
         db_table = "zines"
         verbose_name = "Zine"
@@ -139,6 +156,12 @@ class Zine(TimestampedModel):
             models.Index(fields=["zine_id"]),
             models.Index(fields=["title"]),
         ]
+
+    def natural_key(self):
+        return (self.zine_id,)
+
+    def slug_source(self):
+        return f"z {self.title}"
 
     def __str__(self):
         return self.title

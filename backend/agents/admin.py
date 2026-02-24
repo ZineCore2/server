@@ -10,10 +10,10 @@ class AgentAdmin(ModelAdmin):
     list_display = ["agent_id", "display_name", "kind", "public", "created_at"]
     list_filter = ["kind", "public"]
     search_fields = ["agent_id", "display_name", "aliases"]
-    autocomplete_fields = ["kind"]
-    readonly_fields = ["created_at", "updated_at"]
+    autocomplete_fields = ["kind", "location"]
+    readonly_fields = ["agent_id", "created_at", "updated_at"]
     fieldsets = [
-        (None, {"fields": ["agent_id", "display_name", "kind"]}),
+        (None, {"fields": ["agent_id", "display_name", "kind", "location"]}),
         (_("Identity"), {
             "classes": ["tab"],
             "fields": ["legal_name", "aliases"],

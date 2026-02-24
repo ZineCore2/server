@@ -11,10 +11,9 @@ from .serializers import (
 
 class HoldingViewSet(viewsets.ModelViewSet):
     queryset = Holding.objects.select_related("repository", "zine").all()
-    search_fields = ["holding_id", "call_number", "barcode"]
-    ordering_fields = ["holding_id", "created_at", "updated_at"]
+    search_fields = ["call_number", "barcode"]
+    ordering_fields = ["created_at", "updated_at"]
     ordering = ["-created_at"]
-    lookup_field = "holding_id"
 
     def get_serializer_class(self):
         if self.action in ("create", "update", "partial_update"):

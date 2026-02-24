@@ -19,7 +19,6 @@ class DistroStatusSerializer(serializers.ModelSerializer):
 
 
 class HoldingSerializer(serializers.ModelSerializer):
-    id = serializers.CharField(source="holding_id")
     repository_id = serializers.CharField(source="repository.repo_id", read_only=True)
     zine_id = serializers.CharField(source="zine.zine_id", read_only=True)
 
@@ -46,7 +45,6 @@ class HoldingSerializer(serializers.ModelSerializer):
 
 
 class HoldingWriteSerializer(serializers.ModelSerializer):
-    id = serializers.CharField(source="holding_id")
     repository_id = serializers.SlugRelatedField(
         source="repository",
         slug_field="repo_id",
@@ -75,3 +73,4 @@ class HoldingWriteSerializer(serializers.ModelSerializer):
             "distro_status",
             "notes",
         ]
+        read_only_fields = ["id"]

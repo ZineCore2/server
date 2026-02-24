@@ -25,7 +25,6 @@ VOCAB_MAP = {
     "genres": ("catalog", "Genre"),
     "rights_statements": ("catalog", "RightsStatement"),
     "languages": ("catalog", "Language"),
-    "countries": ("repositories", "Country"),
     "agent_kinds": ("agents", "AgentKind"),
     "agent_roles": ("agents", "AgentRole"),
     "repo_kinds": ("repositories", "RepoKind"),
@@ -71,7 +70,8 @@ class Command(BaseCommand):
             else VOCAB_MAP
         )
 
-        # Filter out languages and countries when using API (they have dedicated commands)
+        # Filter out languages when using API (has dedicated command)
+        # Geographic places are loaded separately via load_geonames
         if not use_local:
             vocabs_to_load = {
                 name: model_info
@@ -81,9 +81,10 @@ class Command(BaseCommand):
             if not vocabs_to_load:
                 self.stderr.write(
                     self.style.WARNING(
-                        "Languages and countries should be loaded with dedicated commands:\n"
+                        "Languages should be loaded with a dedicated command:\n"
                         "  ./manage.py load_languages\n"
-                        "  ./manage.py load_countries"
+                        "Geographic places are loaded separately:\n"
+                        "  ./manage.py load_geonames"
                     )
                 )
                 return

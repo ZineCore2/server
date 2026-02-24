@@ -1,7 +1,9 @@
 from django.contrib.postgres.fields import ArrayField
 from django.db import models
+from django_extensions.db.fields import AutoSlugField
 
 from core.models import BaseVocabulary, TimestampedModel
+from geography.models import GeoPlace
 
 
 class AgentKind(BaseVocabulary):
@@ -18,13 +20,19 @@ class AgentRole(BaseVocabulary):
         verbose_name_plural = "Agent Roles"
 
 
+class AgentManager(models.Manager):
+    def get_by_natural_key(self, agent_id):
+        return self.get(agent_id=agent_id)
+
+
 class Agent(TimestampedModel):
     """AgentCore2: agent (person, collective, or organization) associated with zines."""
 
-    agent_id = models.CharField(
+    agent_id = AutoSlugField(
         max_length=64,
         unique=True,
-        help_text="Stable external identifier (e.g. 'agent_doris').",
+        populate_from="slug_source",
+        help_text="Auto-generated slug (e.g. 'a-doris').",
     )
 
     kind = models.ForeignKey(
@@ -46,6 +54,15 @@ class Agent(TimestampedModel):
     orcid = models.URLField(blank=True)
     wikidata_id = models.CharField(max_length=32, blank=True)
 
+    location = models.ForeignKey(
+        GeoPlace,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name="agents",
+        help_text="Geographic location from GeoNames hierarchy.",
+    )
+
     public = models.BooleanField(default=True)
 
     notes = ArrayField(
@@ -53,6 +70,8 @@ class Agent(TimestampedModel):
         blank=True,
         default=list,
     )
+
+    objects = AgentManager()
 
     class Meta:
         db_table = "agents"
@@ -62,6 +81,12 @@ class Agent(TimestampedModel):
             models.Index(fields=["agent_id"]),
             models.Index(fields=["display_name"]),
         ]
+
+    def natural_key(self):
+        return (self.agent_id,)
+
+    def slug_source(self):
+        return f"a {self.display_name}"
 
     def __str__(self):
         return self.display_name

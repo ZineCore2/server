@@ -1,16 +1,25 @@
 from rest_framework import viewsets
 
 from .models import Agent, AgentKind, AgentRole
-from .serializers import AgentKindSerializer, AgentRoleSerializer, AgentSerializer
+from .serializers import (
+    AgentKindSerializer,
+    AgentRoleSerializer,
+    AgentSerializer,
+    AgentWriteSerializer,
+)
 
 
 class AgentViewSet(viewsets.ModelViewSet):
-    queryset = Agent.objects.all()
-    serializer_class = AgentSerializer
-    search_fields = ["display_name", "aliases"]
+    queryset = Agent.objects.select_related("kind", "location").all()
+    search_fields = ["display_name", "aliases", "location__name"]
     ordering_fields = ["display_name", "created_at", "updated_at"]
     ordering = ["-created_at"]
     lookup_field = "agent_id"
+
+    def get_serializer_class(self):
+        if self.action in ("create", "update", "partial_update"):
+            return AgentWriteSerializer
+        return AgentSerializer
 
 
 class AgentKindViewSet(viewsets.ReadOnlyModelViewSet):

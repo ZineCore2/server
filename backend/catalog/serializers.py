@@ -1,6 +1,8 @@
 from rest_framework import serializers
 
 from agents.serializers import AgentSerializer, AgentRoleSerializer
+from geography.models import GeoPlace
+from geography.serializers import GeoPlaceCompactSerializer
 
 from .models import (
     Genre,
@@ -69,6 +71,7 @@ class ZineSerializer(serializers.ModelSerializer):
     genres = GenreSerializer(many=True, read_only=True)
     languages = LanguageSerializer(many=True, read_only=True)
     rights_statement = RightsStatementSerializer(read_only=True)
+    place_of_publication = GeoPlaceCompactSerializer(read_only=True)
 
     # Through model serializers
     zinecreator_set = ZineCreatorSerializer(many=True, read_only=True)
@@ -165,7 +168,10 @@ class ContributorDataSerializer(serializers.Serializer):
 
 
 class ZineWriteSerializer(serializers.ModelSerializer):
-    id = serializers.CharField(source="zine_id")
+    id = serializers.CharField(source="zine_id", required=False)
+    place_of_publication_geoname_id = serializers.IntegerField(
+        write_only=True, required=False, allow_null=True
+    )
     subject_codes = serializers.ListField(
         child=serializers.CharField(), write_only=True, required=False
     )
@@ -203,7 +209,7 @@ class ZineWriteSerializer(serializers.ModelSerializer):
             "number_of_pages",
             "format",
             "binding_features",
-            "place_of_publication",
+            "place_of_publication_geoname_id",
             "coverage",
             "source",
             "relation",
@@ -217,6 +223,14 @@ class ZineWriteSerializer(serializers.ModelSerializer):
             "rights_code",
         ]
 
+    def _resolve_place_of_publication(self, validated_data):
+        geoname_id = validated_data.pop("place_of_publication_geoname_id", None)
+        if geoname_id is not None:
+            validated_data["place_of_publication"] = GeoPlace.objects.get(
+                geoname_id=geoname_id
+            )
+        return validated_data
+
     def create(self, validated_data):
         # Extract M2M and through model data
         subject_codes = validated_data.pop("subject_codes", [])
@@ -226,6 +240,9 @@ class ZineWriteSerializer(serializers.ModelSerializer):
         contributor_data = validated_data.pop("contributor_data", [])
         publisher_ids = validated_data.pop("publisher_ids", [])
         rights_code = validated_data.pop("rights_code", None)
+
+        # Resolve place of publication
+        self._resolve_place_of_publication(validated_data)
 
         # Set rights statement
         if rights_code:
@@ -273,6 +290,9 @@ class ZineWriteSerializer(serializers.ModelSerializer):
         contributor_data = validated_data.pop("contributor_data", None)
         publisher_ids = validated_data.pop("publisher_ids", None)
         rights_code = validated_data.pop("rights_code", None)
+
+        # Resolve place of publication
+        self._resolve_place_of_publication(validated_data)
 
         # Update rights statement
         if rights_code is not None:

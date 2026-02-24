@@ -12,7 +12,9 @@ from .serializers import (
 
 
 class ZineViewSet(viewsets.ModelViewSet):
-    queryset = Zine.objects.prefetch_related("subjects", "genres").all()
+    queryset = Zine.objects.select_related(
+        "place_of_publication", "rights_statement"
+    ).prefetch_related("subjects", "genres").all()
     search_fields = ["title", "creator", "subjects__label"]
     ordering_fields = ["title", "created_at", "updated_at"]
     ordering = ["-created_at"]

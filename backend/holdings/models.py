@@ -23,12 +23,6 @@ class DistroStatus(BaseVocabulary):
 class Holding(TimestampedModel):
     """HoldingCore2: a specific holding (copy/item) of a zine at a repository."""
 
-    holding_id = models.CharField(
-        max_length=64,
-        unique=True,
-        help_text="Stable external identifier (e.g. 'holding_qzap_heavy_mayo_1').",
-    )
-
     repository = models.ForeignKey(
         Repository,
         on_delete=models.CASCADE,
@@ -76,9 +70,8 @@ class Holding(TimestampedModel):
         verbose_name = "Holding"
         verbose_name_plural = "Holdings"
         indexes = [
-            models.Index(fields=["holding_id"]),
             models.Index(fields=["repository", "zine"]),
         ]
 
     def __str__(self):
-        return f"{self.holding_id} ({self.repository} \u2013 {self.zine})"
+        return f"{self.repository} \u2013 {self.zine}"

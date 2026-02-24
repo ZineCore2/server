@@ -7,13 +7,13 @@ from .models import AccessStatus, DistroStatus, Holding
 
 @admin.register(Holding)
 class HoldingAdmin(ModelAdmin):
-    list_display = ["holding_id", "repository", "zine", "access_status", "digital_available"]
+    list_display = ["repository", "zine", "access_status", "digital_available"]
     list_filter = ["access_status", "distro_status", "digital_available"]
-    search_fields = ["holding_id", "call_number", "barcode"]
+    search_fields = ["call_number", "barcode"]
     autocomplete_fields = ["repository", "zine", "access_status", "distro_status"]
     readonly_fields = ["created_at", "updated_at"]
     fieldsets = [
-        (None, {"fields": ["holding_id", "repository", "zine"]}),
+        (None, {"fields": ["repository", "zine"]}),
         (_("Location"), {
             "classes": ["tab"],
             "fields": ["call_number", "location"],
