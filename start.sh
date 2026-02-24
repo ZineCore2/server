@@ -59,4 +59,4 @@ echo "Press Ctrl+C to stop"
 echo ""
 
 DJANGO_SETTINGS_MODULE=zinecore.settings.development \
-    .venv/bin/python backend/manage.py runserver 0.0.0.0:8000
+    .venv/bin/python backend/manage.py runserver_plus 0.0.0.0:8000

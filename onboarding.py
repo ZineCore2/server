@@ -364,12 +364,12 @@ class OnboardingApp(App):
                 run=step_load_languages,
             ),
             OnboardingStep(
-                name="Load ISO 3166-1 Countries",
-                run=step_load_countries,
+                name="Load GeoNames Places",
+                run=step_load_geonames,
             ),
             OnboardingStep(
-                name="Import Sample Data",
-                run=step_import_sample_data,
+                name="Import Fixtures",
+                run=step_import_fixture_data,
             ),
             OnboardingStep(
                 name="Create Superuser",
@@ -564,34 +564,34 @@ async def step_load_languages(app: OnboardingApp, _user_said_yes: bool | None) -
                 break
 
 
-async def step_load_countries(app: OnboardingApp, _user_said_yes: bool | None) -> None:
-    app.log_message("Fetching ISO 3166-1 country codes from Library of Congress...")
+async def step_load_geonames(app: OnboardingApp, _user_said_yes: bool | None) -> None:
+    app.log_message("Loading geographic places from GeoNames (countries, admin1, cities)...")
     try:
-        await app.run_command(f"{MANAGE_PY} load_countries")
-        app.log_message("[green]\u2713 ISO 3166-1 countries loaded[/green]")
+        await app.run_command(f"{MANAGE_PY} load_geonames")
+        app.log_message("[green]\u2713 GeoNames places loaded[/green]")
     except RuntimeError:
         app.log_message(
-            "[yellow]Warning: Failed to fetch countries from LOC. "
-            "You can retry later with: ./manage.py load_countries[/yellow]"
+            "[yellow]Warning: Failed to load GeoNames data. "
+            "You can retry later with: ./manage.py load_geonames[/yellow]"
         )
         for s in app.steps:
-            if s.name == "Load ISO 3166-1 Countries":
+            if s.name == "Load GeoNames Places":
                 s.status = StepStatus.SKIPPED
                 break
 
 
-async def step_import_sample_data(app: OnboardingApp, _user_said_yes: bool | None) -> None:
-    data_file = PROJECT_ROOT / "data" / "sample-data.json"
+async def step_import_fixture_data(app: OnboardingApp, _user_said_yes: bool | None) -> None:
+    data_file = PROJECT_ROOT / "data" / "fixtures.json"
     if not data_file.exists():
-        app.log_message("[yellow]data/sample-data.json not found, skipping[/yellow]")
+        app.log_message("[yellow]data/fixtures.json not found, skipping[/yellow]")
         for s in app.steps:
-            if s.name == "Import Sample Data":
+            if s.name == "Import Fixtures":
                 s.status = StepStatus.SKIPPED
                 break
         return
 
     app.log_message("Loading sample data (agents, repos, zines, holdings)...")
-    await app.run_command(f"{MANAGE_PY} loaddata data/sample-data.json")
+    await app.run_command(f"{MANAGE_PY} loaddata data/fixtures.json")
     app.log_message("[green]\u2713 Sample data loaded[/green]")
 
 
