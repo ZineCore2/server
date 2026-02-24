@@ -29,7 +29,123 @@ INSTALLED_APPS = [
 
 UNFOLD = {
     "SITE_TITLE": "ZineCore2",
-    "SITE_HEADER": "ZineCore2 Admin",
+    "SITE_HEADER": "ZineCore2 Server",
+    "DASHBOARD_CALLBACK": "core.admin.dashboard_callback",
+    "SIDEBAR": {
+        "show_search": True,
+        "show_all_applications": False,
+        "navigation": [
+            {
+                "title": "Catalog",
+                "separator": True,
+                "collapsible": True,
+                "items": [
+                    {
+                        "title": "Zines",
+                        "icon": "book",
+                        "link": "/admin/catalog/zine/",
+                    },
+                    {
+                        "title": "Agents",
+                        "icon": "person",
+                        "link": "/admin/agents/agent/",
+                    },
+                    {
+                        "title": "Repositories",
+                        "icon": "store",
+                        "link": "/admin/repositories/repository/",
+                    },
+                    {
+                        "title": "Holdings",
+                        "icon": "inventory",
+                        "link": "/admin/holdings/holding/",
+                    },
+                ],
+            },
+{
+                "title": "Controlled Vocabularies",
+                "separator": True,
+                "collapsible": True,
+                "items": [
+                    {
+                        "title": "Subjects",
+                        "icon": "label",
+                        "link": "/admin/catalog/subject/",
+                    },
+                    {
+                        "title": "Genres",
+                        "icon": "category",
+                        "link": "/admin/catalog/genre/",
+                    },
+                    {
+                        "title": "Languages",
+                        "icon": "language",
+                        "link": "/admin/catalog/language/",
+                    },
+                    {
+                        "title": "Rights Statements",
+                        "icon": "gavel",
+                        "link": "/admin/catalog/rightsstatement/",
+                    },
+                                        {
+                        "title": "Agent Kinds",
+                        "icon": "badge",
+                        "link": "/admin/agents/agentkind/",
+                    },
+                    {
+                        "title": "Agent Roles",
+                        "icon": "work",
+                        "link": "/admin/agents/agentrole/",
+                    },
+                    {
+                        "title": "Access Statuses",
+                        "icon": "lock",
+                        "link": "/admin/holdings/accessstatus/",
+                    },
+                    {
+                        "title": "Distribution Statuses",
+                        "icon": "local_shipping",
+                        "link": "/admin/holdings/distrostatus/",
+                    },
+                    {
+                        "title": "Repository Kinds",
+                        "icon": "business",
+                        "link": "/admin/repositories/repokind/",
+                    },
+                    {
+                        "title": "Countries",
+                        "icon": "public",
+                        "link": "/admin/repositories/country/",
+                    },
+
+                ]
+            },
+            {
+                "title": "User Management",
+                "separator": True,
+                "collapsible": True,
+                "items": [
+                    {
+                        "title": "Users",
+                        "icon": "people",
+                        "link": "/admin/auth/user/",
+                    },
+                    {
+                        "title": "Groups",
+                        "icon": "groups",
+                        "link": "/admin/auth/group/",
+                    },
+                ],
+            },
+        ],
+    },
+    "SITE_DROPDOWN": [
+        {
+            "icon": "diamond",
+            "title": "ZineCore.org",
+            "link": "https://zinecore.org",
+        },
+    ]
 }
 
 MIDDLEWARE = [
@@ -47,7 +163,7 @@ ROOT_URLCONF = "zinecore.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [BASE_DIR / "core" / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [

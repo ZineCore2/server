@@ -43,7 +43,13 @@ class Holding(TimestampedModel):
     call_number = models.CharField(max_length=255, blank=True)
     location = models.CharField(max_length=255, blank=True)
 
-    access_status = models.CharField(max_length=64, blank=True)
+    access_status = models.ForeignKey(
+        AccessStatus,
+        on_delete=models.PROTECT,
+        related_name="holdings",
+        blank=True,
+        null=True,
+    )
     condition = models.CharField(max_length=64, blank=True)
     copy_count = models.PositiveIntegerField(blank=True, null=True)
     barcode = models.CharField(max_length=64, blank=True)
@@ -51,7 +57,13 @@ class Holding(TimestampedModel):
     digital_available = models.BooleanField(default=False)
     digital_url = models.URLField(blank=True)
 
-    distro_status = models.CharField(max_length=64, blank=True)
+    distro_status = models.ForeignKey(
+        DistroStatus,
+        on_delete=models.PROTECT,
+        related_name="holdings",
+        blank=True,
+        null=True,
+    )
 
     notes = ArrayField(
         base_field=models.TextField(),

@@ -28,8 +28,10 @@ class Repository(TimestampedModel):
     )
 
     name = models.CharField(max_length=255)
-    kind = models.CharField(
-        max_length=64,
+    kind = models.ForeignKey(
+        RepoKind,
+        on_delete=models.PROTECT,
+        related_name="repositories",
         help_text="Repository type: 'library', 'archive', 'zine-library', 'distro', etc.",
     )
 
@@ -37,7 +39,11 @@ class Repository(TimestampedModel):
 
     city = models.CharField(max_length=255, blank=True)
     region = models.CharField(max_length=255, blank=True)
-    country = models.CharField(max_length=2)
+    country = models.ForeignKey(
+        Country,
+        on_delete=models.PROTECT,
+        related_name="repositories",
+    )
 
     # External identifiers
     marc_org_code = models.CharField(max_length=16, blank=True)

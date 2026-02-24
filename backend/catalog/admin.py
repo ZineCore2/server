@@ -39,8 +39,9 @@ class ZinePublisherInline(TabularInline):
 class ZineAdmin(ModelAdmin):
     list_display = ["zine_id", "title", "created_at"]
     search_fields = ["zine_id", "title"]
-    readonly_fields = ["created_at", "updated_at"]
+    autocomplete_fields = ["rights_statement"]
     filter_horizontal = ["subjects", "genres", "languages"]
+    readonly_fields = ["created_at", "updated_at"]
     inlines = [ZineCreatorInline, ZineContributorInline, ZinePublisherInline]
     fieldsets = [
         (None, {"fields": ["zine_id", "title"]}),

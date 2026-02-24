@@ -10,6 +10,7 @@ class AgentAdmin(ModelAdmin):
     list_display = ["agent_id", "display_name", "kind", "public", "created_at"]
     list_filter = ["kind", "public"]
     search_fields = ["agent_id", "display_name", "aliases"]
+    autocomplete_fields = ["kind"]
     readonly_fields = ["created_at", "updated_at"]
     fieldsets = [
         (None, {"fields": ["agent_id", "display_name", "kind"]}),
@@ -17,9 +18,9 @@ class AgentAdmin(ModelAdmin):
             "classes": ["tab"],
             "fields": ["legal_name", "aliases"],
         }),
-        (_("Roles & Links"), {
+        (_("Links"), {
             "classes": ["tab"],
-            "fields": ["roles", "website", "orcid", "wikidata_id"],
+            "fields": ["website", "orcid", "wikidata_id"],
         }),
         (_("Visibility & Notes"), {
             "classes": ["tab"],

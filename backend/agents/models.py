@@ -27,8 +27,10 @@ class Agent(TimestampedModel):
         help_text="Stable external identifier (e.g. 'agent_doris').",
     )
 
-    kind = models.CharField(
-        max_length=32,
+    kind = models.ForeignKey(
+        AgentKind,
+        on_delete=models.PROTECT,
+        related_name="agents",
         help_text="Agent type: 'person', 'collective', 'organization', 'other', 'unknown'.",
     )
     display_name = models.CharField(max_length=255)
@@ -36,11 +38,6 @@ class Agent(TimestampedModel):
 
     aliases = ArrayField(
         base_field=models.CharField(max_length=255),
-        blank=True,
-        default=list,
-    )
-    roles = ArrayField(
-        base_field=models.CharField(max_length=64),
         blank=True,
         default=list,
     )

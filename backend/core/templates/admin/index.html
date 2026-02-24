@@ -1,0 +1,76 @@
+{% extends 'admin/base_site.html' %}
+{% load i18n static %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+    <a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="module">
+    <h1>{% trans 'Dashboard' %}</h1>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+        <!-- Zines Card -->
+        <a href="{% url 'admin:catalog_zine_changelist' %}" style="text-decoration: none; color: inherit;">
+            <div style="background: white; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); padding: 1.5rem; border: 1px solid #e5e7eb; transition: box-shadow 0.2s;">
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                    <div>
+                        <p style="font-size: 0.875rem; font-weight: 500; color: #6b7280; margin: 0;">Zines</p>
+                        <p style="font-size: 2rem; font-weight: bold; color: #111827; margin: 0.5rem 0 0 0;">{{ zine_count|default:0 }}</p>
+                    </div>
+                    <div style="display: flex; align-items: center; justify-content: center; width: 3rem; height: 3rem; background: #dbeafe; border-radius: 8px;">
+                        <span class="material-symbols-outlined" style="color: #2563eb;">book</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <!-- Agents Card -->
+        <a href="{% url 'admin:agents_agent_changelist' %}" style="text-decoration: none; color: inherit;">
+            <div style="background: white; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); padding: 1.5rem; border: 1px solid #e5e7eb; transition: box-shadow 0.2s;">
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                    <div>
+                        <p style="font-size: 0.875rem; font-weight: 500; color: #6b7280; margin: 0;">Agents</p>
+                        <p style="font-size: 2rem; font-weight: bold; color: #111827; margin: 0.5rem 0 0 0;">{{ agent_count|default:0 }}</p>
+                    </div>
+                    <div style="display: flex; align-items: center; justify-content: center; width: 3rem; height: 3rem; background: #d1fae5; border-radius: 8px;">
+                        <span class="material-symbols-outlined" style="color: #059669;">person</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <!-- Repositories Card -->
+        <a href="{% url 'admin:repositories_repository_changelist' %}" style="text-decoration: none; color: inherit;">
+            <div style="background: white; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); padding: 1.5rem; border: 1px solid #e5e7eb; transition: box-shadow 0.2s;">
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                    <div>
+                        <p style="font-size: 0.875rem; font-weight: 500; color: #6b7280; margin: 0;">Repositories</p>
+                        <p style="font-size: 2rem; font-weight: bold; color: #111827; margin: 0.5rem 0 0 0;">{{ repository_count|default:0 }}</p>
+                    </div>
+                    <div style="display: flex; align-items: center; justify-content: center; width: 3rem; height: 3rem; background: #e9d5ff; border-radius: 8px;">
+                        <span class="material-symbols-outlined" style="color: #7c3aed;">store</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <!-- Holdings Card -->
+        <a href="{% url 'admin:holdings_holding_changelist' %}" style="text-decoration: none; color: inherit;">
+            <div style="background: white; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); padding: 1.5rem; border: 1px solid #e5e7eb; transition: box-shadow 0.2s;">
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                    <div>
+                        <p style="font-size: 0.875rem; font-weight: 500; color: #6b7280; margin: 0;">Holdings</p>
+                        <p style="font-size: 2rem; font-weight: bold; color: #111827; margin: 0.5rem 0 0 0;">{{ holding_count|default:0 }}</p>
+                    </div>
+                    <div style="display: flex; align-items: center; justify-content: center; width: 3rem; height: 3rem; background: #fed7aa; border-radius: 8px;">
+                        <span class="material-symbols-outlined" style="color: #ea580c;">inventory</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+{% endblock %}

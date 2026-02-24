@@ -10,8 +10,8 @@ class HoldingAdmin(ModelAdmin):
     list_display = ["holding_id", "repository", "zine", "access_status", "digital_available"]
     list_filter = ["access_status", "distro_status", "digital_available"]
     search_fields = ["holding_id", "call_number", "barcode"]
+    autocomplete_fields = ["repository", "zine", "access_status", "distro_status"]
     readonly_fields = ["created_at", "updated_at"]
-    raw_id_fields = ["repository", "zine"]
     fieldsets = [
         (None, {"fields": ["holding_id", "repository", "zine"]}),
         (_("Location"), {
