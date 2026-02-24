@@ -8,6 +8,7 @@ urlpatterns = [
     path("api/", include("catalog.urls")),
     path("api/", include("agents.urls")),
     path("api/", include("repositories.urls")),
+    path("api/", include("geography.urls")),
     path("api/", include("holdings.urls")),
     path("api/auth/", include("rest_framework.urls")),
     path("api/auth/token/", obtain_auth_token, name="api-token-auth"),

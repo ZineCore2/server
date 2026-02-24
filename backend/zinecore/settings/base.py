@@ -3,6 +3,17 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
+# Load .env from server/ root (parent of backend/) if it exists.
+# Real env vars take precedence — this only fills in gaps.
+_env_file = BASE_DIR.parent / ".env"
+if _env_file.is_file():
+    for _line in _env_file.read_text().splitlines():
+        _line = _line.strip()
+        if not _line or _line.startswith("#") or "=" not in _line:
+            continue
+        _key, _, _val = _line.partition("=")
+        os.environ.setdefault(_key.strip(), _val.strip())
+
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "insecure-dev-key-change-me")
 
 INSTALLED_APPS = [
@@ -19,11 +30,13 @@ INSTALLED_APPS = [
     "rest_framework.authtoken",
     "django_filters",
     "drf_spectacular",
+    "django_extensions",
     # Local apps
     "core",
     "catalog",
     "agents",
     "repositories",
+    "geography",
     "holdings",
 ]
 
@@ -113,9 +126,9 @@ UNFOLD = {
                         "link": "/admin/repositories/repokind/",
                     },
                     {
-                        "title": "Countries",
+                        "title": "Geographic Places",
                         "icon": "public",
-                        "link": "/admin/repositories/country/",
+                        "link": "/admin/geography/geoplace/",
                     },
 
                 ]
