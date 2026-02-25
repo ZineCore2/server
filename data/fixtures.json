@@ -1,430 +1,1896 @@
 [
-{
-  "model": "repositories.repository",
-  "pk": 1,
-  "fields": {
-    "created_at": "2026-02-24T18:40:06.520Z",
-    "updated_at": "2026-02-24T18:50:50.295Z",
-    "repo_id": "r-brown-recluse-zine-distro",
-    "name": "Brown Recluse Zine Distro",
-    "kind": [
-      "distro"
-    ],
-    "address": "PO Box 22281\r\nOakland, CA 94623",
-    "location": [
-      5378538
-    ],
-    "access_policy": "",
-    "hours": "",
-    "notes": "[\"Brown Recluse Zine Distro was created to support and center zines written predominantly by POC folks of all identities. This project was born out of passion for zines and frustration at the lack of representation and meaningful zine material for People of Color. I scoured through zine distros with a fine tooth comb and found that just like everywhere else in the dominant culture there was a serious lack of material written by POC folks in these distros. This is not because there is a lack of zines written by People of Color\", \"because there are hundreds of self-published works written by People of Color. My personal zine collection is full of POC zines and zines that are of interest to us.\\r\\n\\r\\nSo after many years of reading zines\", \"writing zines and observing zine culture I decided to start a zine distro that centers our voices and presents our large contribution to zine and DIY culture. BRZD is dedicated to our struggles\", \"our projects and our zines. Brown Recluse Zine Distro was born in the spirit of visibility and in the spirit of celebrating our cultures and inter-sectionality. BRZD exists to strengthen our ties and highlight out inter-sectional relateable experiences. BRZD is here to offer a place to locate POC zines without spending hours browsing the internet.\"]"
+  {
+    "model": "repositories.repository",
+    "pk": 1,
+    "fields": {
+      "created_at": "2026-02-24T18:40:06.520Z",
+      "updated_at": "2026-02-24T18:50:50.295Z",
+      "repo_id": "r-brown-recluse-zine-distro",
+      "name": "Brown Recluse Zine Distro",
+      "kind": [
+        "distro"
+      ],
+      "address": "PO Box 22281\r\nOakland, CA 94623",
+      "location": [
+        5378538
+      ],
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Brown Recluse Zine Distro was created to support and center zines written predominantly by POC folks of all identities. This project was born out of passion for zines and frustration at the lack of representation and meaningful zine material for People of Color. I scoured through zine distros with a fine tooth comb and found that just like everywhere else in the dominant culture there was a serious lack of material written by POC folks in these distros. This is not because there is a lack of zines written by People of Color",
+        "because there are hundreds of self-published works written by People of Color. My personal zine collection is full of POC zines and zines that are of interest to us.\\r\\n\\r\\nSo after many years of reading zines",
+        "writing zines and observing zine culture I decided to start a zine distro that centers our voices and presents our large contribution to zine and DIY culture. BRZD is dedicated to our struggles",
+        "our projects and our zines. Brown Recluse Zine Distro was born in the spirit of visibility and in the spirit of celebrating our cultures and inter-sectionality. BRZD exists to strengthen our ties and highlight out inter-sectional relateable experiences. BRZD is here to offer a place to locate POC zines without spending hours browsing the internet."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 2,
+    "fields": {
+      "created_at": "2026-02-24T18:50:10.208Z",
+      "updated_at": "2026-02-24T18:50:10.208Z",
+      "repo_id": "r-portland-button-works-and-zine-distro",
+      "name": "Portland Button Works and Zine Distro",
+      "kind": [
+        "distro"
+      ],
+      "address": "PBW Zine Distro\r\n5307 N Minnesota Ave.\r\nPortland, Oregon 97217",
+      "location": [
+        5746545
+      ],
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "\"We are interested in zines that are based in DIY and punk ethics in regards to politics\"",
+        "\"content\"",
+        "\"production\"",
+        "\"and pricing. In an effort to keep zines accessible we prefer zines that are $5 retail or less.\\\\r\\\\n\\\\r\\\\nKinds of zines we are interested in:\\\\r\\\\n-Perzines that fall into the personal is political with thoughtful narratives\"",
+        "\"especially zines with interesting and creative design & layout that suits the writing.\\\\r\\\\n-Witchcraft zines that are not Wiccan and that are preferably secular witch friendly (also culturally sensitive\"",
+        "\"non-appropriative\"",
+        "\"historically accurate\"",
+        "\"and do not express views of gender essentialism.)\\\\r\\\\n-Zines that cover a single issue that are well researched and explore unique topics and perspectives\\\\r\\\\n-Thoughtfully put together zines exploring self-care\\\\r\\\\n-Vegan cook zines\\\\r\\\\n-DIY project zines\\\\r\\\\n-Independently produced tarot and oracle decks\\\\r\\\\n\\\\r\\\\nKinds of zines that we are not particularly interested:\\\\r\\\\n-Comics (unless you consider it a zine and the focus is a topics listed above)\"",
+        "\"Poetry\"",
+        "\"Fiction\"",
+        "\"Photo\"",
+        "\"Art zines\"",
+        "\"Chapbooks\\\\r\\\\nWe hope it goes without saying that are not interested in zines expressing views of racism\"",
+        "\"sexism\"",
+        "\"classism\"",
+        "\"ableism\"",
+        "\"homophobia\"",
+        "\"transphobia\"",
+        "\"religious intolerance\"",
+        "\"ageism\"",
+        "\"sizeism\"",
+        "\"and all other forms of discrimination.\\\\r\\\\nIf you think your zine might be a good fit with us please send one actual physical copy for distro consideration (no digital files) to the address below with a note stating the retail price\"",
+        "\"a short description of your zine\"",
+        "\"and a way to contact you. If there is no note we will assume you are just randomly sending a zine and we will donate it to a zine library.\""
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 3,
+    "fields": {
+      "created_at": "2026-02-24T18:51:23.945Z",
+      "updated_at": "2026-02-24T19:14:37.329Z",
+      "repo_id": "r-antiquated-future",
+      "name": "Antiquated Future",
+      "kind": [
+        "distro"
+      ],
+      "address": "P.O. Box 42081 Portland, OR 97211",
+      "location": [
+        5746545
+      ],
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "An eclectic zine distro",
+        "tape label",
+        "and online store of books",
+        "records",
+        "and handmade odds and ends out of Portland",
+        "Oregon. We carry over 500 items at any given time",
+        "and over 250 different zine titles.\\r\\n\\r\\nIn terms of zines",
+        "we try to carry a wide range of zines",
+        "while still maintaining a curated selection. Personal",
+        "historical",
+        "humor",
+        "personal-as-political",
+        "literary",
+        "how-to",
+        "and music are all zine genres we find ourselves especially drawn to. We also try to carry a range of zines in terms of cost and production quality—both simply designed",
+        "affordable zines (that nod to the '90s zine heyday we came up in) and high-production value art-focused zines and workbook zines that reflect where people have taken the zine format in recent years. We hope to offer a lot of entry points into falling in love with zines."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 4,
+    "fields": {
+      "created_at": "2026-02-24T19:15:48.026Z",
+      "updated_at": "2026-02-24T19:15:59.903Z",
+      "repo_id": "r-the-word-distribution",
+      "name": "The Word Distribution",
+      "kind": [
+        "distro"
+      ],
+      "address": "319 8th St., Apt 4R\r\nJersey City, NJ 07302",
+      "location": [
+        5099836
+      ],
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Focusing on the lighter side of things – cats",
+        "food",
+        "sports",
+        "music",
+        "etc. Fully supportive of zine culture and all things zine related. DIY till you Die!"
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 5,
+    "fields": {
+      "created_at": "2026-02-24T19:16:51.212Z",
+      "updated_at": "2026-02-24T19:16:51.212Z",
+      "repo_id": "r-silver-sproket",
+      "name": "Silver Sproket",
+      "kind": [
+        "distro"
+      ],
+      "address": "1038 Valencia St, San Francisco, CA 94110",
+      "location": [
+        5391959
+      ],
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Silver Sprocket is a radical indie publisher",
+        "art-crew",
+        "gallery",
+        "and comic shop focused on indie comics and comic zines",
+        "but we distro plenty of non-comic zines too whenever someone who works here gets excited about something.\\r\\n\\r\\nWe strive to build a better world without forgetting to have a good time."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 6,
+    "fields": {
+      "created_at": "2026-02-24T19:17:59.980Z",
+      "updated_at": "2026-02-24T19:17:59.980Z",
+      "repo_id": "r-crapandemic",
+      "name": "CRAPANDEMIC",
+      "kind": [
+        "distro"
+      ],
+      "address": "",
+      "location": [
+        5110629
+      ],
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Cut-and-pastey",
+        "text-heavy perzine/fanzine distro for mallgoths of the internet",
+        "the darkly inclined",
+        "and the goth-at-heart",
+        "run out of the Midwest by julia eff & friends. Nothing over $6",
+        "vast majority under $5",
+        "with all items available on sliding scale pricing (just email/DM). We have patches & stickers & pins & stuff too. Submissions always open!"
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 7,
+    "fields": {
+      "created_at": "2026-02-24T19:18:50.116Z",
+      "updated_at": "2026-02-24T19:19:02.432Z",
+      "repo_id": "r-wasted-ink-zine-distro",
+      "name": "Wasted Ink Zine Distro",
+      "kind": [
+        "distro"
+      ],
+      "address": "The Hive – 2222 N 16th St, Phoenix, AZ 85006",
+      "location": [
+        5308655
+      ],
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Founded by Charissa Lucille",
+        "WIZD was born from a deficit of creative spaces that voice the self-expressions of our desert-dwelling community. We work to highlight zines from underrepresented communities such as the POC",
+        "LGBTQIA",
+        "and disabled folks. This has led to representing 200+ zine makers and their variety of works – from comics",
+        "fan-zines",
+        "per-zines",
+        "poetry",
+        "prose",
+        "to postcards",
+        "stickers",
+        "and buttons."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 8,
+    "fields": {
+      "created_at": "2026-02-24T19:20:08.541Z",
+      "updated_at": "2026-02-24T19:23:21.801Z",
+      "repo_id": "r-take-care",
+      "name": "Take Care",
+      "kind": [
+        "distro"
+      ],
+      "address": "PO Box 4, Enmore NSW 2042, Australia",
+      "location": [
+        2155400
+      ],
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Take Care was founded on 1 January 2010 by Tim and Emma",
+        "in Eora (Sydney)",
+        "Australia. We stock zines that we've made",
+        "some by good friends and comrades",
+        "and some that we just really like. We stock perzines",
+        "experimental writing",
+        "cut n paste",
+        "free zines",
+        "the occasional comic",
+        "punk zines",
+        "art zines",
+        "travel zines and other zines that are conceptually",
+        "technically or thematically interesting",
+        "and that aren't overpriced. We like zines that explore intersectional anti-capitalist/communist/anarchist politics",
+        "DIY ethics",
+        "uninstitutionalised art practices",
+        "pop-culture and everyday life. We don't currently have an open submission policy",
+        "but if you think your zine might fit really well with our current roster please feel free to get in touch – no promises though; we're just a little distro and don't have heaps of time or space to keep loads of stock 🙂"
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 9,
+    "fields": {
+      "created_at": "2026-02-24T19:21:59.450Z",
+      "updated_at": "2026-02-24T19:26:52.290Z",
+      "repo_id": "r-bus-stop-press",
+      "name": "Bus Stop Press",
+      "kind": [
+        "distro"
+      ],
+      "address": "Giz c/o CIRA\r\n50, rue Consolat\r\n13001 Marseille\r\nFrance",
+      "location": [
+        2995469
+      ],
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "\"Publisher and distributor of pamphlets\"",
+        "\"zines\"",
+        "\"books\"",
+        "\"tapes & records since 2010. Everything on a pay what you want basis. Punkpost is encouraged but we can work around that. Original zines include the Cheaptoys & Papercore series. The distro has a permanent kiosque at the CIRA-Marseille (International Center for Research on Anarchism).\""
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 10,
+    "fields": {
+      "created_at": "2026-02-24T19:22:47.474Z",
+      "updated_at": "2026-02-24T19:22:47.474Z",
+      "repo_id": "r-pen-fight",
+      "name": "Pen Fight",
+      "kind": [
+        "distro"
+      ],
+      "address": "",
+      "location": [
+        2643123
+      ],
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Pen Fight is a feminist and queer zine and bookshop and small press based out of Manchester",
+        "UK. Independently run since 2015",
+        "we sell zines",
+        "radical books",
+        "badges",
+        "and other DIY and small-run art and craft.\\r\\n\\r\\nWe stock work on feminist and women's rights",
+        "disability and mental health",
+        "food",
+        "veganism",
+        "gardening",
+        "politics",
+        "race",
+        "class",
+        "art",
+        "friendship",
+        "music",
+        "fanzines",
+        "and anything else with an ace DIY ethic.\\r\\n\\r\\nWe also operate a small press",
+        "printing zine titles by women",
+        "non-binary and LGBTQIA+ folks",
+        "we want to amplify the voices and creative work of the marginalised and new artists and zinemakers."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 11,
+    "fields": {
+      "created_at": "2026-02-24T19:26:39.166Z",
+      "updated_at": "2026-02-24T19:26:39.166Z",
+      "repo_id": "r-ohio-state-university-rare-books-manuscript-library",
+      "name": "Ohio State University Rare Books & Manuscript Library",
+      "kind": [
+        "academic-library"
+      ],
+      "address": "Thompson Library\r\n1858 Neil Avenue Mall\r\nColumbus, Ohio 43210-1286",
+      "location": [
+        4509177
+      ],
+      "access_policy": "",
+      "hours": "",
+      "notes": []
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 12,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-queer-anxiety-babiez-distro",
+      "name": "Queer Anxiety Babiez Distro",
+      "kind": [
+        "distro"
+      ],
+      "address": "SF Bay Area",
+      "location": [
+        5391959
+      ],
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Three non-binary zinesters in the East Bay making and distributing zines focused on disability",
+        "self-care",
+        "self-harm",
+        "and gender from a queer perspective. Their titles are described as very personal and raw",
+        "often mixing poetry with essays on topics like selfies",
+        "embodiment",
+        "and living in a queer/disabled body."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 13,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-archive-six",
+      "name": "Archive Six",
+      "kind": [
+        "distro"
+      ],
+      "address": "Seattle, WA",
+      "location": null,
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Seattle-based small press and zine distributor that began as a way to distribute the personal work of its founder",
+        "zinester and designer Rachelle Abellar",
+        "and later expanded into a curated distro centering marginalized voices. Its catalog focuses on work about social justice",
+        "feminism",
+        "women of color and other underrepresented creators",
+        "intersectionality",
+        "fat activism",
+        "survival",
+        "and art",
+        "with Archive Six frequently tabling at regional events like Seattle Zine Fest."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 14,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-catland-books",
+      "name": "Catland Books",
+      "kind": [
+        "bookstore"
+      ],
+      "address": "987 Flushing Ave, Brooklyn, NY 11206",
+      "location": [
+        5099836
+      ],
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Catland Books is an occult bookstore and witchcraft-oriented community space in Bushwick",
+        "Brooklyn",
+        "often described as 'Brooklyn's favorite witch shop.' The shop carries a mix of occult and esoteric books",
+        "ritual tools",
+        "herbs",
+        "and independently produced zines and small-press titles related to witchcraft",
+        "tarot",
+        "astrology",
+        "and radical spirituality."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 15,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-darcy-crash-distro",
+      "name": "Darcy Crash Distro",
+      "kind": [
+        "distro"
+      ],
+      "address": "",
+      "location": null,
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Darcy Crash Distro is a zine distro project (active primarily online",
+        "via social platforms) that publishes and distributes personal and political zines. Posts and mentions show Darcy Crash collaborating with Brown Recluse Zine Distro on events such as fundraising for Zine Queens Vol. 3",
+        "indicating strong ties to QTBIPOC-centered and feminist zine communities. The distro's work leans into themes of trauma",
+        "survival",
+        "and self-definition",
+        "often through visceral",
+        "emotionally charged writing and imagery."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 16,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-fist-zine",
+      "name": "FIST Zine",
+      "kind": [
+        "distro"
+      ],
+      "address": "New York, NY",
+      "location": [
+        5099836
+      ],
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "FIST is a New York-based queer erotic and intimacy-focused zine project and event series that publishes themed print issues (e.g.",
+        "'FIST Issue 05: Cruising",
+        "' 'FIST Issue 04: Devotion') and related works like 'Linked",
+        "A Polyamory Zine.' Its site sells print issues and tickets to events such as 'Bawdy",
+        "' an in-person gathering mixing performance",
+        "storytelling",
+        "and erotic art centered on queer desire and kink."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 17,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-homie-house-press",
+      "name": "Homie House Press",
+      "kind": [
+        "distro"
+      ],
+      "address": "",
+      "location": null,
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Homie House Press is a radical cooperative small press and 'photo book' platform founded by Adriana Monsalve and Caterina Ragg",
+        "dedicated to equipping historically underrepresented people with the tools to create and publish in the photobook and zine medium. Described by its founders as a 'sisterhood",
+        "' 'wolfpack",
+        "' and 'secret space and open house for honest content",
+        "' the press views itself as a visual recording project that prioritizes community over everything",
+        "centering transfronteriza (border-crossing)",
+        "diasporic",
+        "and marginalized experiences."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 18,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-last-gasp",
+      "name": "Last Gasp",
+      "kind": [
+        "distro"
+      ],
+      "address": "777 Florida St, San Francisco, CA 94110",
+      "location": [
+        5391959
+      ],
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Last Gasp is a San Francisco-based publisher and former distributor of underground comix",
+        "lowbrow art",
+        "and countercultural books",
+        "founded by Ron Turner in 1970 in Berkeley. Over five decades it became one of the oldest and most influential houses for underground comics and radical graphic culture",
+        "publishing titles like Weirdo",
+        "Wimmen's Comix",
+        "Zap Comix",
+        "and an array of art books",
+        "graphic novels",
+        "and subcultural nonfiction."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 19,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-radiator-comics",
+      "name": "Radiator Comics",
+      "kind": [
+        "distro"
+      ],
+      "address": "Chicago, IL",
+      "location": null,
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Radiator Comics is a Chicago-born small-press distributor and publisher dedicated to self-published and small-press comics",
+        "founded in July 2014 by Neil Brideau. Its primary focus is distributing mini-comics and graphic stories by over 200 emerging and independent cartoonists",
+        "offering an online storefront plus tabling at festivals such as Small Press Expo and Chicago Alternative Comics Expo (CAKE)."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 20,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-stranger-danger-zine-distro",
+      "name": "Stranger Danger Zine Distro",
+      "kind": [
+        "distro"
+      ],
+      "address": "Chicago, IL",
+      "location": null,
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Stranger Danger Zine Distro was a Chicago-based zine distro that specialized in feminist",
+        "queer",
+        "and trans zines",
+        "widely cited in zine-community guides as a go-to source for radical personal and political work. It carried titles focused on feminism",
+        "queer and trans experiences",
+        "mental health",
+        "and anti-authoritarian politics. In a 2019 Instagram post",
+        "the distro announced that Stranger Danger had come to an end."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 21,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-pioneers-press",
+      "name": "Pioneers Press",
+      "kind": [
+        "distro"
+      ],
+      "address": "Leavenworth, KS",
+      "location": null,
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Pioneers Press was an independent publishing house and small-press distributor founded in 2012 by Jessie Duke after leaving Microcosm Publishing",
+        "with headquarters in Ann Arbor",
+        "Michigan and a distribution center on a farm outside Leavenworth",
+        "Kansas. The press focused on survival and sustainability in rural and urban settings",
+        "health",
+        "gender",
+        "sexuality",
+        "social justice",
+        "food movements",
+        "and literary work by emerging authors. Pioneers Press operated as both publisher and distro but closed on December 31",
+        "2020."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 22,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-flywheel-arts-collective",
+      "name": "Flywheel Arts Collective",
+      "kind": [
+        "zine-library"
+      ],
+      "address": "43 Main Street, Easthampton, MA 01027",
+      "location": null,
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Flywheel Arts Collective was a volunteer-run multi-use art and meeting space in Easthampton",
+        "Massachusetts",
+        "located at 43 Main Street (in the old town hall) with a performance venue",
+        "community meeting space",
+        "and zine library. Active through the 2000s and 2010s",
+        "Flywheel hosted punk and experimental music shows",
+        "film screenings",
+        "readings",
+        "and the Flywheel Zine Fest",
+        "which brought together zinesters",
+        "small presses",
+        "and political/DIY organizations."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 23,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-doris-press",
+      "name": "Doris Press",
+      "kind": [
+        "distro"
+      ],
+      "address": "Athens, OH",
+      "location": null,
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Doris Press is the long-running personal-as-political zine imprint of Cindy Crabb",
+        "publisher of the influential perzine Doris",
+        "which has been produced since the early 1990s. The press also published the 300-page Encyclopedia of Doris: Stories",
+        "Essays",
+        "and Interviews",
+        "collecting work from the zine into a bound volume while keeping the DIY ethos intact. In a zine-ecosystem map",
+        "Doris Press serves as a key perzine publisher focused on trauma",
+        "healing",
+        "feminism",
+        "and everyday survival."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 24,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-mcmicken-freespace",
+      "name": "McMicken FreeSpace",
+      "kind": [
+        "zine-library"
+      ],
+      "address": "West McMicken Avenue, Cincinnati, OH",
+      "location": null,
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "McMicken FreeSpace is a non-profit",
+        "volunteer-run community space and zine distro housed in a formerly foreclosed building on West McMicken Avenue in Cincinnati",
+        "envisioned by founder Stephanie Kodakya Phillips as a safe",
+        "accessible 'freespace' for people without a foundation. Evolving from an earlier project called SoapBox Books and Zines",
+        "it now serves as Cincinnati's only explicit activist hub and solidarity center",
+        "hosting groups like Cincinnati Allied Transgender Support",
+        "Sex Worker Support",
+        "Black Lives Matter",
+        "and AA for Freethinkers/Art of Recovery."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 25,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-microcosm-publishing",
+      "name": "Microcosm Publishing",
+      "kind": [
+        "distro"
+      ],
+      "address": "2752 N Williams Ave, Portland, OR 97227",
+      "location": [
+        5746545
+      ],
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Microcosm Publishing is a Portland-based zine publisher and distributor founded in 1996",
+        "originally in Cleveland before relocating to Portland",
+        "that focuses on practical",
+        "empowering books and zines about DIY skills",
+        "self-help",
+        "mental health",
+        "punk and subculture history",
+        "feminism",
+        "and radical politics. Emerging from zine culture",
+        "Microcosm grew into a hybrid of micro-press and indie publisher",
+        "producing and distributing hundreds of titles while still foregrounding small-press sensibilities like hand-drawn layouts and subcultural topics."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 26,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-wyrd-sisters-distro",
+      "name": "Wyrd Sisters Distro",
+      "kind": [
+        "distro"
+      ],
+      "address": "Portland, OR",
+      "location": [
+        5746545
+      ],
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Wyrd Sisters Distro is a Portland-based zine distro and record label focused specifically on neurodiverse and disabled artists",
+        "highlighted in distro directories as a dedicated platform for creators whose work is often marginalized even within DIY spaces. The distro's catalog concentrates on zines and music projects made by neurodivergent and disabled people",
+        "aligning its curation with disability justice and anti-ableist politics."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 27,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-poopsheet-shop",
+      "name": "Poopsheet Shop",
+      "kind": [
+        "distro"
+      ],
+      "address": "Bedford",
+      "location": null,
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Poopsheet Shop is an online shop and archive project specializing in mini-comics",
+        "art zines",
+        "fanzines",
+        "underground comix",
+        "and related curiosities from the 1970s to the present",
+        "operating under the umbrella of the Poopsheet Foundation. It focuses heavily on small-press and self-published comics",
+        "often stocking rare or out-of-print items as well as new work by contemporary mini-comics artists."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 28,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-mend-my-dress-press",
+      "name": "Mend My Dress Press",
+      "kind": [
+        "distro"
+      ],
+      "address": "Tacoma, WA",
+      "location": null,
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Mend My Dress Press is a small",
+        "'grrrl-run' publishing house and zine distributor based in Tacoma",
+        "Washington",
+        "dedicated to anthologizing and amplifying zine culture. The press publishes collections of classic zines and related small art books—for example",
+        "anthologies of Doris by Cindy Crabb and Mend My Dress by Cristy C. Road—alongside original titles that maintain a distinctly DIY look and focus on feminism",
+        "trauma",
+        "survival",
+        "and queer/punk life."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 29,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-sweet-candy-distro",
+      "name": "Sweet Candy Distro",
+      "kind": [
+        "distro"
+      ],
+      "address": "Washington, DC",
+      "location": null,
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Sweet Candy Distro and Sweet Candy Press is a longstanding zine distro and small press founded and run by Sage Adderley",
+        "originally based in Olympia",
+        "Washington and later noted in some library guides as Washington",
+        "DC. The distro has for over a decade carried a wide range of perzines",
+        "feminist and queer zines",
+        "and DIY publications",
+        "while the press side publishes original titles such as Ofrenda: A Zine Anthology by Celia Pérez."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 30,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-neither-nor",
+      "name": "Neither-Nor",
+      "kind": [
+        "zine-library"
+      ],
+      "address": "Kansas City, MO",
+      "location": null,
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Neither-nor Zine Distro is a Kansas City-based zine distro and zine library project founded in 2015 by Jess Hogan after the success of the first KC Zine Con. Hogan",
+        "a Kansas Citian who loves making",
+        "reading",
+        "trading",
+        "and collecting zines",
+        "started Neither-nor to give local zinesters and enthusiasts a place to sell their zines",
+        "support each other",
+        "and build a sustainable zine destination in the city. The project has grown into a distro plus a collectively run zine library",
+        "which hosts a monthly Zine Club and participates actively in KC Zine Con."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 31,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-sprout-zine-distro",
+      "name": "Sprout Zine Distro",
+      "kind": [
+        "distro"
+      ],
+      "address": "",
+      "location": null,
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Sprout Zine Distro (often referenced simply as Sprout Distro) is a distro and resource project focused on anarchist and security-oriented zines",
+        "particularly those dealing with legal rights",
+        "digital security",
+        "and community defense. It appears in community-resource lists as a curated source for zines such as 'Threat Library' by the No Trace Project",
+        "along with other titles covering individual and collective safety",
+        "state repression",
+        "and organizing skills."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 32,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-sticky-institute",
+      "name": "Sticky Institute",
+      "kind": [
+        "distro"
+      ],
+      "address": "Nicholas Building, Melbourne, Australia",
+      "location": null,
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Long-running zine shop/artist-run space; a 'Melbourne institution' that has operated a zine shop since 2001 (originally in the Flinders St/Degraves subway; now in the Nicholas Building). They stock thousands of zines from around the world",
+        "operate on a consignment model (e.g.",
+        "80% of shelf price back to the artist in one interview)",
+        "and run major events like the Festival of the Photocopier and Australian Zine Showcase."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 33,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-fight-boredom",
+      "name": "Fight Boredom",
+      "kind": [
+        "distro"
+      ],
+      "address": "Montréal, QC, Canada",
+      "location": null,
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Long-running feminist/queer-leaning zine distro (originally associated with the Riot Grrrl DIY back-to-basics wave)."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 34,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-look-mum-distro",
+      "name": "Look Mum! Distro",
+      "kind": [
+        "distro"
+      ],
+      "address": "Guelph, ON, Canada",
+      "location": null,
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Canadian distro often carrying personal/political zines; historically present at zine fests and mail-order."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 35,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-eskaramuza-diy-distro",
+      "name": "Eskaramuza DIY Distro",
+      "kind": [
+        "distro"
+      ],
+      "address": "O'Higgins 575, Curicó, Chile",
+      "location": null,
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "DIY music and zine distro and physical shop",
+        "active in Curicó",
+        "Chile. Punk/metal/grindcore-leaning underground culture: they buy and sell CDs",
+        "vinyl",
+        "cassettes",
+        "and zines",
+        "and also fabricate musical merchandise (likely screen-printed shirts",
+        "patches",
+        "etc.) for bands. Runs a bricks-and-mortar shop at O'Higgins 575 in Curicó and does mail-order."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 36,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-vampire-hag-distro",
+      "name": "Vampire Hag Distro",
+      "kind": [
+        "distro"
+      ],
+      "address": "Chatham, Kent, UK",
+      "location": null,
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Full-size zine distro based in Chatham",
+        "Kent (UK)",
+        "described as 'the zine distro with a bite",
+        "' previously known as Vampire Sushi. Has been around since Halloween 2009",
+        "selling mostly queer and feminist perzines. The branding and social presence highlight a playful",
+        "goth-adjacent aesthetic centered on personal/political queer work."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 37,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-black-star-books",
+      "name": "Black Star Books",
+      "kind": [
+        "infoshop"
+      ],
+      "address": "Dunedin, New Zealand",
+      "location": null,
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Radical infoshop/zine space (anarchist-adjacent",
+        "DIY politics; often carries political and queer zines)."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 38,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-zine-coop",
+      "name": "Zine COOP",
+      "kind": [
+        "distro"
+      ],
+      "address": "Hong Kong",
+      "location": null,
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Collective that runs zine events and distribution",
+        "often focusing on Hong Kong/Asian independent publishing and politically sensitive work."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 39,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-wahala-zine",
+      "name": "Wahala Zine",
+      "kind": [
+        "distro"
+      ],
+      "address": "Lagos, Nigeria",
+      "location": null,
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Lagos-based DIY zine platform centering African perspectives and youth culture; important for Global South representation."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 40,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-queer-zine-archive-project",
+      "name": "Queer Zine Archive Project",
+      "kind": [
+        "community-archive"
+      ],
+      "address": "Milwaukee, WI",
+      "location": null,
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Community archive founded 2003 to preserve queer zines and queer zine culture and make them digitally accessible. They maintain both a physical collection (thousands of zines stored in Milwaukee) and a searchable online archive with hundreds of freely downloadable digitized zines. Mission explicitly frames zines as living history and as a response to marginalization",
+        "emphasizing a collectivist",
+        "broad definition of 'queer.'"
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 41,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-san-francisco-public-library-zine-collection",
+      "name": "San Francisco Public Library Zine Collection",
+      "kind": [
+        "public-library"
+      ],
+      "address": "100 Larkin St, San Francisco, CA 94102",
+      "location": [
+        5391959
+      ],
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Library collection documenting the Bay Area underground/alternative press and its impact on the city's cultural",
+        "social",
+        "and political life (good institutional anchor for West Coast radical/queer material)."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 42,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-umbc-sci-fi-fantasy-fanzines",
+      "name": "UMBC Sci-Fi & Fantasy Fanzines Collection",
+      "kind": [
+        "academic-library"
+      ],
+      "address": "University of Maryland, Baltimore County",
+      "location": null,
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "University of Maryland",
+        "Baltimore County collection focusing on SF/F fanzines; more genre than explicitly queer",
+        "but historically important for fan-culture zine history."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 43,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-black-mosquito",
+      "name": "Black Mosquito",
+      "kind": [
+        "infoshop"
+      ],
+      "address": "Flensburg, Germany",
+      "location": null,
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Not-for-profit anarchist mailorder based in Germany",
+        "active since 2003. Centers anarchist",
+        "anti-fascist",
+        "radical-left and emancipatory ideas and practices; operates as a collective and explicitly channels all profit (after fixed costs) back into emancipatory projects. They stock stickers",
+        "patches",
+        "buttons",
+        "music",
+        "spray paint",
+        "books",
+        "brochures",
+        "zines",
+        "and solidarity products like Zapatista coffee and olive oil from Greek anarchist collectives."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 44,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-heavy-metal-zine-distro",
+      "name": "Heavy Metal Zine Distro",
+      "kind": [
+        "distro"
+      ],
+      "address": "Berlin, Germany",
+      "location": null,
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Berlin-based zine distro specializing in queer and feminist zines."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 45,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-papiercafe",
+      "name": "Papiercafé",
+      "kind": [
+        "zine-library"
+      ],
+      "address": "Nordbau, room 210, Menzelstraße 13-15, 34121 Kassel, Germany",
+      "location": null,
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Student-run zine/showroom space at the Kunsthochschule Kassel (Kassel Art School). Functions as a 'room for student publications",
+        "coffee and cake' at the art school",
+        "with emphasis on self-published work",
+        "art books",
+        "and zines by students. They host zine markets and showcase new titles from the school community."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 46,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-mount-zine",
+      "name": "Mount Zine",
+      "kind": [
+        "distro"
+      ],
+      "address": "Tokyo, Japan",
+      "location": null,
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Mount Zine is a Tokyo-based zine project and shop where anyone can participate",
+        "framing itself as a space where 'anyone can publish a zine.' It operates a physical shop/gallery (most recently in Setagaya/Meguro areas) that specializes in zines and other small-run printed matter",
+        "taking in open submissions from creators in Japan and abroad and routinely stocking over 150-200 titles at a time",
+        "with all stock rotated roughly every six months. Beyond sales",
+        "they run zine-making workshops and a 'zine school",
+        "' host events and exhibitions in Japan and overseas",
+        "and maintain an online store."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 47,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-tokyo-art-book-fair",
+      "name": "Tokyo Art Book Fair",
+      "kind": [
+        "festival"
+      ],
+      "address": "Tokyo, Japan",
+      "location": null,
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Tokyo Art Book Fair (often abbreviated TABF) is Japan's first book fair dedicated to art publications",
+        "launched in 2009 under the name 'ZINE'S MATE: TOKYO ART BOOK FAIR' and now one of the largest art book and zine fairs in Asia. Held annually at venues such as the Museum of Contemporary Art Tokyo",
+        "it regularly hosts around 300 exhibitors from Japan and abroad and draws 20",
+        "000-25",
+        "000 visitors",
+        "with sections that explicitly foreground zines and independent/self-published work."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 48,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-tijuana-zine-fest",
+      "name": "Tijuana Zine Fest",
+      "kind": [
+        "festival"
+      ],
+      "address": "Tijuana, Mexico",
+      "location": null,
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Tijuana Zine Fest is a large-scale",
+        "bilingual zine festival in downtown Tijuana that brings together DIY publishers",
+        "zinesters",
+        "and artists from both sides of the U.S.-Mexico border. Founded by Luisa Martinez and David Peña to create a space for local zinesters to network and present their work",
+        "the fest is held in reclaimed pasajes off Avenida Revolución—passageways once dominated by tourist curio shops and later transformed into cultural corridors of galleries",
+        "bookstores",
+        "and coffee shops after the height of drug-war violence. The event hosts well over a hundred independent publishers",
+        "alongside workshops",
+        "music",
+        "and art",
+        "creating a space for exchanging personal stories",
+        "political manifestos",
+        "and experimental visual work in both Spanish and English."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 49,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-tonone-bookstore",
+      "name": "Tonone Bookstore",
+      "kind": [
+        "bookstore"
+      ],
+      "address": "Vientiane, Laos",
+      "location": null,
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Tonone Bookstore (often written 'Tonone' or 'Tobay / Tonone Bookstore') is a small independent bookshop in Vientiane",
+        "Laos",
+        "located near That Luang and a local mini Big C at a three-way junction. Facebook activity shows them as a general bookstore carrying popular fiction",
+        "manga",
+        "and translated titles. Functions more as an indie general bookstore that might be open to DIY material rather than a dedicated distro."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 50,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-common-room-ph",
+      "name": "Common Room PH",
+      "kind": [
+        "distro"
+      ],
+      "address": "Philippines",
+      "location": null,
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Common Room PH is a Philippine collaborative space and retail platform for independent artists and makers",
+        "with multiple physical stores and an online presence that host locally made art",
+        "crafts",
+        "prints",
+        "and zines. They describe themselves as providing 'a home and a safe space for creatives to express themselves",
+        "support each other",
+        "grow together",
+        "and empower others to make with their hands",
+        "' and they actively highlight storytelling and community-building as part of their mission."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 51,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-baek",
+      "name": "BAEK",
+      "kind": [
+        "distro"
+      ],
+      "address": "South Africa",
+      "location": null,
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "BAEK is a South African independent 'baking zine' and art project created by fine artist and baker Alice Toich",
+        "described as 'somewhere between a recipe book",
+        "art publication and fashion shoot.' The full-colour zine is positioned as a 'decadent' object that merges high-end food styling",
+        "visual art",
+        "and editorial design",
+        "and issues are mailed directly to subscribers."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 52,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-sandwich-mixto",
+      "name": "Sandwich Mixto",
+      "kind": [
+        "bookstore"
+      ],
+      "address": "Calle Torrecilla del Leal 7, Madrid, Spain",
+      "location": null,
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "Sandwich Mixto is a Madrid shop dedicated to fanzines and self-published work",
+        "originally operating as a stall in the Antón Martín market before moving to a street-level space on Calle Torrecilla del Leal 7. Run by Virginia del Diego",
+        "the store specializes in fanzines and uses its expanded wall space for detailed exhibitions that explore the entire fanzine-making process",
+        "from concept and sketches through printing and all the 'glitches' involved."
+      ]
+    }
+  },
+  {
+    "model": "repositories.repository",
+    "pk": 53,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "repo_id": "r-space-bar-zine",
+      "name": "Space Bar Zine",
+      "kind": [
+        "distro"
+      ],
+      "address": "Bangkok, Thailand",
+      "location": null,
+      "access_policy": "",
+      "hours": "",
+      "notes": [
+        "SPACEBAR ZINE is an independent print and arts imprint under SPACEBAR Design Studio",
+        "based in Bangkok",
+        "Thailand. The project",
+        "incorporated in 2016",
+        "focuses on independent printings and arts and also maintains online media for Thai artists and interested audiences",
+        "positioning itself as part design studio",
+        "part small press."
+      ]
+    }
+  },
+  {
+    "model": "core.externalidentifier",
+    "pk": 1,
+    "fields": {
+      "created_at": "2026-02-24T19:51:17.666Z",
+      "updated_at": "2026-02-24T19:51:17.666Z",
+      "system": [
+        "marc_org"
+      ],
+      "agent": null,
+      "repository": [
+        "r-ohio-state-university-rare-books-manuscript-library"
+      ],
+      "value": "ohcourb"
+    }
+  },
+  {
+    "model": "core.externalidentifier",
+    "pk": 2,
+    "fields": {
+      "created_at": "2026-02-24T19:51:17.669Z",
+      "updated_at": "2026-02-24T19:51:17.669Z",
+      "system": [
+        "isil"
+      ],
+      "agent": null,
+      "repository": [
+        "r-ohio-state-university-rare-books-manuscript-library"
+      ],
+      "value": "US-ohcourb"
+    }
+  },
+  {
+    "model": "core.externaluri",
+    "pk": 2,
+    "fields": {
+      "created_at": "2026-02-24T19:51:17.644Z",
+      "updated_at": "2026-02-24T19:51:17.644Z",
+      "uri_type": [
+        "homepage"
+      ],
+      "agent": null,
+      "repository": [
+        "r-portland-button-works-and-zine-distro"
+      ],
+      "uri": "https://portlandbuttonworks.com/"
+    }
+  },
+  {
+    "model": "core.externaluri",
+    "pk": 3,
+    "fields": {
+      "created_at": "2026-02-24T19:51:17.646Z",
+      "updated_at": "2026-02-24T19:51:17.646Z",
+      "uri_type": [
+        "homepage"
+      ],
+      "agent": null,
+      "repository": [
+        "r-brown-recluse-zine-distro"
+      ],
+      "uri": "https://www.brownreclusezinedistro.com/"
+    }
+  },
+  {
+    "model": "core.externaluri",
+    "pk": 4,
+    "fields": {
+      "created_at": "2026-02-24T19:51:17.648Z",
+      "updated_at": "2026-02-24T19:51:17.648Z",
+      "uri_type": [
+        "homepage"
+      ],
+      "agent": null,
+      "repository": [
+        "r-antiquated-future"
+      ],
+      "uri": "https://www.antiquatedfuture.com"
+    }
+  },
+  {
+    "model": "core.externaluri",
+    "pk": 5,
+    "fields": {
+      "created_at": "2026-02-24T19:51:17.650Z",
+      "updated_at": "2026-02-24T19:51:17.650Z",
+      "uri_type": [
+        "homepage"
+      ],
+      "agent": null,
+      "repository": [
+        "r-the-word-distribution"
+      ],
+      "uri": "https://theworddistribution.com/"
+    }
+  },
+  {
+    "model": "core.externaluri",
+    "pk": 6,
+    "fields": {
+      "created_at": "2026-02-24T19:51:17.653Z",
+      "updated_at": "2026-02-24T19:51:17.653Z",
+      "uri_type": [
+        "homepage"
+      ],
+      "agent": null,
+      "repository": [
+        "r-silver-sproket"
+      ],
+      "uri": "https://www.silversprocket.net"
+    }
+  },
+  {
+    "model": "core.externaluri",
+    "pk": 7,
+    "fields": {
+      "created_at": "2026-02-24T19:51:17.655Z",
+      "updated_at": "2026-02-24T19:51:17.655Z",
+      "uri_type": [
+        "homepage"
+      ],
+      "agent": null,
+      "repository": [
+        "r-crapandemic"
+      ],
+      "uri": "http://crapandemic.storenvy.com"
+    }
+  },
+  {
+    "model": "core.externaluri",
+    "pk": 8,
+    "fields": {
+      "created_at": "2026-02-24T19:51:17.657Z",
+      "updated_at": "2026-02-24T19:51:17.657Z",
+      "uri_type": [
+        "homepage"
+      ],
+      "agent": null,
+      "repository": [
+        "r-wasted-ink-zine-distro"
+      ],
+      "uri": "https://www.wizd-az.com/"
+    }
+  },
+  {
+    "model": "core.externaluri",
+    "pk": 9,
+    "fields": {
+      "created_at": "2026-02-24T19:51:17.659Z",
+      "updated_at": "2026-02-24T19:51:17.659Z",
+      "uri_type": [
+        "homepage"
+      ],
+      "agent": null,
+      "repository": [
+        "r-pen-fight"
+      ],
+      "uri": "http://www.penfightdistro.com/"
+    }
+  },
+  {
+    "model": "core.externaluri",
+    "pk": 10,
+    "fields": {
+      "created_at": "2026-02-24T19:51:17.661Z",
+      "updated_at": "2026-02-24T19:51:17.661Z",
+      "uri_type": [
+        "homepage"
+      ],
+      "agent": null,
+      "repository": [
+        "r-take-care"
+      ],
+      "uri": "http://takecarezinedistro.com"
+    }
+  },
+  {
+    "model": "core.externaluri",
+    "pk": 11,
+    "fields": {
+      "created_at": "2026-02-24T19:51:17.663Z",
+      "updated_at": "2026-02-24T19:51:17.663Z",
+      "uri_type": [
+        "homepage"
+      ],
+      "agent": null,
+      "repository": [
+        "r-ohio-state-university-rare-books-manuscript-library"
+      ],
+      "uri": "https://library.osu.edu/rbml/featured-collections"
+    }
+  },
+  {
+    "model": "core.externaluri",
+    "pk": 12,
+    "fields": {
+      "created_at": "2026-02-24T19:51:17.671Z",
+      "updated_at": "2026-02-24T19:51:17.671Z",
+      "uri_type": [
+        "homepage"
+      ],
+      "agent": null,
+      "repository": [
+        "r-bus-stop-press"
+      ],
+      "uri": "https://busstoppress.weebly.com"
+    }
+  },
+  {
+    "model": "core.externaluri",
+    "pk": 13,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "uri_type": [
+        "instagram"
+      ],
+      "agent": null,
+      "repository": [
+        "r-archive-six"
+      ],
+      "uri": "https://www.instagram.com/archivesix/"
+    }
+  },
+  {
+    "model": "core.externaluri",
+    "pk": 14,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "uri_type": [
+        "instagram"
+      ],
+      "agent": null,
+      "repository": [
+        "r-darcy-crash-distro"
+      ],
+      "uri": "https://www.instagram.com/darcycrashdistro/"
+    }
+  },
+  {
+    "model": "core.externaluri",
+    "pk": 15,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "uri_type": [
+        "homepage"
+      ],
+      "agent": null,
+      "repository": [
+        "r-homie-house-press"
+      ],
+      "uri": "http://www.adrianastories.com/homiehousepress"
+    }
+  },
+  {
+    "model": "core.externaluri",
+    "pk": 16,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "uri_type": [
+        "homepage"
+      ],
+      "agent": null,
+      "repository": [
+        "r-last-gasp"
+      ],
+      "uri": "https://lastgasp.com"
+    }
+  },
+  {
+    "model": "core.externaluri",
+    "pk": 17,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "uri_type": [
+        "instagram"
+      ],
+      "agent": null,
+      "repository": [
+        "r-stranger-danger-zine-distro"
+      ],
+      "uri": "https://www.instagram.com/p/ByNlChcgc1V/"
+    }
+  },
+  {
+    "model": "core.externaluri",
+    "pk": 18,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "uri_type": [
+        "facebook"
+      ],
+      "agent": null,
+      "repository": [
+        "r-flywheel-arts-collective"
+      ],
+      "uri": "https://www.facebook.com/FlywheelZineFest/"
+    }
+  },
+  {
+    "model": "core.externaluri",
+    "pk": 19,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "uri_type": [
+        "homepage"
+      ],
+      "agent": null,
+      "repository": [
+        "r-microcosm-publishing"
+      ],
+      "uri": "https://microcosmpublishing.com"
+    }
+  },
+  {
+    "model": "core.externaluri",
+    "pk": 20,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "uri_type": [
+        "homepage"
+      ],
+      "agent": null,
+      "repository": [
+        "r-poopsheet-shop"
+      ],
+      "uri": "https://www.poopsheetfoundation.com"
+    }
+  },
+  {
+    "model": "core.externaluri",
+    "pk": 21,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "uri_type": [
+        "homepage"
+      ],
+      "agent": null,
+      "repository": [
+        "r-sticky-institute"
+      ],
+      "uri": "https://stickyinstitute.com"
+    }
+  },
+  {
+    "model": "core.externaluri",
+    "pk": 22,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "uri_type": [
+        "homepage"
+      ],
+      "agent": null,
+      "repository": [
+        "r-vampire-hag-distro"
+      ],
+      "uri": "https://vampirehag.neocities.org"
+    }
+  },
+  {
+    "model": "core.externaluri",
+    "pk": 23,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "uri_type": [
+        "homepage"
+      ],
+      "agent": null,
+      "repository": [
+        "r-queer-zine-archive-project"
+      ],
+      "uri": "https://www.qzap.org"
+    }
+  },
+  {
+    "model": "core.externaluri",
+    "pk": 24,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "uri_type": [
+        "homepage"
+      ],
+      "agent": null,
+      "repository": [
+        "r-black-mosquito"
+      ],
+      "uri": "https://black-mosquito.org/en"
+    }
+  },
+  {
+    "model": "core.externaluri",
+    "pk": 25,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "uri_type": [
+        "instagram"
+      ],
+      "agent": null,
+      "repository": [
+        "r-papiercafe"
+      ],
+      "uri": "https://www.instagram.com/papiercafe/"
+    }
+  },
+  {
+    "model": "core.externaluri",
+    "pk": 26,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "uri_type": [
+        "youtube"
+      ],
+      "agent": null,
+      "repository": [
+        "r-common-room-ph"
+      ],
+      "uri": "https://www.youtube.com/watch?v=u6x2SUT5dw4"
+    }
+  },
+  {
+    "model": "core.externaluri",
+    "pk": 27,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "uri_type": [
+        "homepage"
+      ],
+      "agent": null,
+      "repository": [
+        "r-space-bar-zine"
+      ],
+      "uri": "https://gospacebar.com/zine/"
+    }
+  },
+  {
+    "model": "core.externaluri",
+    "pk": 28,
+    "fields": {
+      "created_at": "2026-02-25T00:00:00.000Z",
+      "updated_at": "2026-02-25T00:00:00.000Z",
+      "uri_type": [
+        "instagram"
+      ],
+      "agent": null,
+      "repository": [
+        "r-eskaramuza-diy-distro"
+      ],
+      "uri": "https://www.instagram.com/eskaramuza_diy_distro/"
+    }
   }
-},
-{
-  "model": "repositories.repository",
-  "pk": 2,
-  "fields": {
-    "created_at": "2026-02-24T18:50:10.208Z",
-    "updated_at": "2026-02-24T18:50:10.208Z",
-    "repo_id": "r-portland-button-works-and-zine-distro",
-    "name": "Portland Button Works and Zine Distro",
-    "kind": [
-      "distro"
-    ],
-    "address": "PBW Zine Distro\r\n5307 N Minnesota Ave.\r\nPortland, Oregon 97217",
-    "location": [
-      5746545
-    ],
-    "access_policy": "",
-    "hours": "",
-    "notes": "[\"We are interested in zines that are based in DIY and punk ethics in regards to politics\", \"content\", \"production\", \"and pricing. In an effort to keep zines accessible we prefer zines that are $5 retail or less.\\r\\n\\r\\nKinds of zines we are interested in:\\r\\n-Perzines that fall into the “personal is political” with thoughtful narratives\", \"especially zines with interesting and creative design & layout that suits the writing.\\r\\n-Witchcraft zines that are not Wiccan and that are preferably secular witch friendly (also culturally sensitive\", \"non-appropriative\", \"historically accurate\", \"and do not express views of gender essentialism.)\\r\\n-Zines that cover a single issue that are well researched and explore unique topics and perspectives\\r\\n-Thoughtfully put together zines exploring self-care\\r\\n-Vegan cook zines\\r\\n-DIY project zines\\r\\n-Independently produced tarot and oracle decks\\r\\n\\r\\nKinds of zines that we are not particularly interested:\\r\\n-Comics (unless you consider it a zine and the focus is a topics listed above)\", \"Poetry\", \"Fiction\", \"Photo\", \"Art zines\", \"Chapbooks\\r\\nWe hope it goes without saying that are not interested in zines expressing views of racism\", \"sexism\", \"classism\", \"ableism\", \"homophobia\", \"transphobia\", \"religious intolerance\", \"ageism\", \"sizeism\", \"and all other forms of discrimination.\\r\\nIf you think your zine might be a good fit with us please send one actual physical copy for distro consideration (no digital files) to the address below with a note stating the retail price\", \"a short description of your zine\", \"and a way to contact you. If there is no note we will assume you are just randomly sending a zine and we will donate it to a zine library.\"]"
-  }
-},
-{
-  "model": "repositories.repository",
-  "pk": 3,
-  "fields": {
-    "created_at": "2026-02-24T18:51:23.945Z",
-    "updated_at": "2026-02-24T19:14:37.329Z",
-    "repo_id": "r-antiquated-future",
-    "name": "Antiquated Future",
-    "kind": [
-      "distro"
-    ],
-    "address": "P.O. Box 42081 Portland, OR 97211",
-    "location": [
-      5746545
-    ],
-    "access_policy": "",
-    "hours": "",
-    "notes": "[\"An eclectic zine distro\", \"tape label\", \"and online store of books\", \"records\", \"and handmade odds and ends out of Portland\", \"Oregon. We carry over 500 items at any given time\", \"and over 250 different zine titles.\\r\\n\\r\\nIn terms of zines\", \"we try to carry a wide range of zines\", \"while still maintaining a curated selection. Personal\", \"historical\", \"humor\", \"personal-as-political\", \"literary\", \"how-to\", \"and music are all zine genres we find ourselves especially drawn to. We also try to carry a range of zines in terms of cost and production quality—both simply designed\", \"affordable zines (that nod to the ’90s zine heyday we came up in) and high-production value art-focused zines and workbook zines that reflect where people have taken the zine format in recent years. We hope to offer a lot of entry points into falling in love with zines.\"]"
-  }
-},
-{
-  "model": "repositories.repository",
-  "pk": 4,
-  "fields": {
-    "created_at": "2026-02-24T19:15:48.026Z",
-    "updated_at": "2026-02-24T19:15:59.903Z",
-    "repo_id": "r-the-word-distribution",
-    "name": "The Word Distribution",
-    "kind": [
-      "distro"
-    ],
-    "address": "319 8th St., Apt 4R\r\nJersey City, NJ 07302",
-    "location": [
-      5099836
-    ],
-    "access_policy": "",
-    "hours": "",
-    "notes": "[\"Focusing on the lighter side of things – cats\", \"food\", \"sports\", \"music\", \"etc. Fully supportive of zine culture and all things zine related. DIY till you Die!\"]"
-  }
-},
-{
-  "model": "repositories.repository",
-  "pk": 5,
-  "fields": {
-    "created_at": "2026-02-24T19:16:51.212Z",
-    "updated_at": "2026-02-24T19:16:51.212Z",
-    "repo_id": "r-silver-sproket",
-    "name": "Silver Sproket",
-    "kind": [
-      "distro"
-    ],
-    "address": "1038 Valencia St, San Francisco, CA 94110",
-    "location": [
-      5391959
-    ],
-    "access_policy": "",
-    "hours": "",
-    "notes": "[\"Silver Sprocket is a radical indie publisher\", \"art-crew\", \"gallery\", \"and comic shop focused on indie comics and comic zines\", \"but we distro plenty of non-comic zines too whenever someone who works here gets excited about something.\\r\\n\\r\\nWe strive to build a better world without forgetting to have a good time.\"]"
-  }
-},
-{
-  "model": "repositories.repository",
-  "pk": 6,
-  "fields": {
-    "created_at": "2026-02-24T19:17:59.980Z",
-    "updated_at": "2026-02-24T19:17:59.980Z",
-    "repo_id": "r-crapandemic",
-    "name": "CRAPANDEMIC",
-    "kind": [
-      "distro"
-    ],
-    "address": "",
-    "location": [
-      5110629
-    ],
-    "access_policy": "",
-    "hours": "",
-    "notes": "[\"Cut-and-pastey\", \"text-heavy perzine/fanzine distro for mallgoths of the internet\", \"the darkly inclined\", \"and the goth-at-heart\", \"run out of the Midwest by julia eff & friends. Nothing over $6\", \"vast majority under $5\", \"with all items available on sliding scale pricing (just email/DM). We have patches & stickers & pins & stuff too. Submissions always open!\"]"
-  }
-},
-{
-  "model": "repositories.repository",
-  "pk": 7,
-  "fields": {
-    "created_at": "2026-02-24T19:18:50.116Z",
-    "updated_at": "2026-02-24T19:19:02.432Z",
-    "repo_id": "r-wasted-ink-zine-distro",
-    "name": "Wasted Ink Zine Distro",
-    "kind": [
-      "distro"
-    ],
-    "address": "The Hive – 2222 N 16th St, Phoenix, AZ 85006",
-    "location": [
-      5308655
-    ],
-    "access_policy": "",
-    "hours": "",
-    "notes": "[\"Founded by Charissa Lucille\", \"WIZD was born from a deficit of creative spaces that voice the self-expressions of our desert-dwelling community. We work to highlight zines from underrepresented communities such as the POC\", \"LGBTQIA\", \"and disabled folks. This has led to representing 200+ zine makers and their variety of works – from comics\", \"fan-zines\", \"per-zines\", \"poetry\", \"prose\", \"to postcards\", \"stickers\", \"and buttons.\"]"
-  }
-},
-{
-  "model": "repositories.repository",
-  "pk": 8,
-  "fields": {
-    "created_at": "2026-02-24T19:20:08.541Z",
-    "updated_at": "2026-02-24T19:23:21.801Z",
-    "repo_id": "r-take-care",
-    "name": "Take Care",
-    "kind": [
-      "distro"
-    ],
-    "address": "PO Box 4, Enmore NSW 2042, Australia",
-    "location": [
-      2155400
-    ],
-    "access_policy": "",
-    "hours": "",
-    "notes": "[\"Take Care was founded on 1 January 2010 by Tim and Emma\", \"in Eora (Sydney)\", \"Australia. We stock zines that we’ve made\", \"some by good friends and comrades\", \"and some that we just really like. We stock perzines\", \"experimental writing\", \"cut n paste\", \"free zines\", \"the occasional comic\", \"punk zines\", \"art zines\", \"travel zines and other zines that are conceptually\", \"technically or thematically interesting\", \"and that aren’t overpriced. We like zines that explore intersectional anti-capitalist/communist/anarchist politics\", \"DIY ethics\", \"uninstitutionalised art practices\", \"pop-culture and everyday life. We don’t currently have an open submission policy\", \"but if you think your zine might fit really well with our current roster please feel free to get in touch – no promises though; we’re just a little distro and don’t have heaps of time or space to keep loads of stock 🙂\"]"
-  }
-},
-{
-  "model": "repositories.repository",
-  "pk": 9,
-  "fields": {
-    "created_at": "2026-02-24T19:21:59.450Z",
-    "updated_at": "2026-02-24T19:26:52.290Z",
-    "repo_id": "r-bus-stop-press",
-    "name": "Bus Stop Press",
-    "kind": [
-      "distro"
-    ],
-    "address": "Giz c/o CIRA\r\n50, rue Consolat\r\n13001 Marseille\r\nFrance",
-    "location": [
-      2995469
-    ],
-    "access_policy": "",
-    "hours": "",
-    "notes": "[\"Publisher and distributor of pamphlets\", \"zines\", \"books\", \"tapes & records since 2010. Everything on a “pay what you want basis”. Punkpost is encouraged but we can work around that. Original zines include the Cheaptoys & Papercore series. The distro has a permanent kiosque at the CIRA-Marseille (International Center for Research on Anarchism).\"]"
-  }
-},
-{
-  "model": "repositories.repository",
-  "pk": 10,
-  "fields": {
-    "created_at": "2026-02-24T19:22:47.474Z",
-    "updated_at": "2026-02-24T19:22:47.474Z",
-    "repo_id": "r-pen-fight",
-    "name": "Pen Fight",
-    "kind": [
-      "distro"
-    ],
-    "address": "",
-    "location": [
-      2643123
-    ],
-    "access_policy": "",
-    "hours": "",
-    "notes": "[\"Pen Fight is a feminist and queer zine and bookshop and small press based out of Manchester\", \"UK. Independently run since 2015\", \"we sell zines\", \"radical books\", \"badges\", \"and other DIY and small-run art and craft.\\r\\n\\r\\nWe stock work on feminist and women’s rights\", \"disability and mental health\", \"food\", \"veganism\", \"gardening\", \"politics\", \"race\", \"class\", \"art\", \"friendship\", \"music\", \"fanzines\", \"and anything else with an ace DIY ethic.\\r\\n\\r\\nWe also operate a small press\", \"printing zine titles by women\", \"non-binary and LGBTQIA+ folks\", \"we want to amplify the voices and creative work of the marginalised and new artists and zinemakers.\"]"
-  }
-},
-{
-  "model": "repositories.repository",
-  "pk": 11,
-  "fields": {
-    "created_at": "2026-02-24T19:26:39.166Z",
-    "updated_at": "2026-02-24T19:26:39.166Z",
-    "repo_id": "r-ohio-state-university-rare-books-manuscript-library",
-    "name": "Ohio State University Rare Books & Manuscript Library",
-    "kind": [
-      "academic-library"
-    ],
-    "address": "Thompson Library\r\n1858 Neil Avenue Mall\r\nColumbus, Ohio 43210-1286",
-    "location": [
-      4509177
-    ],
-    "access_policy": "",
-    "hours": "",
-    "notes": "[]"
-  }
-},
-{
-  "model": "core.externalidentifier",
-  "pk": 1,
-  "fields": {
-    "created_at": "2026-02-24T19:51:17.666Z",
-    "updated_at": "2026-02-24T19:51:17.666Z",
-    "system": [
-      "marc_org"
-    ],
-    "agent": null,
-    "repository": [
-      "r-ohio-state-university-rare-books-manuscript-library"
-    ],
-    "value": "ohcourb"
-  }
-},
-{
-  "model": "core.externalidentifier",
-  "pk": 2,
-  "fields": {
-    "created_at": "2026-02-24T19:51:17.669Z",
-    "updated_at": "2026-02-24T19:51:17.669Z",
-    "system": [
-      "isil"
-    ],
-    "agent": null,
-    "repository": [
-      "r-ohio-state-university-rare-books-manuscript-library"
-    ],
-    "value": "US-ohcourb"
-  }
-},
-{
-  "model": "core.externaluri",
-  "pk": 2,
-  "fields": {
-    "created_at": "2026-02-24T19:51:17.644Z",
-    "updated_at": "2026-02-24T19:51:17.644Z",
-    "uri_type": [
-      "homepage"
-    ],
-    "agent": null,
-    "repository": [
-      "r-portland-button-works-and-zine-distro"
-    ],
-    "uri": "https://portlandbuttonworks.com/"
-  }
-},
-{
-  "model": "core.externaluri",
-  "pk": 3,
-  "fields": {
-    "created_at": "2026-02-24T19:51:17.646Z",
-    "updated_at": "2026-02-24T19:51:17.646Z",
-    "uri_type": [
-      "homepage"
-    ],
-    "agent": null,
-    "repository": [
-      "r-brown-recluse-zine-distro"
-    ],
-    "uri": "https://www.brownreclusezinedistro.com/"
-  }
-},
-{
-  "model": "core.externaluri",
-  "pk": 4,
-  "fields": {
-    "created_at": "2026-02-24T19:51:17.648Z",
-    "updated_at": "2026-02-24T19:51:17.648Z",
-    "uri_type": [
-      "homepage"
-    ],
-    "agent": null,
-    "repository": [
-      "r-antiquated-future"
-    ],
-    "uri": "https://www.antiquatedfuture.com"
-  }
-},
-{
-  "model": "core.externaluri",
-  "pk": 5,
-  "fields": {
-    "created_at": "2026-02-24T19:51:17.650Z",
-    "updated_at": "2026-02-24T19:51:17.650Z",
-    "uri_type": [
-      "homepage"
-    ],
-    "agent": null,
-    "repository": [
-      "r-the-word-distribution"
-    ],
-    "uri": "https://theworddistribution.com/"
-  }
-},
-{
-  "model": "core.externaluri",
-  "pk": 6,
-  "fields": {
-    "created_at": "2026-02-24T19:51:17.653Z",
-    "updated_at": "2026-02-24T19:51:17.653Z",
-    "uri_type": [
-      "homepage"
-    ],
-    "agent": null,
-    "repository": [
-      "r-silver-sproket"
-    ],
-    "uri": "https://www.silversprocket.net"
-  }
-},
-{
-  "model": "core.externaluri",
-  "pk": 7,
-  "fields": {
-    "created_at": "2026-02-24T19:51:17.655Z",
-    "updated_at": "2026-02-24T19:51:17.655Z",
-    "uri_type": [
-      "homepage"
-    ],
-    "agent": null,
-    "repository": [
-      "r-crapandemic"
-    ],
-    "uri": "http://crapandemic.storenvy.com"
-  }
-},
-{
-  "model": "core.externaluri",
-  "pk": 8,
-  "fields": {
-    "created_at": "2026-02-24T19:51:17.657Z",
-    "updated_at": "2026-02-24T19:51:17.657Z",
-    "uri_type": [
-      "homepage"
-    ],
-    "agent": null,
-    "repository": [
-      "r-wasted-ink-zine-distro"
-    ],
-    "uri": "https://www.wizd-az.com/"
-  }
-},
-{
-  "model": "core.externaluri",
-  "pk": 9,
-  "fields": {
-    "created_at": "2026-02-24T19:51:17.659Z",
-    "updated_at": "2026-02-24T19:51:17.659Z",
-    "uri_type": [
-      "homepage"
-    ],
-    "agent": null,
-    "repository": [
-      "r-pen-fight"
-    ],
-    "uri": "http://www.penfightdistro.com/"
-  }
-},
-{
-  "model": "core.externaluri",
-  "pk": 10,
-  "fields": {
-    "created_at": "2026-02-24T19:51:17.661Z",
-    "updated_at": "2026-02-24T19:51:17.661Z",
-    "uri_type": [
-      "homepage"
-    ],
-    "agent": null,
-    "repository": [
-      "r-take-care"
-    ],
-    "uri": "http://takecarezinedistro.com"
-  }
-},
-{
-  "model": "core.externaluri",
-  "pk": 11,
-  "fields": {
-    "created_at": "2026-02-24T19:51:17.663Z",
-    "updated_at": "2026-02-24T19:51:17.663Z",
-    "uri_type": [
-      "homepage"
-    ],
-    "agent": null,
-    "repository": [
-      "r-ohio-state-university-rare-books-manuscript-library"
-    ],
-    "uri": "https://library.osu.edu/rbml/featured-collections"
-  }
-},
-{
-  "model": "core.externaluri",
-  "pk": 12,
-  "fields": {
-    "created_at": "2026-02-24T19:51:17.671Z",
-    "updated_at": "2026-02-24T19:51:17.671Z",
-    "uri_type": [
-      "homepage"
-    ],
-    "agent": null,
-    "repository": [
-      "r-bus-stop-press"
-    ],
-    "uri": "https://busstoppress.weebly.com"
-  }
-}
 ]
