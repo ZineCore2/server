@@ -26,11 +26,11 @@ For migrations: `makemigrations <app>` then `migrate`.
 
 To load vocabularies: `load_vocabularies` (fetches from `zinecore.org/api/vocabularies/`).
 
+To load GeoNames geographic data: `load_geonames` (fetches from `download.geonames.org`). **Must run before** `load_vocabularies` — some vocabularies reference GeoPlace for authority_scope.
+
 To load ISO 639-1 language codes from Library of Congress: `load_languages` (fetches from `id.loc.gov`).
 
-To load ISO 3166-1 country codes from Library of Congress: `load_countries` (fetches from `id.loc.gov`).
-
-To load sample data: `loaddata data/fixtures.json`. **Must run after** `load_vocabularies`, `load_languages`, and `load_countries` — fixtures use natural foreign keys that reference vocabulary and geography records.
+To load sample data: `loaddata data/fixtures.json`. **Must run after** `load_geonames`, `load_vocabularies`, and `load_languages` — fixtures use natural foreign keys that reference vocabulary and geography records.
 
 ## Package Management
 
@@ -103,7 +103,13 @@ Each app follows the pattern: `models.py`, `serializers.py`, `views.py`, `urls.p
 
 ## Vocabulary Loading
 
-The `load_vocabularies` management command fetches controlled vocabularies from the zinecore.org API (`https://zinecore.org/api/vocabularies/{vocab}`). It loads: subjects, genres, rights_statements, agent_kinds, agent_roles, repo_kinds, holding_access_statuses, holding_distro_statuses, external_id_systems, and external_uri_types. Use `--local` to load from `spec/vocabularies/canonical/` instead. The `VOCAB_MAP` dict must stay aligned with the spec repo's `scripts/build-vocabularies.js` `DJANGO_MODELS` mapping.
+**Prerequisites:** Run `load_geonames` BEFORE `load_vocabularies`. Some vocabularies (e.g., `ExternalIdSystem`) have an `authority_scope` field that references `GeoPlace` country records.
+
+The `load_vocabularies` management command fetches controlled vocabularies from the zinecore.org API (`https://zinecore.org/api/vocabularies/{vocab}`). It loads: subjects, genres, rights_statements, agent_kinds, agent_roles, repo_kinds, holding_access_statuses, and holding_distro_statuses from the API.
+
+**Note:** The `external_id_systems` and `external_uri_types` vocabularies are not available from the API and must be loaded from local files using `--local --vocab external_id_systems` and `--local --vocab external_uri_types`. The onboarding script handles this automatically.
+
+Use `--local` to load from `spec/vocabularies/canonical/` instead of the API. The `VOCAB_MAP` dict must stay aligned with the spec repo's `scripts/build-vocabularies.js` `DJANGO_MODELS` mapping.
 
 The `load_languages` management command fetches ISO 639-1 language codes directly from the Library of Congress vocabulary API (`id.loc.gov/vocabulary/iso639-1.json`). Run with `--dry-run` to preview without saving. This is separate from the spec-based vocabularies since languages use an external authoritative source.
 

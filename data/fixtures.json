@@ -20,6 +20,26 @@
   }
 },
 {
+  "model": "agents.agent",
+  "pk": 2,
+  "fields": {
+    "created_at": "2026-02-25T04:37:18.034Z",
+    "updated_at": "2026-02-25T04:37:18.034Z",
+    "agent_id": "a-anonymous-queers",
+    "kind": [
+      "collective"
+    ],
+    "display_name": "Anonymous Queers",
+    "legal_name": null,
+    "aliases": "[]",
+    "location": [
+      6252001
+    ],
+    "public": true,
+    "notes": "[]"
+  }
+},
+{
   "model": "repositories.repository",
   "pk": 1,
   "fields": {
@@ -461,6 +481,205 @@
       "r-bus-stop-press"
     ],
     "uri": "https://busstoppress.weebly.com"
+  }
+},
+{
+  "model": "core.externaluri",
+  "pk": 13,
+  "fields": {
+    "created_at": "2026-02-25T04:37:18.038Z",
+    "updated_at": "2026-02-25T04:37:18.038Z",
+    "uri_type": [
+      "homepage"
+    ],
+    "agent": [
+      "a-anonymous-queers"
+    ],
+    "repository": null,
+    "uri": "https://anonymousqueers.org/"
+  }
+},
+{
+  "model": "catalog.zine",
+  "pk": 1,
+  "fields": {
+    "created_at": "2026-02-25T04:39:26.971Z",
+    "updated_at": "2026-02-25T04:41:17.862Z",
+    "zine_id": "z-queer-chaos-1",
+    "title": "Queer Chaos #1",
+    "series_title": "Queer Chaos",
+    "issue_designation": "1",
+    "edition_statement": "",
+    "alternative_title": "[]",
+    "abstract": "",
+    "table_of_contents": "",
+    "public_notes": "[]",
+    "publish_date": "2025-02-01",
+    "physical_dimensions": "",
+    "number_of_pages": "24",
+    "format": "PDF",
+    "binding_features": "",
+    "place_of_publication": [
+      5165418
+    ],
+    "coverage": "[]",
+    "source": "[]",
+    "relation": "[]",
+    "rights_statement": [
+      "cc-by"
+    ],
+    "identifier": "[]",
+    "subjects": [
+      [
+        "activism"
+      ],
+      [
+        "anti-fascism"
+      ],
+      [
+        "anti-racism"
+      ],
+      [
+        "gender-and-sexuality"
+      ],
+      [
+        "queer-history"
+      ],
+      [
+        "queer-politics"
+      ]
+    ],
+    "genres": [
+      [
+        "political-zine"
+      ]
+    ],
+    "languages": [
+      [
+        "en"
+      ]
+    ]
+  }
+},
+{
+  "model": "catalog.zine",
+  "pk": 2,
+  "fields": {
+    "created_at": "2026-02-25T04:43:44.166Z",
+    "updated_at": "2026-02-25T04:43:44.166Z",
+    "zine_id": "z-queer-chaos-2",
+    "title": "Queer Chaos #2",
+    "series_title": "Queer Chaos",
+    "issue_designation": "2",
+    "edition_statement": "",
+    "alternative_title": "[]",
+    "abstract": "",
+    "table_of_contents": "",
+    "public_notes": "[]",
+    "publish_date": "2025-08-15",
+    "physical_dimensions": "5.5 in x 8.5 in",
+    "number_of_pages": "24",
+    "format": "Offset, black ink; Hot pink cover card stock",
+    "binding_features": "Staple",
+    "place_of_publication": [
+      6252001
+    ],
+    "coverage": "[]",
+    "source": "[]",
+    "relation": "[]",
+    "rights_statement": null,
+    "identifier": "[]",
+    "subjects": [
+      [
+        "activism"
+      ],
+      [
+        "anti-fascism"
+      ],
+      [
+        "anti-racism"
+      ],
+      [
+        "gender-and-sexuality"
+      ],
+      [
+        "queer-history"
+      ],
+      [
+        "queer-politics"
+      ],
+      [
+        "race-and-racism"
+      ]
+    ],
+    "genres": [
+      [
+        "political-zine"
+      ]
+    ],
+    "languages": [
+      [
+        "en"
+      ]
+    ]
+  }
+},
+{
+  "model": "catalog.zinecreator",
+  "pk": 1,
+  "fields": {
+    "zine": [
+      "z-queer-chaos-1"
+    ],
+    "agent": [
+      "a-pink-rose-society"
+    ],
+    "order": 0
+  }
+},
+{
+  "model": "catalog.zinecreator",
+  "pk": 2,
+  "fields": {
+    "zine": [
+      "z-queer-chaos-2"
+    ],
+    "agent": [
+      "a-pink-rose-society"
+    ],
+    "order": 0
+  }
+},
+{
+  "model": "catalog.zinecontributor",
+  "pk": 1,
+  "fields": {
+    "zine": [
+      "z-queer-chaos-1"
+    ],
+    "agent": [
+      "a-anonymous-queers"
+    ],
+    "role": [
+      "editor"
+    ],
+    "order": 0
+  }
+},
+{
+  "model": "catalog.zinecontributor",
+  "pk": 2,
+  "fields": {
+    "zine": [
+      "z-queer-chaos-2"
+    ],
+    "agent": [
+      "a-anonymous-queers"
+    ],
+    "role": [
+      "editor"
+    ],
+    "order": 0
   }
 }
 ]

@@ -356,16 +356,16 @@ class OnboardingApp(App):
                 run=step_database,
             ),
             OnboardingStep(
+                name="Load GeoNames Places",
+                run=step_load_geonames,
+            ),
+            OnboardingStep(
                 name="Load Vocabularies",
                 run=step_load_vocabularies,
             ),
             OnboardingStep(
                 name="Load ISO 639-1 Languages",
                 run=step_load_languages,
-            ),
-            OnboardingStep(
-                name="Load GeoNames Places",
-                run=step_load_geonames,
             ),
             OnboardingStep(
                 name="Import Fixtures",
@@ -536,11 +536,26 @@ async def step_load_vocabularies(app: OnboardingApp, _user_said_yes: bool | None
     app.log_message("Fetching controlled vocabularies from zinecore.org API...")
     try:
         await app.run_command(f"{MANAGE_PY} load_vocabularies")
+    except RuntimeError:
+        app.log_message(
+            "[yellow]Warning: Some vocabularies failed to fetch from API[/yellow]"
+        )
+
+    # Load external_id_systems and external_uri_types from local files
+    # (these are not available from the zinecore.org API)
+    app.log_message("Loading external identifier and URI vocabularies from local files...")
+    try:
+        await app.run_command(
+            f"{MANAGE_PY} load_vocabularies --local --vocab external_id_systems"
+        )
+        await app.run_command(
+            f"{MANAGE_PY} load_vocabularies --local --vocab external_uri_types"
+        )
         app.log_message("[green]\u2713 Vocabularies loaded[/green]")
     except RuntimeError:
         app.log_message(
-            "[yellow]Warning: Failed to fetch vocabularies from zinecore.org. "
-            "You can retry later with: ./manage.py load_vocabularies[/yellow]"
+            "[yellow]Warning: Failed to load local vocabularies. "
+            "You can retry later with: ./manage.py load_vocabularies --local[/yellow]"
         )
         for s in app.steps:
             if s.name == "Load Vocabularies":
