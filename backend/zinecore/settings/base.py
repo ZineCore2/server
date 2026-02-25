@@ -232,6 +232,7 @@ REST_FRAMEWORK = {
         "core.renderers.MARCXMLRenderer",
         "rest_framework.renderers.BrowsableAPIRenderer",
     ],
+    "DEFAULT_CONTENT_NEGOTIATION_CLASS": "core.negotiation.FormatOverrideNegotiation",
     "DEFAULT_AUTHENTICATION_CLASSES": [
         "rest_framework.authentication.SessionAuthentication",
         "rest_framework.authentication.TokenAuthentication",
