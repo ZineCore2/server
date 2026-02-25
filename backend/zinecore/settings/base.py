@@ -227,6 +227,9 @@ REST_FRAMEWORK = {
         "core.renderers.JSONLDRenderer",
         "core.renderers.CSVRenderer",
         "core.renderers.DublinCoreXMLRenderer",
+        "core.renderers.BibTeXRenderer",
+        "core.renderers.TurtleRenderer",
+        "core.renderers.MARCXMLRenderer",
         "rest_framework.renderers.BrowsableAPIRenderer",
     ],
     "DEFAULT_AUTHENTICATION_CLASSES": [
