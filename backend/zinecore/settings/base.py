@@ -250,8 +250,37 @@ REST_FRAMEWORK = {
 
 SPECTACULAR_SETTINGS = {
     "TITLE": "ZineCore2 API",
-    "DESCRIPTION": "REST API for the ZineCore2 metadata specification",
+    "DESCRIPTION": (
+        "REST API implementing the four ZineCore2 metadata profiles: "
+        "**ZineCore2** (zines), **AgentCore2** (people & organizations), "
+        "**RepoCore2** (repositories), and **HoldingCore2** (holdings).\n\n"
+        "## Authentication\n"
+        "Read endpoints are public. Write endpoints require token or session authentication.\n\n"
+        "## Output Formats\n"
+        "Use the `?format=` query parameter or `Accept` header to request alternate formats:\n\n"
+        "| Format | `?format=` | `Accept` header |\n"
+        "|--------|-----------|----------------|\n"
+        "| JSON | `json` | `application/json` |\n"
+        "| JSON-LD | `jsonld` | `application/ld+json` |\n"
+        "| CSV | `csv` | `text/csv` |\n"
+        "| Dublin Core XML | `dc-xml` | `application/xml` |\n"
+        "| RDF/Turtle | `turtle` | `text/turtle` |\n"
+        "| BibTeX | `bibtex` | `application/x-bibtex` |\n"
+        "| MARCXML | `marcxml` | `application/marcxml+xml` |\n\n"
+        "BibTeX is available on `/api/zines/` only. "
+        "MARCXML is available on `/api/zines/` and `/api/holdings/`."
+    ),
     "VERSION": "2.0.0",
+    "COMPONENT_SPLIT_REQUEST": True,
+    "SORT_OPERATIONS": False,
+    "TAGS": [
+        {"name": "Zines", "description": "ZineCore2 profile — bibliographic zine records."},
+        {"name": "Agents", "description": "AgentCore2 profile — people and organizations."},
+        {"name": "Repositories", "description": "RepoCore2 profile — physical and digital collections."},
+        {"name": "Holdings", "description": "HoldingCore2 profile — links between zines and repositories."},
+        {"name": "Vocabularies", "description": "Read-only controlled vocabulary endpoints."},
+        {"name": "Geography", "description": "GeoNames-based geographic place lookups."},
+    ],
 }
 
 # Path to canonical vocabulary JSON files

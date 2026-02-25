@@ -1,3 +1,4 @@
+from drf_spectacular.utils import extend_schema_field
 from rest_framework import serializers
 
 from agents.serializers import AgentSerializer, AgentRoleSerializer
@@ -128,33 +129,40 @@ class ZineSerializer(serializers.ModelSerializer):
         ]
         read_only_fields = ["created_at", "updated_at"]
 
+    @extend_schema_field(serializers.ListField(child=serializers.CharField()))
     def get_subject(self, obj):
         return list(obj.subjects.values_list("label", flat=True))
 
+    @extend_schema_field(serializers.ListField(child=serializers.CharField()))
     def get_genre(self, obj):
         return list(obj.genres.values_list("label", flat=True))
 
+    @extend_schema_field(serializers.ListField(child=serializers.CharField()))
     def get_language(self, obj):
         return list(obj.languages.values_list("code", flat=True))
 
+    @extend_schema_field(serializers.ListField(child=serializers.CharField()))
     def get_creator(self, obj):
         return [
             zc.agent.display_name
             for zc in obj.zinecreator_set.all().order_by("order")
         ]
 
+    @extend_schema_field(serializers.ListField(child=serializers.CharField()))
     def get_contributor(self, obj):
         return [
             zc.agent.display_name
             for zc in obj.zinecontributor_set.all().order_by("order")
         ]
 
+    @extend_schema_field(serializers.ListField(child=serializers.CharField()))
     def get_publisher(self, obj):
         return [
             zp.agent.display_name
             for zp in obj.zinepublisher_set.all().order_by("order")
         ]
 
+    @extend_schema_field(serializers.ListField(child=serializers.CharField()))
     def get_rights(self, obj):
         if obj.rights_statement:
             return [obj.rights_statement.label]

@@ -1,3 +1,4 @@
+from drf_spectacular.utils import extend_schema_field
 from rest_framework import serializers
 
 from .models import GeoPlace
@@ -58,6 +59,7 @@ class GeoPlaceDetailSerializer(GeoPlaceSerializer):
     class Meta(GeoPlaceSerializer.Meta):
         fields = [*GeoPlaceSerializer.Meta.fields, "ancestors"]
 
+    @extend_schema_field(GeoPlaceAncestorSerializer(many=True))
     def get_ancestors(self, obj):
         chain = obj.ancestor_chain()
         return GeoPlaceAncestorSerializer(chain[1:], many=True).data
