@@ -372,6 +372,10 @@ class OnboardingApp(App):
                 run=step_import_fixture_data,
             ),
             OnboardingStep(
+                name="Import Custom Fixtures",
+                run=step_import_custom_data,
+            ), 
+            OnboardingStep(
                 name="Create Superuser",
                 run=step_create_superuser,
             ),
@@ -608,6 +612,21 @@ async def step_import_fixture_data(app: OnboardingApp, _user_said_yes: bool | No
     app.log_message("Loading sample data (agents, repos, zines, holdings)...")
     await app.run_command(f"{MANAGE_PY} loaddata data/fixtures.json")
     app.log_message("[green]\u2713 Sample data loaded[/green]")
+
+
+async def step_import_custom_data(app: OnboardingApp, _user_said_yes: bool | None) -> None:
+    data_file = PROJECT_ROOT / "data" / "custom.json"
+    if not data_file.exists():
+        app.log_message("[yellow]data/custom.json not found, skipping[/yellow]")
+        for s in app.steps:
+            if s.name == "Import Custom Fixtures":
+                s.status = StepStatus.SKIPPED
+                break
+        return
+
+    app.log_message("Loading custom data (agents, repos, zines, holdings)...")
+    await app.run_command(f"{MANAGE_PY} loaddata data/custom.json")
+    app.log_message("[green]\u2713 Custom data loaded[/green]")
 
 
 async def step_create_superuser(app: OnboardingApp, _user_said_yes: bool | None) -> None:

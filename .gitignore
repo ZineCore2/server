@@ -6,6 +6,9 @@ __pycache__/
 dist/
 build/
 
+# Don't save custom data.
+data/custom.json
+
 # Virtual environment
 .venv/
 
