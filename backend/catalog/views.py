@@ -1,6 +1,7 @@
 from rest_framework import viewsets
 
 from core.mixins import CSVPaginationBypassMixin
+from core.renderers import BibTeXRenderer, MARCXMLRenderer
 
 from .models import Genre, Language, RightsStatement, Subject, Zine
 from .serializers import (
@@ -21,6 +22,9 @@ class ZineViewSet(CSVPaginationBypassMixin, viewsets.ModelViewSet):
     ordering_fields = ["title", "created_at", "updated_at"]
     ordering = ["-created_at"]
     lookup_field = "zine_id"
+
+    def get_renderers(self):
+        return super().get_renderers() + [BibTeXRenderer(), MARCXMLRenderer()]
 
     def get_serializer_class(self):
         if self.action in ("create", "update", "partial_update"):

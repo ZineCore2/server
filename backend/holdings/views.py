@@ -1,6 +1,7 @@
 from rest_framework import viewsets
 
 from core.mixins import CSVPaginationBypassMixin
+from core.renderers import MARCXMLRenderer
 
 from .models import AccessStatus, DistroStatus, Holding
 from .serializers import (
@@ -16,6 +17,9 @@ class HoldingViewSet(CSVPaginationBypassMixin, viewsets.ModelViewSet):
     search_fields = ["call_number", "barcode"]
     ordering_fields = ["created_at", "updated_at"]
     ordering = ["-created_at"]
+
+    def get_renderers(self):
+        return super().get_renderers() + [MARCXMLRenderer()]
 
     def get_serializer_class(self):
         if self.action in ("create", "update", "partial_update"):
