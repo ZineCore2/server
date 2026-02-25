@@ -1,10 +1,12 @@
 from rest_framework import viewsets
 
+from core.mixins import CSVPaginationBypassMixin
+
 from .models import RepoKind, Repository
 from .serializers import RepoKindSerializer, RepositorySerializer, RepositoryWriteSerializer
 
 
-class RepositoryViewSet(viewsets.ModelViewSet):
+class RepositoryViewSet(CSVPaginationBypassMixin, viewsets.ModelViewSet):
     queryset = Repository.objects.select_related("location", "kind").prefetch_related(
         "external_ids__system", "external_uris__uri_type"
     ).all()

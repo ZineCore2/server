@@ -1,5 +1,7 @@
 from rest_framework import viewsets
 
+from core.mixins import CSVPaginationBypassMixin
+
 from .models import AccessStatus, DistroStatus, Holding
 from .serializers import (
     AccessStatusSerializer,
@@ -9,7 +11,7 @@ from .serializers import (
 )
 
 
-class HoldingViewSet(viewsets.ModelViewSet):
+class HoldingViewSet(CSVPaginationBypassMixin, viewsets.ModelViewSet):
     queryset = Holding.objects.select_related("repository", "zine").all()
     search_fields = ["call_number", "barcode"]
     ordering_fields = ["created_at", "updated_at"]

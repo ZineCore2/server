@@ -1,5 +1,7 @@
 from rest_framework import viewsets
 
+from core.mixins import CSVPaginationBypassMixin
+
 from .models import Agent, AgentKind, AgentRole
 from .serializers import (
     AgentKindSerializer,
@@ -9,7 +11,7 @@ from .serializers import (
 )
 
 
-class AgentViewSet(viewsets.ModelViewSet):
+class AgentViewSet(CSVPaginationBypassMixin, viewsets.ModelViewSet):
     queryset = Agent.objects.select_related("kind", "location").prefetch_related(
         "external_ids__system", "external_uris__uri_type"
     ).all()

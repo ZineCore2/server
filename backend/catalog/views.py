@@ -1,5 +1,7 @@
 from rest_framework import viewsets
 
+from core.mixins import CSVPaginationBypassMixin
+
 from .models import Genre, Language, RightsStatement, Subject, Zine
 from .serializers import (
     GenreSerializer,
@@ -11,7 +13,7 @@ from .serializers import (
 )
 
 
-class ZineViewSet(viewsets.ModelViewSet):
+class ZineViewSet(CSVPaginationBypassMixin, viewsets.ModelViewSet):
     queryset = Zine.objects.select_related(
         "place_of_publication", "rights_statement"
     ).prefetch_related("subjects", "genres").all()
