@@ -52,6 +52,10 @@ class AgentSerializer(serializers.ModelSerializer):
 
 class AgentWriteSerializer(serializers.ModelSerializer):
     id = serializers.CharField(source="agent_id", required=False)
+    kind = serializers.SlugRelatedField(
+        slug_field="code",
+        queryset=AgentKind.objects.all(),
+    )
     location_geoname_id = serializers.IntegerField(
         write_only=True, required=False, allow_null=True
     )

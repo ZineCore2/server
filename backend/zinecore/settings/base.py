@@ -160,6 +160,18 @@ UNFOLD = {
                     },
                 ],
             },
+            {
+                "title": "Data Management",
+                "separator": True,
+                "collapsible": True,
+                "items": [
+                    {
+                        "title": "Import JSON",
+                        "icon": "upload",
+                        "link": "/admin/import-json/",
+                    },
+                ],
+            },
         ],
     },
     "SITE_DROPDOWN": [

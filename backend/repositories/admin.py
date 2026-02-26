@@ -9,7 +9,7 @@ from .models import RepoKind, Repository
 
 @admin.register(Repository)
 class RepositoryAdmin(ModelAdmin):
-    list_display = ["repo_id", "name", "kind", "location", "created_at"]
+    list_display = ["name", "kind", "full_location_display", "location_level"]
     list_filter = ["kind"]
     search_fields = ["repo_id", "name", "location__name"]
     autocomplete_fields = ["kind", "location"]
@@ -32,6 +32,20 @@ class RepositoryAdmin(ModelAdmin):
             "fields": ["created_at", "updated_at"],
         }),
     ]
+
+    @admin.display(description="Location", ordering="location__name")
+    def full_location_display(self, obj):
+        """Display full geographic hierarchy for location."""
+        if obj.location:
+            return obj.location.full_display_name
+        return "-"
+
+    @admin.display(description="Level", ordering="location__feature_code")
+    def location_level(self, obj):
+        """Display geographic level of location."""
+        if obj.location:
+            return obj.location.level
+        return "-"
 
 
 @admin.register(RepoKind)

@@ -75,13 +75,7 @@ class GeoPlace(models.Model):
         return (self.geoname_id,)
 
     def __str__(self):
-        if self.feature_code == "PCLI":
-            return self.name
-        elif self.feature_code == "ADM1":
-            return f"{self.name}, {self.country_code}"
-        elif self.parent:
-            return f"{self.name}, {self.parent.name}"
-        return f"{self.name}, {self.country_code}"
+        return f"{self.full_display_name} ({self.level})"
 
     @property
     def level(self):
@@ -99,3 +93,12 @@ class GeoPlace(models.Model):
             current = current.parent
             chain.append(current)
         return chain
+
+    @property
+    def full_display_name(self):
+        """Return full hierarchical name (e.g., 'Middletown, Ohio, USA')."""
+        chain = self.ancestor_chain()
+        # Reverse to get root-first order, then reverse back for display
+        # We want to show from specific to general: city, state, country
+        names = [place.name for place in chain]
+        return ", ".join(names)

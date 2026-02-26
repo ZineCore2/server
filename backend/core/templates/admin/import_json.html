@@ -1,0 +1,134 @@
+{% extends "admin/base_site.html" %}
+{% load i18n static %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+    <a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
+    &rsaquo; {% trans 'Import JSON Data' %}
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="max-w-7xl">
+    <h1 class="text-2xl font-bold mb-4">{% trans 'Import JSON Data' %}</h1>
+
+    <p class="mb-6 text-gray-600 dark:text-gray-400">
+        Upload JSON data conforming to ZineCore2, AgentCore2, RepoCore2, or HoldingCore2 schemas.
+        You can paste a single object or an array of objects.
+    </p>
+
+    <form method="post" class="space-y-6">
+        {% csrf_token %}
+
+        <div class="form-group">
+            <label for="{{ form.json_data.id_for_label }}" class="block font-medium mb-2">
+                {{ form.json_data.label }}
+            </label>
+            {{ form.json_data }}
+            {% if form.json_data.help_text %}
+                <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">{{ form.json_data.help_text }}</p>
+            {% endif %}
+            {% if form.json_data.errors %}
+                <div class="text-red-600 mt-1">{{ form.json_data.errors }}</div>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            <label for="{{ form.schema_type.id_for_label }}" class="block font-medium mb-2">
+                {{ form.schema_type.label }}
+            </label>
+            {{ form.schema_type }}
+            {% if form.schema_type.help_text %}
+                <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">{{ form.schema_type.help_text }}</p>
+            {% endif %}
+        </div>
+
+        <div class="space-y-2">
+            <div class="flex items-center">
+                {{ form.atomic_import }}
+                <label for="{{ form.atomic_import.id_for_label }}" class="ml-2">
+                    {{ form.atomic_import.label }}
+                </label>
+            </div>
+            {% if form.atomic_import.help_text %}
+                <p class="text-sm text-gray-500 dark:text-gray-400 ml-6">{{ form.atomic_import.help_text }}</p>
+            {% endif %}
+        </div>
+
+        <div class="space-y-2">
+            <div class="flex items-center">
+                {{ form.validate_only }}
+                <label for="{{ form.validate_only.id_for_label }}" class="ml-2">
+                    {{ form.validate_only.label }}
+                </label>
+            </div>
+            {% if form.validate_only.help_text %}
+                <p class="text-sm text-gray-500 dark:text-gray-400 ml-6">{{ form.validate_only.help_text }}</p>
+            {% endif %}
+        </div>
+
+        <div class="flex gap-2">
+            <button type="submit" class="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded">
+                {% trans 'Process Import' %}
+            </button>
+        </div>
+    </form>
+
+    {% if result %}
+    <div class="mt-8 space-y-4">
+        <h2 class="text-xl font-bold">{% trans 'Import Results' %}</h2>
+
+        <div class="p-4 rounded {% if result.is_successful %}bg-green-50 border-l-4 border-green-500{% elif result.has_errors %}{% if result.successful > 0 %}bg-yellow-50 border-l-4 border-yellow-500{% else %}bg-red-50 border-l-4 border-red-500{% endif %}{% endif %}">
+            <div class="space-y-2">
+                <p><strong>Total Records:</strong> {{ result.total_records }}</p>
+                <p><strong>Successful:</strong> {{ result.successful }}</p>
+                <p><strong>Failed:</strong> {{ result.failed }}</p>
+            </div>
+
+            {% if not validate_only %}
+                {% if result.created_ids %}
+                <div class="mt-4">
+                    <h4 class="font-medium mb-2">Created ({{ result.created_ids|length }}):</h4>
+                    <div class="flex flex-wrap gap-2">
+                        {% for id in result.created_ids %}
+                            <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 rounded text-sm font-mono">{{ id }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+
+                {% if result.updated_ids %}
+                <div class="mt-4">
+                    <h4 class="font-medium mb-2">Updated ({{ result.updated_ids|length }}):</h4>
+                    <div class="flex flex-wrap gap-2">
+                        {% for id in result.updated_ids %}
+                            <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 rounded text-sm font-mono">{{ id }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+            {% endif %}
+        </div>
+
+        {% if result.errors %}
+        <div class="space-y-2">
+            <h3 class="text-lg font-bold">Errors ({{ result.errors|length }})</h3>
+            {% for error in result.errors %}
+            <div class="p-3 bg-red-50 dark:bg-red-900 border-l-4 border-red-500 rounded">
+                <div class="font-medium text-sm text-red-800 dark:text-red-200 uppercase">
+                    {{ error.error_type }} Error
+                </div>
+                <div class="text-sm mt-1">
+                    <strong>Record #{{ error.record_index }}</strong>
+                    {% if error.record_id %}(ID: {{ error.record_id }}){% endif %}
+                    {% if error.field %} - Field: {{ error.field }}{% endif %}
+                </div>
+                <div class="text-sm mt-1">{{ error.message }}</div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

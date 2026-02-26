@@ -13,6 +13,7 @@ dependencies = [
     "requests",
     "werkzeug>=3.1.6",
     "django-extensions>=4.1",
+    "jsonschema>=4.0",
 ]
 
 [dependency-groups]

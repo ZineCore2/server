@@ -46,6 +46,10 @@ class RepositorySerializer(serializers.ModelSerializer):
 
 class RepositoryWriteSerializer(serializers.ModelSerializer):
     id = serializers.CharField(source="repo_id", required=False)
+    kind = serializers.SlugRelatedField(
+        slug_field="code",
+        queryset=RepoKind.objects.all(),
+    )
     location_geoname_id = serializers.IntegerField(
         write_only=True, required=False, allow_null=True
     )

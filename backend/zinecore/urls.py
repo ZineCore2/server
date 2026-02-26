@@ -3,7 +3,10 @@ from django.urls import include, path
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 from rest_framework.authtoken.views import obtain_auth_token
 
+from core.admin_views import ImportJSONView
+
 urlpatterns = [
+    path("admin/import-json/", ImportJSONView.as_view(), name="import_json"),
     path("admin/", admin.site.urls),
     path("api/", include("catalog.urls")),
     path("api/", include("agents.urls")),
