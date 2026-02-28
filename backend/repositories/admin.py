@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
 from unfold.admin import ModelAdmin
+from unfold.contrib.filters.admin import RelatedDropdownFilter
 
 from core.admin import ExternalIdentifierInline, ExternalUriInline
 
@@ -9,8 +10,13 @@ from .models import RepoKind, Repository
 
 @admin.register(Repository)
 class RepositoryAdmin(ModelAdmin):
-    list_display = ["name", "kind", "full_location_display", "location_level"]
-    list_filter = ["kind"]
+    list_display = ["name", "kind", "is_active", "submission_allowed", "full_location_display",]
+    list_filter = [
+        ("kind", RelatedDropdownFilter),
+        "is_active",
+        "submission_allowed",
+    ]
+    list_filter_submit = True
     search_fields = ["repo_id", "name", "location__name"]
     autocomplete_fields = ["kind", "location"]
     readonly_fields = ["repo_id", "created_at", "updated_at"]
@@ -25,6 +31,13 @@ class RepositoryAdmin(ModelAdmin):
             "classes": ["tab"],
             "fields": [
                 ("access_policy", "hours", "notes")
+            ],
+        }),
+        (_("Status & Submission"), {
+            "classes": ["tab"],
+            "fields": [
+                "is_active",
+                ("submission_allowed", "submission_notes"),
             ],
         }),
         (_("System"), {

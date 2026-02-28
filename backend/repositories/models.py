@@ -53,6 +53,11 @@ class Repository(TimestampedModel):
         blank=True,
         default=list,
     )
+    
+    is_active = models.BooleanField(default=True)
+    
+    submission_allowed = models.BooleanField(default=False)
+    submission_notes = models.TextField(blank=True)
 
     objects = RepositoryManager()
 
