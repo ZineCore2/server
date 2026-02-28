@@ -1,0 +1,116 @@
+{
+  "id": "external_uri_types",
+  "title": "External URI Types",
+  "description": "Controlled vocabulary of external URI types for categorizing web links associated with agents and repositories.",
+  "namespace": "https://zinecore.org/vocab/external-uri-types/",
+  "terms": [
+    {
+      "code": "homepage",
+      "label": "Homepage",
+      "category": "web",
+      "icon": "home"
+    },
+    {
+      "code": "catalog",
+      "label": "Online Catalog",
+      "category": "web",
+      "icon": "menu_book"
+    },
+    {
+      "code": "blog",
+      "label": "Blog",
+      "category": "web",
+      "icon": "article"
+    },
+    {
+      "code": "donate",
+      "label": "Donate / Support",
+      "category": "web",
+      "icon": "volunteer_activism"
+    },
+    {
+      "code": "twitter",
+      "label": "X / Twitter",
+      "category": "social",
+      "base_uri": "https://x.com/"
+    },
+    {
+      "code": "instagram",
+      "label": "Instagram",
+      "category": "social",
+      "base_uri": "https://instagram.com/"
+    },
+    {
+      "code": "facebook",
+      "label": "Facebook",
+      "category": "social",
+      "base_uri": "https://facebook.com/"
+    },
+    {
+      "code": "mastodon",
+      "label": "Mastodon",
+      "category": "social"
+    },
+    {
+      "code": "bluesky",
+      "label": "Bluesky",
+      "category": "social",
+      "base_uri": "https://bsky.app/profile/"
+    },
+    {
+      "code": "tumblr",
+      "label": "Tumblr",
+      "category": "social",
+      "base_uri": "https://tumblr.com/"
+    },
+    {
+      "code": "youtube",
+      "label": "YouTube",
+      "category": "social",
+      "base_uri": "https://youtube.com/"
+    },
+    {
+      "code": "bandcamp",
+      "label": "Bandcamp",
+      "category": "social"
+    },
+    {
+      "code": "linktree",
+      "label": "Linktree",
+      "category": "social",
+      "base_uri": "https://linktr.ee/"
+    },
+    {
+      "code": "github",
+      "label": "GitHub",
+      "category": "tech",
+      "base_uri": "https://github.com/"
+    },
+    {
+      "code": "gitlab",
+      "label": "GitLab",
+      "category": "tech",
+      "base_uri": "https://gitlab.com/"
+    },
+    {
+      "code": "opac",
+      "label": "OPAC",
+      "category": "tech"
+    },
+    {
+      "code": "oai_pmh",
+      "label": "OAI-PMH Endpoint",
+      "category": "tech"
+    },
+    {
+      "code": "sru",
+      "label": "SRU/SRW Endpoint",
+      "category": "tech"
+    },
+    {
+      "code": "api",
+      "label": "API Endpoint",
+      "category": "tech"
+    }
+  ]
+}

@@ -1,45 +1,5 @@
 [
 {
-  "model": "agents.agent",
-  "pk": 1,
-  "fields": {
-    "created_at": "2026-02-24T19:27:27.741Z",
-    "updated_at": "2026-02-24T19:27:27.741Z",
-    "agent_id": "a-pink-rose-society",
-    "kind": [
-      "collective"
-    ],
-    "display_name": "Pink Rose Society",
-    "legal_name": null,
-    "aliases": "[]",
-    "location": [
-      6252001
-    ],
-    "public": true,
-    "notes": "[]"
-  }
-},
-{
-  "model": "agents.agent",
-  "pk": 2,
-  "fields": {
-    "created_at": "2026-02-25T04:37:18.034Z",
-    "updated_at": "2026-02-25T04:37:18.034Z",
-    "agent_id": "a-anonymous-queers",
-    "kind": [
-      "collective"
-    ],
-    "display_name": "Anonymous Queers",
-    "legal_name": null,
-    "aliases": "[]",
-    "location": [
-      6252001
-    ],
-    "public": true,
-    "notes": "[]"
-  }
-},
-{
   "model": "repositories.repository",
   "pk": 1,
   "fields": {
@@ -56,7 +16,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"Brown Recluse Zine Distro was created to support and center zines written predominantly by POC folks of all identities. This project was born out of passion for zines and frustration at the lack of representation and meaningful zine material for People of Color. I scoured through zine distros with a fine tooth comb and found that just like everywhere else in the dominant culture there was a serious lack of material written by POC folks in these distros. This is not because there is a lack of zines written by People of Color\", \"because there are hundreds of self-published works written by People of Color. My personal zine collection is full of POC zines and zines that are of interest to us.\\\\r\\\\n\\\\r\\\\nSo after many years of reading zines\", \"writing zines and observing zine culture I decided to start a zine distro that centers our voices and presents our large contribution to zine and DIY culture. BRZD is dedicated to our struggles\", \"our projects and our zines. Brown Recluse Zine Distro was born in the spirit of visibility and in the spirit of celebrating our cultures and inter-sectionality. BRZD exists to strengthen our ties and highlight out inter-sectional relateable experiences. BRZD is here to offer a place to locate POC zines without spending hours browsing the internet.\"]"
+    "notes": "[\"Brown Recluse Zine Distro was created to support and center zines written predominantly by POC folks of all identities. This project was born out of passion for zines and frustration at the lack of representation and meaningful zine material for People of Color. I scoured through zine distros with a fine tooth comb and found that just like everywhere else in the dominant culture there was a serious lack of material written by POC folks in these distros. This is not because there is a lack of zines written by People of Color\", \"because there are hundreds of self-published works written by People of Color. My personal zine collection is full of POC zines and zines that are of interest to us.\\\\r\\\\n\\\\r\\\\nSo after many years of reading zines\", \"writing zines and observing zine culture I decided to start a zine distro that centers our voices and presents our large contribution to zine and DIY culture. BRZD is dedicated to our struggles\", \"our projects and our zines. Brown Recluse Zine Distro was born in the spirit of visibility and in the spirit of celebrating our cultures and inter-sectionality. BRZD exists to strengthen our ties and highlight out inter-sectional relateable experiences. BRZD is here to offer a place to locate POC zines without spending hours browsing the internet.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -76,7 +39,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"\\\"We are interested in zines that are based in DIY and punk ethics in regards to politics\\\"\", \"\\\"content\\\"\", \"\\\"production\\\"\", \"\\\"and pricing. In an effort to keep zines accessible we prefer zines that are $5 retail or less.\\\\\\\\r\\\\\\\\n\\\\\\\\r\\\\\\\\nKinds of zines we are interested in:\\\\\\\\r\\\\\\\\n-Perzines that fall into the personal is political with thoughtful narratives\\\"\", \"\\\"especially zines with interesting and creative design & layout that suits the writing.\\\\\\\\r\\\\\\\\n-Witchcraft zines that are not Wiccan and that are preferably secular witch friendly (also culturally sensitive\\\"\", \"\\\"non-appropriative\\\"\", \"\\\"historically accurate\\\"\", \"\\\"and do not express views of gender essentialism.)\\\\\\\\r\\\\\\\\n-Zines that cover a single issue that are well researched and explore unique topics and perspectives\\\\\\\\r\\\\\\\\n-Thoughtfully put together zines exploring self-care\\\\\\\\r\\\\\\\\n-Vegan cook zines\\\\\\\\r\\\\\\\\n-DIY project zines\\\\\\\\r\\\\\\\\n-Independently produced tarot and oracle decks\\\\\\\\r\\\\\\\\n\\\\\\\\r\\\\\\\\nKinds of zines that we are not particularly interested:\\\\\\\\r\\\\\\\\n-Comics (unless you consider it a zine and the focus is a topics listed above)\\\"\", \"\\\"Poetry\\\"\", \"\\\"Fiction\\\"\", \"\\\"Photo\\\"\", \"\\\"Art zines\\\"\", \"\\\"Chapbooks\\\\\\\\r\\\\\\\\nWe hope it goes without saying that are not interested in zines expressing views of racism\\\"\", \"\\\"sexism\\\"\", \"\\\"classism\\\"\", \"\\\"ableism\\\"\", \"\\\"homophobia\\\"\", \"\\\"transphobia\\\"\", \"\\\"religious intolerance\\\"\", \"\\\"ageism\\\"\", \"\\\"sizeism\\\"\", \"\\\"and all other forms of discrimination.\\\\\\\\r\\\\\\\\nIf you think your zine might be a good fit with us please send one actual physical copy for distro consideration (no digital files) to the address below with a note stating the retail price\\\"\", \"\\\"a short description of your zine\\\"\", \"\\\"and a way to contact you. If there is no note we will assume you are just randomly sending a zine and we will donate it to a zine library.\\\"\"]"
+    "notes": "[\"\\\"We are interested in zines that are based in DIY and punk ethics in regards to politics\\\"\", \"\\\"content\\\"\", \"\\\"production\\\"\", \"\\\"and pricing. In an effort to keep zines accessible we prefer zines that are $5 retail or less.\\\\\\\\r\\\\\\\\n\\\\\\\\r\\\\\\\\nKinds of zines we are interested in:\\\\\\\\r\\\\\\\\n-Perzines that fall into the personal is political with thoughtful narratives\\\"\", \"\\\"especially zines with interesting and creative design & layout that suits the writing.\\\\\\\\r\\\\\\\\n-Witchcraft zines that are not Wiccan and that are preferably secular witch friendly (also culturally sensitive\\\"\", \"\\\"non-appropriative\\\"\", \"\\\"historically accurate\\\"\", \"\\\"and do not express views of gender essentialism.)\\\\\\\\r\\\\\\\\n-Zines that cover a single issue that are well researched and explore unique topics and perspectives\\\\\\\\r\\\\\\\\n-Thoughtfully put together zines exploring self-care\\\\\\\\r\\\\\\\\n-Vegan cook zines\\\\\\\\r\\\\\\\\n-DIY project zines\\\\\\\\r\\\\\\\\n-Independently produced tarot and oracle decks\\\\\\\\r\\\\\\\\n\\\\\\\\r\\\\\\\\nKinds of zines that we are not particularly interested:\\\\\\\\r\\\\\\\\n-Comics (unless you consider it a zine and the focus is a topics listed above)\\\"\", \"\\\"Poetry\\\"\", \"\\\"Fiction\\\"\", \"\\\"Photo\\\"\", \"\\\"Art zines\\\"\", \"\\\"Chapbooks\\\\\\\\r\\\\\\\\nWe hope it goes without saying that are not interested in zines expressing views of racism\\\"\", \"\\\"sexism\\\"\", \"\\\"classism\\\"\", \"\\\"ableism\\\"\", \"\\\"homophobia\\\"\", \"\\\"transphobia\\\"\", \"\\\"religious intolerance\\\"\", \"\\\"ageism\\\"\", \"\\\"sizeism\\\"\", \"\\\"and all other forms of discrimination.\\\\\\\\r\\\\\\\\nIf you think your zine might be a good fit with us please send one actual physical copy for distro consideration (no digital files) to the address below with a note stating the retail price\\\"\", \"\\\"a short description of your zine\\\"\", \"\\\"and a way to contact you. If there is no note we will assume you are just randomly sending a zine and we will donate it to a zine library.\\\"\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -96,7 +62,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"An eclectic zine distro\", \"tape label\", \"and online store of books\", \"records\", \"and handmade odds and ends out of Portland\", \"Oregon. We carry over 500 items at any given time\", \"and over 250 different zine titles.\\\\r\\\\n\\\\r\\\\nIn terms of zines\", \"we try to carry a wide range of zines\", \"while still maintaining a curated selection. Personal\", \"historical\", \"humor\", \"personal-as-political\", \"literary\", \"how-to\", \"and music are all zine genres we find ourselves especially drawn to. We also try to carry a range of zines in terms of cost and production quality—both simply designed\", \"affordable zines (that nod to the '90s zine heyday we came up in) and high-production value art-focused zines and workbook zines that reflect where people have taken the zine format in recent years. We hope to offer a lot of entry points into falling in love with zines.\"]"
+    "notes": "[\"An eclectic zine distro\", \"tape label\", \"and online store of books\", \"records\", \"and handmade odds and ends out of Portland\", \"Oregon. We carry over 500 items at any given time\", \"and over 250 different zine titles.\\\\r\\\\n\\\\r\\\\nIn terms of zines\", \"we try to carry a wide range of zines\", \"while still maintaining a curated selection. Personal\", \"historical\", \"humor\", \"personal-as-political\", \"literary\", \"how-to\", \"and music are all zine genres we find ourselves especially drawn to. We also try to carry a range of zines in terms of cost and production quality—both simply designed\", \"affordable zines (that nod to the '90s zine heyday we came up in) and high-production value art-focused zines and workbook zines that reflect where people have taken the zine format in recent years. We hope to offer a lot of entry points into falling in love with zines.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -116,7 +85,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"Focusing on the lighter side of things – cats\", \"food\", \"sports\", \"music\", \"etc. Fully supportive of zine culture and all things zine related. DIY till you Die!\"]"
+    "notes": "[\"Focusing on the lighter side of things – cats\", \"food\", \"sports\", \"music\", \"etc. Fully supportive of zine culture and all things zine related. DIY till you Die!\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -136,7 +108,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"Silver Sprocket is a radical indie publisher\", \"art-crew\", \"gallery\", \"and comic shop focused on indie comics and comic zines\", \"but we distro plenty of non-comic zines too whenever someone who works here gets excited about something.\\\\r\\\\n\\\\r\\\\nWe strive to build a better world without forgetting to have a good time.\"]"
+    "notes": "[\"Silver Sprocket is a radical indie publisher\", \"art-crew\", \"gallery\", \"and comic shop focused on indie comics and comic zines\", \"but we distro plenty of non-comic zines too whenever someone who works here gets excited about something.\\\\r\\\\n\\\\r\\\\nWe strive to build a better world without forgetting to have a good time.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -156,7 +131,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"Cut-and-pastey\", \"text-heavy perzine/fanzine distro for mallgoths of the internet\", \"the darkly inclined\", \"and the goth-at-heart\", \"run out of the Midwest by julia eff & friends. Nothing over $6\", \"vast majority under $5\", \"with all items available on sliding scale pricing (just email/DM). We have patches & stickers & pins & stuff too. Submissions always open!\"]"
+    "notes": "[\"Cut-and-pastey\", \"text-heavy perzine/fanzine distro for mallgoths of the internet\", \"the darkly inclined\", \"and the goth-at-heart\", \"run out of the Midwest by julia eff & friends. Nothing over $6\", \"vast majority under $5\", \"with all items available on sliding scale pricing (just email/DM). We have patches & stickers & pins & stuff too. Submissions always open!\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -176,7 +154,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"Founded by Charissa Lucille\", \"WIZD was born from a deficit of creative spaces that voice the self-expressions of our desert-dwelling community. We work to highlight zines from underrepresented communities such as the POC\", \"LGBTQIA\", \"and disabled folks. This has led to representing 200+ zine makers and their variety of works – from comics\", \"fan-zines\", \"per-zines\", \"poetry\", \"prose\", \"to postcards\", \"stickers\", \"and buttons.\"]"
+    "notes": "[\"Founded by Charissa Lucille\", \"WIZD was born from a deficit of creative spaces that voice the self-expressions of our desert-dwelling community. We work to highlight zines from underrepresented communities such as the POC\", \"LGBTQIA\", \"and disabled folks. This has led to representing 200+ zine makers and their variety of works – from comics\", \"fan-zines\", \"per-zines\", \"poetry\", \"prose\", \"to postcards\", \"stickers\", \"and buttons.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -196,7 +177,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"Take Care was founded on 1 January 2010 by Tim and Emma\", \"in Eora (Sydney)\", \"Australia. We stock zines that we've made\", \"some by good friends and comrades\", \"and some that we just really like. We stock perzines\", \"experimental writing\", \"cut n paste\", \"free zines\", \"the occasional comic\", \"punk zines\", \"art zines\", \"travel zines and other zines that are conceptually\", \"technically or thematically interesting\", \"and that aren't overpriced. We like zines that explore intersectional anti-capitalist/communist/anarchist politics\", \"DIY ethics\", \"uninstitutionalised art practices\", \"pop-culture and everyday life. We don't currently have an open submission policy\", \"but if you think your zine might fit really well with our current roster please feel free to get in touch – no promises though; we're just a little distro and don't have heaps of time or space to keep loads of stock 🙂\"]"
+    "notes": "[\"Take Care was founded on 1 January 2010 by Tim and Emma\", \"in Eora (Sydney)\", \"Australia. We stock zines that we've made\", \"some by good friends and comrades\", \"and some that we just really like. We stock perzines\", \"experimental writing\", \"cut n paste\", \"free zines\", \"the occasional comic\", \"punk zines\", \"art zines\", \"travel zines and other zines that are conceptually\", \"technically or thematically interesting\", \"and that aren't overpriced. We like zines that explore intersectional anti-capitalist/communist/anarchist politics\", \"DIY ethics\", \"uninstitutionalised art practices\", \"pop-culture and everyday life. We don't currently have an open submission policy\", \"but if you think your zine might fit really well with our current roster please feel free to get in touch – no promises though; we're just a little distro and don't have heaps of time or space to keep loads of stock 🙂\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -216,7 +200,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"\\\"Publisher and distributor of pamphlets\\\"\", \"\\\"zines\\\"\", \"\\\"books\\\"\", \"\\\"tapes & records since 2010. Everything on a pay what you want basis. Punkpost is encouraged but we can work around that. Original zines include the Cheaptoys & Papercore series. The distro has a permanent kiosque at the CIRA-Marseille (International Center for Research on Anarchism).\\\"\"]"
+    "notes": "[\"\\\"Publisher and distributor of pamphlets\\\"\", \"\\\"zines\\\"\", \"\\\"books\\\"\", \"\\\"tapes & records since 2010. Everything on a pay what you want basis. Punkpost is encouraged but we can work around that. Original zines include the Cheaptoys & Papercore series. The distro has a permanent kiosque at the CIRA-Marseille (International Center for Research on Anarchism).\\\"\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -236,27 +223,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"Pen Fight is a feminist and queer zine and bookshop and small press based out of Manchester\", \"UK. Independently run since 2015\", \"we sell zines\", \"radical books\", \"badges\", \"and other DIY and small-run art and craft.\\\\r\\\\n\\\\r\\\\nWe stock work on feminist and women's rights\", \"disability and mental health\", \"food\", \"veganism\", \"gardening\", \"politics\", \"race\", \"class\", \"art\", \"friendship\", \"music\", \"fanzines\", \"and anything else with an ace DIY ethic.\\\\r\\\\n\\\\r\\\\nWe also operate a small press\", \"printing zine titles by women\", \"non-binary and LGBTQIA+ folks\", \"we want to amplify the voices and creative work of the marginalised and new artists and zinemakers.\"]"
-  }
-},
-{
-  "model": "repositories.repository",
-  "pk": 11,
-  "fields": {
-    "created_at": "2026-02-24T19:26:39.166Z",
-    "updated_at": "2026-02-24T19:26:39.166Z",
-    "repo_id": "r-ohio-state-university-rare-books-manuscript-library",
-    "name": "Ohio State University Rare Books & Manuscript Library",
-    "kind": [
-      "academic-library"
-    ],
-    "address": "Thompson Library\r\n1858 Neil Avenue Mall\r\nColumbus, Ohio 43210-1286",
-    "location": [
-      4509177
-    ],
-    "access_policy": "",
-    "hours": "",
-    "notes": "[]"
+    "notes": "[\"Pen Fight is a feminist and queer zine and bookshop and small press based out of Manchester\", \"UK. Independently run since 2015\", \"we sell zines\", \"radical books\", \"badges\", \"and other DIY and small-run art and craft.\\\\r\\\\n\\\\r\\\\nWe stock work on feminist and women's rights\", \"disability and mental health\", \"food\", \"veganism\", \"gardening\", \"politics\", \"race\", \"class\", \"art\", \"friendship\", \"music\", \"fanzines\", \"and anything else with an ace DIY ethic.\\\\r\\\\n\\\\r\\\\nWe also operate a small press\", \"printing zine titles by women\", \"non-binary and LGBTQIA+ folks\", \"we want to amplify the voices and creative work of the marginalised and new artists and zinemakers.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -276,27 +246,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"Three non-binary zinesters in the East Bay making and distributing zines focused on disability\", \"self-care\", \"self-harm\", \"and gender from a queer perspective. Their titles are described as very personal and raw\", \"often mixing poetry with essays on topics like selfies\", \"embodiment\", \"and living in a queer/disabled body.\"]"
-  }
-},
-{
-  "model": "repositories.repository",
-  "pk": 13,
-  "fields": {
-    "created_at": "2026-02-25T00:00:00Z",
-    "updated_at": "2026-02-25T23:44:14.081Z",
-    "repo_id": "r-archive-six",
-    "name": "Archive Six",
-    "kind": [
-      "distro"
-    ],
-    "address": "Seattle, WA",
-    "location": [
-      5809844
-    ],
-    "access_policy": "",
-    "hours": "",
-    "notes": "[\"Seattle-based small press and zine distributor that began as a way to distribute the personal work of its founder\", \"zinester and designer Rachelle Abellar\", \"and later expanded into a curated distro centering marginalized voices. Its catalog focuses on work about social justice\", \"feminism\", \"women of color and other underrepresented creators\", \"intersectionality\", \"fat activism\", \"survival\", \"and art\", \"with Archive Six frequently tabling at regional events like Seattle Zine Fest.\"]"
+    "notes": "[\"Three non-binary zinesters in the East Bay making and distributing zines focused on disability\", \"self-care\", \"self-harm\", \"and gender from a queer perspective. Their titles are described as very personal and raw\", \"often mixing poetry with essays on topics like selfies\", \"embodiment\", \"and living in a queer/disabled body.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -316,7 +269,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"Catland Books is an occult bookstore and witchcraft-oriented community space in Bushwick\", \"Brooklyn\", \"often described as 'Brooklyn's favorite witch shop.' The shop carries a mix of occult and esoteric books\", \"ritual tools\", \"herbs\", \"and independently produced zines and small-press titles related to witchcraft\", \"tarot\", \"astrology\", \"and radical spirituality.\"]"
+    "notes": "[\"Catland Books is an occult bookstore and witchcraft-oriented community space in Bushwick\", \"Brooklyn\", \"often described as 'Brooklyn's favorite witch shop.' The shop carries a mix of occult and esoteric books\", \"ritual tools\", \"herbs\", \"and independently produced zines and small-press titles related to witchcraft\", \"tarot\", \"astrology\", \"and radical spirituality.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -336,7 +292,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"Darcy Crash Distro is a zine distro project (active primarily online\", \"via social platforms) that publishes and distributes personal and political zines. Posts and mentions show Darcy Crash collaborating with Brown Recluse Zine Distro on events such as fundraising for Zine Queens Vol. 3\", \"indicating strong ties to QTBIPOC-centered and feminist zine communities. The distro's work leans into themes of trauma\", \"survival\", \"and self-definition\", \"often through visceral\", \"emotionally charged writing and imagery.\"]"
+    "notes": "[\"Darcy Crash Distro is a zine distro project (active primarily online\", \"via social platforms) that publishes and distributes personal and political zines. Posts and mentions show Darcy Crash collaborating with Brown Recluse Zine Distro on events such as fundraising for Zine Queens Vol. 3\", \"indicating strong ties to QTBIPOC-centered and feminist zine communities. The distro's work leans into themes of trauma\", \"survival\", \"and self-definition\", \"often through visceral\", \"emotionally charged writing and imagery.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -356,7 +315,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"FIST is a New York-based queer erotic and intimacy-focused zine project and event series that publishes themed print issues (e.g.\", \"'FIST Issue 05: Cruising\", \"' 'FIST Issue 04: Devotion') and related works like 'Linked\", \"A Polyamory Zine.' Its site sells print issues and tickets to events such as 'Bawdy\", \"' an in-person gathering mixing performance\", \"storytelling\", \"and erotic art centered on queer desire and kink.\"]"
+    "notes": "[\"FIST is a New York-based queer erotic and intimacy-focused zine project and event series that publishes themed print issues (e.g.\", \"'FIST Issue 05: Cruising\", \"' 'FIST Issue 04: Devotion') and related works like 'Linked\", \"A Polyamory Zine.' Its site sells print issues and tickets to events such as 'Bawdy\", \"' an in-person gathering mixing performance\", \"storytelling\", \"and erotic art centered on queer desire and kink.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -376,7 +338,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"Homie House Press is a radical cooperative small press and 'photo book' platform founded by Adriana Monsalve and Caterina Ragg\", \"dedicated to equipping historically underrepresented people with the tools to create and publish in the photobook and zine medium. Described by its founders as a 'sisterhood\", \"' 'wolfpack\", \"' and 'secret space and open house for honest content\", \"' the press views itself as a visual recording project that prioritizes community over everything\", \"centering transfronteriza (border-crossing)\", \"diasporic\", \"and marginalized experiences.\"]"
+    "notes": "[\"Homie House Press is a radical cooperative small press and 'photo book' platform founded by Adriana Monsalve and Caterina Ragg\", \"dedicated to equipping historically underrepresented people with the tools to create and publish in the photobook and zine medium. Described by its founders as a 'sisterhood\", \"' 'wolfpack\", \"' and 'secret space and open house for honest content\", \"' the press views itself as a visual recording project that prioritizes community over everything\", \"centering transfronteriza (border-crossing)\", \"diasporic\", \"and marginalized experiences.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -396,7 +361,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"Last Gasp is a San Francisco-based publisher and former distributor of underground comix\", \"lowbrow art\", \"and countercultural books\", \"founded by Ron Turner in 1970 in Berkeley. Over five decades it became one of the oldest and most influential houses for underground comics and radical graphic culture\", \"publishing titles like Weirdo\", \"Wimmen's Comix\", \"Zap Comix\", \"and an array of art books\", \"graphic novels\", \"and subcultural nonfiction.\"]"
+    "notes": "[\"Last Gasp is a San Francisco-based publisher and former distributor of underground comix\", \"lowbrow art\", \"and countercultural books\", \"founded by Ron Turner in 1970 in Berkeley. Over five decades it became one of the oldest and most influential houses for underground comics and radical graphic culture\", \"publishing titles like Weirdo\", \"Wimmen's Comix\", \"Zap Comix\", \"and an array of art books\", \"graphic novels\", \"and subcultural nonfiction.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -416,7 +384,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"Radiator Comics is a Chicago-born small-press distributor and publisher dedicated to self-published and small-press comics\", \"founded in July 2014 by Neil Brideau. Its primary focus is distributing mini-comics and graphic stories by over 200 emerging and independent cartoonists\", \"offering an online storefront plus tabling at festivals such as Small Press Expo and Chicago Alternative Comics Expo (CAKE).\"]"
+    "notes": "[\"Radiator Comics is a Chicago-born small-press distributor and publisher dedicated to self-published and small-press comics\", \"founded in July 2014 by Neil Brideau. Its primary focus is distributing mini-comics and graphic stories by over 200 emerging and independent cartoonists\", \"offering an online storefront plus tabling at festivals such as Small Press Expo and Chicago Alternative Comics Expo (CAKE).\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -436,7 +407,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"Stranger Danger Zine Distro was a Chicago-based zine distro that specialized in feminist\", \"queer\", \"and trans zines\", \"widely cited in zine-community guides as a go-to source for radical personal and political work. It carried titles focused on feminism\", \"queer and trans experiences\", \"mental health\", \"and anti-authoritarian politics. In a 2019 Instagram post\", \"the distro announced that Stranger Danger had come to an end.\"]"
+    "notes": "[\"Stranger Danger Zine Distro was a Chicago-based zine distro that specialized in feminist\", \"queer\", \"and trans zines\", \"widely cited in zine-community guides as a go-to source for radical personal and political work. It carried titles focused on feminism\", \"queer and trans experiences\", \"mental health\", \"and anti-authoritarian politics. In a 2019 Instagram post\", \"the distro announced that Stranger Danger had come to an end.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -456,7 +430,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"Pioneers Press was an independent publishing house and small-press distributor founded in 2012 by Jessie Duke after leaving Microcosm Publishing\", \"with headquarters in Ann Arbor\", \"Michigan and a distribution center on a farm outside Leavenworth\", \"Kansas. The press focused on survival and sustainability in rural and urban settings\", \"health\", \"gender\", \"sexuality\", \"social justice\", \"food movements\", \"and literary work by emerging authors. Pioneers Press operated as both publisher and distro but closed on December 31\", \"2020.\"]"
+    "notes": "[\"Pioneers Press was an independent publishing house and small-press distributor founded in 2012 by Jessie Duke after leaving Microcosm Publishing\", \"with headquarters in Ann Arbor\", \"Michigan and a distribution center on a farm outside Leavenworth\", \"Kansas. The press focused on survival and sustainability in rural and urban settings\", \"health\", \"gender\", \"sexuality\", \"social justice\", \"food movements\", \"and literary work by emerging authors. Pioneers Press operated as both publisher and distro but closed on December 31\", \"2020.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -476,7 +453,33 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"Flywheel Arts Collective was a volunteer-run multi-use art and meeting space in Easthampton\", \"Massachusetts\", \"located at 43 Main Street (in the old town hall) with a performance venue\", \"community meeting space\", \"and zine library. Active through the 2000s and 2010s\", \"Flywheel hosted punk and experimental music shows\", \"film screenings\", \"readings\", \"and the Flywheel Zine Fest\", \"which brought together zinesters\", \"small presses\", \"and political/DIY organizations.\"]"
+    "notes": "[\"Flywheel Arts Collective was a volunteer-run multi-use art and meeting space in Easthampton\", \"Massachusetts\", \"located at 43 Main Street (in the old town hall) with a performance venue\", \"community meeting space\", \"and zine library. Active through the 2000s and 2010s\", \"Flywheel hosted punk and experimental music shows\", \"film screenings\", \"readings\", \"and the Flywheel Zine Fest\", \"which brought together zinesters\", \"small presses\", \"and political/DIY organizations.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
+  }
+},
+{
+  "model": "repositories.repository",
+  "pk": 11,
+  "fields": {
+    "created_at": "2026-02-24T19:26:39.166Z",
+    "updated_at": "2026-02-24T19:26:39.166Z",
+    "repo_id": "r-ohio-state-university-rare-books-manuscript-library",
+    "name": "Ohio State University Rare Books & Manuscript Library",
+    "kind": [
+      "academic-library"
+    ],
+    "address": "Thompson Library\r\n1858 Neil Avenue Mall\r\nColumbus, Ohio 43210-1286",
+    "location": [
+      4509177
+    ],
+    "access_policy": "",
+    "hours": "",
+    "notes": "[]",
+    "is_active": true,
+    "submission_allowed": true,
+    "submission_notes": "CONTACT CURATOR: Acquisition based on relevance to collection development, research value, relationship to existing holdings, costs. OSU cannot provide appraisals for gifts-in-kind. Previously had zine drop box for collection building. Contact: Eric Johnson, Curator, johnson.4156@osu.edu"
   }
 },
 {
@@ -496,27 +499,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"Doris Press is the long-running personal-as-political zine imprint of Cindy Crabb\", \"publisher of the influential perzine Doris\", \"which has been produced since the early 1990s. The press also published the 300-page Encyclopedia of Doris: Stories\", \"Essays\", \"and Interviews\", \"collecting work from the zine into a bound volume while keeping the DIY ethos intact. In a zine-ecosystem map\", \"Doris Press serves as a key perzine publisher focused on trauma\", \"healing\", \"feminism\", \"and everyday survival.\"]"
-  }
-},
-{
-  "model": "repositories.repository",
-  "pk": 24,
-  "fields": {
-    "created_at": "2026-02-25T00:00:00Z",
-    "updated_at": "2026-02-25T23:46:29.890Z",
-    "repo_id": "r-mcmicken-freespace",
-    "name": "McMicken FreeSpace",
-    "kind": [
-      "zine-library"
-    ],
-    "address": "West McMicken Avenue, Cincinnati, OH",
-    "location": [
-      4508722
-    ],
-    "access_policy": "",
-    "hours": "",
-    "notes": "[\"McMicken FreeSpace is a non-profit\", \"volunteer-run community space and zine distro housed in a formerly foreclosed building on West McMicken Avenue in Cincinnati\", \"envisioned by founder Stephanie Kodakya Phillips as a safe\", \"accessible 'freespace' for people without a foundation. Evolving from an earlier project called SoapBox Books and Zines\", \"it now serves as Cincinnati's only explicit activist hub and solidarity center\", \"hosting groups like Cincinnati Allied Transgender Support\", \"Sex Worker Support\", \"Black Lives Matter\", \"and AA for Freethinkers/Art of Recovery.\"]"
+    "notes": "[\"Doris Press is the long-running personal-as-political zine imprint of Cindy Crabb\", \"publisher of the influential perzine Doris\", \"which has been produced since the early 1990s. The press also published the 300-page Encyclopedia of Doris: Stories\", \"Essays\", \"and Interviews\", \"collecting work from the zine into a bound volume while keeping the DIY ethos intact. In a zine-ecosystem map\", \"Doris Press serves as a key perzine publisher focused on trauma\", \"healing\", \"feminism\", \"and everyday survival.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -536,7 +522,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"Microcosm Publishing is a Portland-based zine publisher and distributor founded in 1996\", \"originally in Cleveland before relocating to Portland\", \"that focuses on practical\", \"empowering books and zines about DIY skills\", \"self-help\", \"mental health\", \"punk and subculture history\", \"feminism\", \"and radical politics. Emerging from zine culture\", \"Microcosm grew into a hybrid of micro-press and indie publisher\", \"producing and distributing hundreds of titles while still foregrounding small-press sensibilities like hand-drawn layouts and subcultural topics.\"]"
+    "notes": "[\"Microcosm Publishing is a Portland-based zine publisher and distributor founded in 1996\", \"originally in Cleveland before relocating to Portland\", \"that focuses on practical\", \"empowering books and zines about DIY skills\", \"self-help\", \"mental health\", \"punk and subculture history\", \"feminism\", \"and radical politics. Emerging from zine culture\", \"Microcosm grew into a hybrid of micro-press and indie publisher\", \"producing and distributing hundreds of titles while still foregrounding small-press sensibilities like hand-drawn layouts and subcultural topics.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -556,7 +545,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"Wyrd Sisters Distro is a Portland-based zine distro and record label focused specifically on neurodiverse and disabled artists\", \"highlighted in distro directories as a dedicated platform for creators whose work is often marginalized even within DIY spaces. The distro's catalog concentrates on zines and music projects made by neurodivergent and disabled people\", \"aligning its curation with disability justice and anti-ableist politics.\"]"
+    "notes": "[\"Wyrd Sisters Distro is a Portland-based zine distro and record label focused specifically on neurodiverse and disabled artists\", \"highlighted in distro directories as a dedicated platform for creators whose work is often marginalized even within DIY spaces. The distro's catalog concentrates on zines and music projects made by neurodivergent and disabled people\", \"aligning its curation with disability justice and anti-ableist politics.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -576,7 +568,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"Poopsheet Shop is an online shop and archive project specializing in mini-comics\", \"art zines\", \"fanzines\", \"underground comix\", \"and related curiosities from the 1970s to the present\", \"operating under the umbrella of the Poopsheet Foundation. It focuses heavily on small-press and self-published comics\", \"often stocking rare or out-of-print items as well as new work by contemporary mini-comics artists.\"]"
+    "notes": "[\"Poopsheet Shop is an online shop and archive project specializing in mini-comics\", \"art zines\", \"fanzines\", \"underground comix\", \"and related curiosities from the 1970s to the present\", \"operating under the umbrella of the Poopsheet Foundation. It focuses heavily on small-press and self-published comics\", \"often stocking rare or out-of-print items as well as new work by contemporary mini-comics artists.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -596,7 +591,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"Mend My Dress Press is a small\", \"'grrrl-run' publishing house and zine distributor based in Tacoma\", \"Washington\", \"dedicated to anthologizing and amplifying zine culture. The press publishes collections of classic zines and related small art books—for example\", \"anthologies of Doris by Cindy Crabb and Mend My Dress by Cristy C. Road—alongside original titles that maintain a distinctly DIY look and focus on feminism\", \"trauma\", \"survival\", \"and queer/punk life.\"]"
+    "notes": "[\"Mend My Dress Press is a small\", \"'grrrl-run' publishing house and zine distributor based in Tacoma\", \"Washington\", \"dedicated to anthologizing and amplifying zine culture. The press publishes collections of classic zines and related small art books—for example\", \"anthologies of Doris by Cindy Crabb and Mend My Dress by Cristy C. Road—alongside original titles that maintain a distinctly DIY look and focus on feminism\", \"trauma\", \"survival\", \"and queer/punk life.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -616,27 +614,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"Sweet Candy Distro and Sweet Candy Press is a longstanding zine distro and small press founded and run by Sage Adderley\", \"originally based in Olympia\", \"Washington and later noted in some library guides as Washington\", \"DC. The distro has for over a decade carried a wide range of perzines\", \"feminist and queer zines\", \"and DIY publications\", \"while the press side publishes original titles such as Ofrenda: A Zine Anthology by Celia Pérez.\"]"
-  }
-},
-{
-  "model": "repositories.repository",
-  "pk": 30,
-  "fields": {
-    "created_at": "2026-02-25T00:00:00Z",
-    "updated_at": "2026-02-25T23:43:40.765Z",
-    "repo_id": "r-neither-nor",
-    "name": "Neither-Nor",
-    "kind": [
-      "zine-library"
-    ],
-    "address": "Kansas City, MO",
-    "location": [
-      4393217
-    ],
-    "access_policy": "",
-    "hours": "",
-    "notes": "[\"Neither-nor Zine Distro is a Kansas City-based zine distro and zine library project founded in 2015 by Jess Hogan after the success of the first KC Zine Con. Hogan\", \"a Kansas Citian who loves making\", \"reading\", \"trading\", \"and collecting zines\", \"started Neither-nor to give local zinesters and enthusiasts a place to sell their zines\", \"support each other\", \"and build a sustainable zine destination in the city. The project has grown into a distro plus a collectively run zine library\", \"which hosts a monthly Zine Club and participates actively in KC Zine Con.\"]"
+    "notes": "[\"Sweet Candy Distro and Sweet Candy Press is a longstanding zine distro and small press founded and run by Sage Adderley\", \"originally based in Olympia\", \"Washington and later noted in some library guides as Washington\", \"DC. The distro has for over a decade carried a wide range of perzines\", \"feminist and queer zines\", \"and DIY publications\", \"while the press side publishes original titles such as Ofrenda: A Zine Anthology by Celia Pérez.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -656,7 +637,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"Sprout Zine Distro (often referenced simply as Sprout Distro) is a distro and resource project focused on anarchist and security-oriented zines\", \"particularly those dealing with legal rights\", \"digital security\", \"and community defense. It appears in community-resource lists as a curated source for zines such as 'Threat Library' by the No Trace Project\", \"along with other titles covering individual and collective safety\", \"state repression\", \"and organizing skills.\"]"
+    "notes": "[\"Sprout Zine Distro (often referenced simply as Sprout Distro) is a distro and resource project focused on anarchist and security-oriented zines\", \"particularly those dealing with legal rights\", \"digital security\", \"and community defense. It appears in community-resource lists as a curated source for zines such as 'Threat Library' by the No Trace Project\", \"along with other titles covering individual and collective safety\", \"state repression\", \"and organizing skills.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -676,7 +660,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"Long-running zine shop/artist-run space; a 'Melbourne institution' that has operated a zine shop since 2001 (originally in the Flinders St/Degraves subway; now in the Nicholas Building). They stock thousands of zines from around the world\", \"operate on a consignment model (e.g.\", \"80% of shelf price back to the artist in one interview)\", \"and run major events like the Festival of the Photocopier and Australian Zine Showcase.\"]"
+    "notes": "[\"Long-running zine shop/artist-run space; a 'Melbourne institution' that has operated a zine shop since 2001 (originally in the Flinders St/Degraves subway; now in the Nicholas Building). They stock thousands of zines from around the world\", \"operate on a consignment model (e.g.\", \"80% of shelf price back to the artist in one interview)\", \"and run major events like the Festival of the Photocopier and Australian Zine Showcase.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -696,7 +683,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"Long-running feminist/queer-leaning zine distro (originally associated with the Riot Grrrl DIY back-to-basics wave).\"]"
+    "notes": "[\"Long-running feminist/queer-leaning zine distro (originally associated with the Riot Grrrl DIY back-to-basics wave).\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -716,7 +706,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"Canadian distro often carrying personal/political zines; historically present at zine fests and mail-order.\"]"
+    "notes": "[\"Canadian distro often carrying personal/political zines; historically present at zine fests and mail-order.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -736,7 +729,33 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"DIY music and zine distro and physical shop\", \"active in Curicó\", \"Chile. Punk/metal/grindcore-leaning underground culture: they buy and sell CDs\", \"vinyl\", \"cassettes\", \"and zines\", \"and also fabricate musical merchandise (likely screen-printed shirts\", \"patches\", \"etc.) for bands. Runs a bricks-and-mortar shop at O'Higgins 575 in Curicó and does mail-order.\"]"
+    "notes": "[\"DIY music and zine distro and physical shop\", \"active in Curicó\", \"Chile. Punk/metal/grindcore-leaning underground culture: they buy and sell CDs\", \"vinyl\", \"cassettes\", \"and zines\", \"and also fabricate musical merchandise (likely screen-printed shirts\", \"patches\", \"etc.) for bands. Runs a bricks-and-mortar shop at O'Higgins 575 in Curicó and does mail-order.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
+  }
+},
+{
+  "model": "repositories.repository",
+  "pk": 30,
+  "fields": {
+    "created_at": "2026-02-25T00:00:00Z",
+    "updated_at": "2026-02-28T18:55:55.412Z",
+    "repo_id": "r-neither-nor",
+    "name": "Neither-Nor",
+    "kind": [
+      "zine-library"
+    ],
+    "address": "Kansas City, MO",
+    "location": [
+      4393217
+    ],
+    "access_policy": "",
+    "hours": "",
+    "notes": "[\"Neither-nor Zine Distro is a Kansas City-based zine distro and zine library project founded in 2015 by Jess Hogan after the success of the first KC Zine Con. Hogan\", \"a Kansas Citian who loves making\", \"reading\", \"trading\", \"and collecting zines\", \"started Neither-nor to give local zinesters and enthusiasts a place to sell their zines\", \"support each other\", \"and build a sustainable zine destination in the city. The project has grown into a distro plus a collectively run zine library\", \"which hosts a monthly Zine Club and participates actively in KC Zine Con.\"]",
+    "is_active": true,
+    "submission_allowed": true,
+    "submission_notes": "CONSIGNMENT/DISTRO MODEL: Contact neithernorzinedistro@gmail.com for submission details. Functions as commercial distro (not permanent archive) selling zines at 5 Missouri stores and online. Travels to zine fests and facilitates workshops."
   }
 },
 {
@@ -756,7 +775,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"Full-size zine distro based in Chatham\", \"Kent (UK)\", \"described as 'the zine distro with a bite\", \"' previously known as Vampire Sushi. Has been around since Halloween 2009\", \"selling mostly queer and feminist perzines. The branding and social presence highlight a playful\", \"goth-adjacent aesthetic centered on personal/political queer work.\"]"
+    "notes": "[\"Full-size zine distro based in Chatham\", \"Kent (UK)\", \"described as 'the zine distro with a bite\", \"' previously known as Vampire Sushi. Has been around since Halloween 2009\", \"selling mostly queer and feminist perzines. The branding and social presence highlight a playful\", \"goth-adjacent aesthetic centered on personal/political queer work.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -776,7 +798,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"Radical infoshop/zine space (anarchist-adjacent\", \"DIY politics; often carries political and queer zines).\"]"
+    "notes": "[\"Radical infoshop/zine space (anarchist-adjacent\", \"DIY politics; often carries political and queer zines).\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -796,7 +821,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"Collective that runs zine events and distribution\", \"often focusing on Hong Kong/Asian independent publishing and politically sensitive work.\"]"
+    "notes": "[\"Collective that runs zine events and distribution\", \"often focusing on Hong Kong/Asian independent publishing and politically sensitive work.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -816,27 +844,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"Lagos-based DIY zine platform centering African perspectives and youth culture; important for Global South representation.\"]"
-  }
-},
-{
-  "model": "repositories.repository",
-  "pk": 41,
-  "fields": {
-    "created_at": "2026-02-25T00:00:00Z",
-    "updated_at": "2026-02-25T00:00:00Z",
-    "repo_id": "r-san-francisco-public-library-zine-collection",
-    "name": "San Francisco Public Library Zine Collection",
-    "kind": [
-      "public-library"
-    ],
-    "address": "100 Larkin St, San Francisco, CA 94102",
-    "location": [
-      5391959
-    ],
-    "access_policy": "",
-    "hours": "",
-    "notes": "[\"Library collection documenting the Bay Area underground/alternative press and its impact on the city's cultural\", \"social\", \"and political life (good institutional anchor for West Coast radical/queer material).\"]"
+    "notes": "[\"Lagos-based DIY zine platform centering African perspectives and youth culture; important for Global South representation.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -856,7 +867,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"University of Maryland\", \"Baltimore County collection focusing on SF/F fanzines; more genre than explicitly queer\", \"but historically important for fan-culture zine history.\"]"
+    "notes": "[\"University of Maryland\", \"Baltimore County collection focusing on SF/F fanzines; more genre than explicitly queer\", \"but historically important for fan-culture zine history.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -876,7 +890,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"Not-for-profit anarchist mailorder based in Germany\", \"active since 2003. Centers anarchist\", \"anti-fascist\", \"radical-left and emancipatory ideas and practices; operates as a collective and explicitly channels all profit (after fixed costs) back into emancipatory projects. They stock stickers\", \"patches\", \"buttons\", \"music\", \"spray paint\", \"books\", \"brochures\", \"zines\", \"and solidarity products like Zapatista coffee and olive oil from Greek anarchist collectives.\"]"
+    "notes": "[\"Not-for-profit anarchist mailorder based in Germany\", \"active since 2003. Centers anarchist\", \"anti-fascist\", \"radical-left and emancipatory ideas and practices; operates as a collective and explicitly channels all profit (after fixed costs) back into emancipatory projects. They stock stickers\", \"patches\", \"buttons\", \"music\", \"spray paint\", \"books\", \"brochures\", \"zines\", \"and solidarity products like Zapatista coffee and olive oil from Greek anarchist collectives.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -896,7 +913,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"Berlin-based zine distro specializing in queer and feminist zines.\"]"
+    "notes": "[\"Berlin-based zine distro specializing in queer and feminist zines.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -916,7 +936,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"Student-run zine/showroom space at the Kunsthochschule Kassel (Kassel Art School). Functions as a 'room for student publications\", \"coffee and cake' at the art school\", \"with emphasis on self-published work\", \"art books\", \"and zines by students. They host zine markets and showcase new titles from the school community.\"]"
+    "notes": "[\"Student-run zine/showroom space at the Kunsthochschule Kassel (Kassel Art School). Functions as a 'room for student publications\", \"coffee and cake' at the art school\", \"with emphasis on self-published work\", \"art books\", \"and zines by students. They host zine markets and showcase new titles from the school community.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -936,7 +959,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"Mount Zine is a Tokyo-based zine project and shop where anyone can participate\", \"framing itself as a space where 'anyone can publish a zine.' It operates a physical shop/gallery (most recently in Setagaya/Meguro areas) that specializes in zines and other small-run printed matter\", \"taking in open submissions from creators in Japan and abroad and routinely stocking over 150-200 titles at a time\", \"with all stock rotated roughly every six months. Beyond sales\", \"they run zine-making workshops and a 'zine school\", \"' host events and exhibitions in Japan and overseas\", \"and maintain an online store.\"]"
+    "notes": "[\"Mount Zine is a Tokyo-based zine project and shop where anyone can participate\", \"framing itself as a space where 'anyone can publish a zine.' It operates a physical shop/gallery (most recently in Setagaya/Meguro areas) that specializes in zines and other small-run printed matter\", \"taking in open submissions from creators in Japan and abroad and routinely stocking over 150-200 titles at a time\", \"with all stock rotated roughly every six months. Beyond sales\", \"they run zine-making workshops and a 'zine school\", \"' host events and exhibitions in Japan and overseas\", \"and maintain an online store.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -956,7 +982,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"Tokyo Art Book Fair (often abbreviated TABF) is Japan's first book fair dedicated to art publications\", \"launched in 2009 under the name 'ZINE'S MATE: TOKYO ART BOOK FAIR' and now one of the largest art book and zine fairs in Asia. Held annually at venues such as the Museum of Contemporary Art Tokyo\", \"it regularly hosts around 300 exhibitors from Japan and abroad and draws 20\", \"000-25\", \"000 visitors\", \"with sections that explicitly foreground zines and independent/self-published work.\"]"
+    "notes": "[\"Tokyo Art Book Fair (often abbreviated TABF) is Japan's first book fair dedicated to art publications\", \"launched in 2009 under the name 'ZINE'S MATE: TOKYO ART BOOK FAIR' and now one of the largest art book and zine fairs in Asia. Held annually at venues such as the Museum of Contemporary Art Tokyo\", \"it regularly hosts around 300 exhibitors from Japan and abroad and draws 20\", \"000-25\", \"000 visitors\", \"with sections that explicitly foreground zines and independent/self-published work.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -976,7 +1005,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"Tijuana Zine Fest is a large-scale\", \"bilingual zine festival in downtown Tijuana that brings together DIY publishers\", \"zinesters\", \"and artists from both sides of the U.S.-Mexico border. Founded by Luisa Martinez and David Peña to create a space for local zinesters to network and present their work\", \"the fest is held in reclaimed pasajes off Avenida Revolución—passageways once dominated by tourist curio shops and later transformed into cultural corridors of galleries\", \"bookstores\", \"and coffee shops after the height of drug-war violence. The event hosts well over a hundred independent publishers\", \"alongside workshops\", \"music\", \"and art\", \"creating a space for exchanging personal stories\", \"political manifestos\", \"and experimental visual work in both Spanish and English.\"]"
+    "notes": "[\"Tijuana Zine Fest is a large-scale\", \"bilingual zine festival in downtown Tijuana that brings together DIY publishers\", \"zinesters\", \"and artists from both sides of the U.S.-Mexico border. Founded by Luisa Martinez and David Peña to create a space for local zinesters to network and present their work\", \"the fest is held in reclaimed pasajes off Avenida Revolución—passageways once dominated by tourist curio shops and later transformed into cultural corridors of galleries\", \"bookstores\", \"and coffee shops after the height of drug-war violence. The event hosts well over a hundred independent publishers\", \"alongside workshops\", \"music\", \"and art\", \"creating a space for exchanging personal stories\", \"political manifestos\", \"and experimental visual work in both Spanish and English.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -996,7 +1028,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"Tonone Bookstore (often written 'Tonone' or 'Tobay / Tonone Bookstore') is a small independent bookshop in Vientiane\", \"Laos\", \"located near That Luang and a local mini Big C at a three-way junction. Facebook activity shows them as a general bookstore carrying popular fiction\", \"manga\", \"and translated titles. Functions more as an indie general bookstore that might be open to DIY material rather than a dedicated distro.\"]"
+    "notes": "[\"Tonone Bookstore (often written 'Tonone' or 'Tobay / Tonone Bookstore') is a small independent bookshop in Vientiane\", \"Laos\", \"located near That Luang and a local mini Big C at a three-way junction. Facebook activity shows them as a general bookstore carrying popular fiction\", \"manga\", \"and translated titles. Functions more as an indie general bookstore that might be open to DIY material rather than a dedicated distro.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -1016,7 +1051,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"Common Room PH is a Philippine collaborative space and retail platform for independent artists and makers\", \"with multiple physical stores and an online presence that host locally made art\", \"crafts\", \"prints\", \"and zines. They describe themselves as providing 'a home and a safe space for creatives to express themselves\", \"support each other\", \"grow together\", \"and empower others to make with their hands\", \"' and they actively highlight storytelling and community-building as part of their mission.\"]"
+    "notes": "[\"Common Room PH is a Philippine collaborative space and retail platform for independent artists and makers\", \"with multiple physical stores and an online presence that host locally made art\", \"crafts\", \"prints\", \"and zines. They describe themselves as providing 'a home and a safe space for creatives to express themselves\", \"support each other\", \"grow together\", \"and empower others to make with their hands\", \"' and they actively highlight storytelling and community-building as part of their mission.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -1036,7 +1074,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"BAEK is a South African independent 'baking zine' and art project created by fine artist and baker Alice Toich\", \"described as 'somewhere between a recipe book\", \"art publication and fashion shoot.' The full-colour zine is positioned as a 'decadent' object that merges high-end food styling\", \"visual art\", \"and editorial design\", \"and issues are mailed directly to subscribers.\"]"
+    "notes": "[\"BAEK is a South African independent 'baking zine' and art project created by fine artist and baker Alice Toich\", \"described as 'somewhere between a recipe book\", \"art publication and fashion shoot.' The full-colour zine is positioned as a 'decadent' object that merges high-end food styling\", \"visual art\", \"and editorial design\", \"and issues are mailed directly to subscribers.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -1056,7 +1097,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"Sandwich Mixto is a Madrid shop dedicated to fanzines and self-published work\", \"originally operating as a stall in the Antón Martín market before moving to a street-level space on Calle Torrecilla del Leal 7. Run by Virginia del Diego\", \"the store specializes in fanzines and uses its expanded wall space for detailed exhibitions that explore the entire fanzine-making process\", \"from concept and sketches through printing and all the 'glitches' involved.\"]"
+    "notes": "[\"Sandwich Mixto is a Madrid shop dedicated to fanzines and self-published work\", \"originally operating as a stall in the Antón Martín market before moving to a street-level space on Calle Torrecilla del Leal 7. Run by Virginia del Diego\", \"the store specializes in fanzines and uses its expanded wall space for detailed exhibitions that explore the entire fanzine-making process\", \"from concept and sketches through printing and all the 'glitches' involved.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -1076,27 +1120,10 @@
     ],
     "access_policy": "",
     "hours": "",
-    "notes": "[\"SPACEBAR ZINE is an independent print and arts imprint under SPACEBAR Design Studio\", \"based in Bangkok\", \"Thailand. The project\", \"incorporated in 2016\", \"focuses on independent printings and arts and also maintains online media for Thai artists and interested audiences\", \"positioning itself as part design studio\", \"part small press.\"]"
-  }
-},
-{
-  "model": "repositories.repository",
-  "pk": 54,
-  "fields": {
-    "created_at": "2026-02-25T19:02:49.936Z",
-    "updated_at": "2026-02-26T00:20:02.989Z",
-    "repo_id": "barnard-zine-library",
-    "name": "Barnard College Zine Library",
-    "kind": [
-      "library"
-    ],
-    "address": "New York, NY",
-    "location": [
-      5128581
-    ],
-    "access_policy": "Research and teaching collection with in-person access; some zines digitized and available online.",
-    "hours": "Follows Barnard Library / Archives & Special Collections hours; check website for current schedule.",
-    "notes": "[\"Focus on feminism\", \"gender\", \"activism\", \"and popular culture.\", \"Maintains an international list of zine libraries and collections.\"]"
+    "notes": "[\"SPACEBAR ZINE is an independent print and arts imprint under SPACEBAR Design Studio\", \"based in Bangkok\", \"Thailand. The project\", \"incorporated in 2016\", \"focuses on independent printings and arts and also maintains online media for Thai artists and interested audiences\", \"positioning itself as part design studio\", \"part small press.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -1116,7 +1143,10 @@
     ],
     "access_policy": "On-site use in Special Collections reading room; selected materials digitized for online access.",
     "hours": "Follows University of Iowa Special Collections reading-room hours.",
-    "notes": "[\"Contains over 10\", \"000 science fiction\", \"fantasy\", \"and horror fanzines.\", \"Part of University of Iowa Libraries Special Collections and Archives.\"]"
+    "notes": "[\"Contains over 10\", \"000 science fiction\", \"fantasy\", \"and horror fanzines.\", \"Part of University of Iowa Libraries Special Collections and Archives.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -1136,67 +1166,10 @@
     ],
     "access_policy": "On-site access via the hosting library's special collections; advance notice recommended.",
     "hours": "Follows UMBC library or special collections hours; see website.",
-    "notes": "[\"Holds more than 15\", \"000 fantasy and science fiction fanzines dated 1937–1972\", \"plus tens of thousands more related fanzines.\", \"Referenced as one of the largest focused sci-fi fanzine collections.\"]"
-  }
-},
-{
-  "model": "repositories.repository",
-  "pk": 57,
-  "fields": {
-    "created_at": "2026-02-25T19:02:49.936Z",
-    "updated_at": "2026-02-26T00:19:37.993Z",
-    "repo_id": "university-miami-zines",
-    "name": "University of Miami Libraries Zine Collection",
-    "kind": [
-      "library"
-    ],
-    "address": "Coral Gables, FL",
-    "location": [
-      4151871
-    ],
-    "access_policy": "On-site use in Special Collections; some zines digitized and discoverable online.",
-    "hours": "Follows University of Miami Special Collections hours.",
-    "notes": "[\"Collection of over 5\", \"000 zines documenting zine culture with an emphasis on South Florida.\", \"Used for teaching\", \"outreach\", \"and research on DIY and independent publishing.\"]"
-  }
-},
-{
-  "model": "repositories.repository",
-  "pk": 58,
-  "fields": {
-    "created_at": "2026-02-25T19:02:49.936Z",
-    "updated_at": "2026-02-26T00:19:28.283Z",
-    "repo_id": "duke-sallie-bingham-zines",
-    "name": "Sallie Bingham Center Zine Collections",
-    "kind": [
-      "archive"
-    ],
-    "address": "Durham, NC",
-    "location": [
-      4464368
-    ],
-    "access_policy": "On-site access in the Rubenstein Library reading room; some finding aids and digitized materials available online.",
-    "hours": "Follows David M. Rubenstein Rare Book & Manuscript Library hours.",
-    "notes": "[\"Includes multiple named zine collections (e.g.\", \"Libby Gilbert\", \"Ailecia Ruscin).\", \"Strong emphasis on women's history\", \"gender\", \"sexuality\", \"and DIY publishing.\"]"
-  }
-},
-{
-  "model": "repositories.repository",
-  "pk": 59,
-  "fields": {
-    "created_at": "2026-02-25T19:02:49.936Z",
-    "updated_at": "2026-02-26T00:20:15.995Z",
-    "repo_id": "uiuc-abz-zines",
-    "name": "Artists' Books & Zines (ABZ) – University of Illinois Urbana-Champaign",
-    "kind": [
-      "library"
-    ],
-    "address": "Urbana-Champaign, IL",
-    "location": [
-      4914570
-    ],
-    "access_policy": "On-site access in participating UIUC libraries; policies vary by unit.",
-    "hours": "Follows hours for Ricker Library and other participating UIUC libraries.",
-    "notes": "[\"Distributed holdings across Ricker Library of Art + Architecture\", \"International & Area Studies\", \"Social Sciences/Health/Education\", \"and Rare Book & Manuscript Library.\", \"Covers artists' books\", \"zines\", \"and related art/design materials.\"]"
+    "notes": "[\"Holds more than 15\", \"000 fantasy and science fiction fanzines dated 1937–1972\", \"plus tens of thousands more related fanzines.\", \"Referenced as one of the largest focused sci-fi fanzine collections.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -1216,7 +1189,10 @@
     ],
     "access_policy": "Public zine library with in-person browsing; some events and workshops require booking.",
     "hours": "Open on specific days and times; schedule published on the website.",
-    "notes": "[\"Independent zine library and community space.\", \"Collection spans gender\", \"sexuality\", \"activism\", \"popular culture\", \"local interest\", \"photography\", \"art\", \"nature\", \"and more.\"]"
+    "notes": "[\"Independent zine library and community space.\", \"Collection spans gender\", \"sexuality\", \"activism\", \"popular culture\", \"local interest\", \"photography\", \"art\", \"nature\", \"and more.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -1236,47 +1212,10 @@
     ],
     "access_policy": "Free public browsing; many items available for on-site use, with some lending options depending on membership or local policy.",
     "hours": "Open limited days/hours each week; see website for current schedule.",
-    "notes": "[\"Holds thousands of zines with a focus on DIY\", \"radical politics\", \"personal writing\", \"and art.\", \"Frequently cited in academic and community guides as a major independent zine library.\"]"
-  }
-},
-{
-  "model": "repositories.repository",
-  "pk": 62,
-  "fields": {
-    "created_at": "2026-02-25T19:02:49.936Z",
-    "updated_at": "2026-02-26T00:20:34.119Z",
-    "repo_id": "jax-public-library-zines",
-    "name": "Jacksonville Public Library Zine Collection",
-    "kind": [
-      "library"
-    ],
-    "address": "Jacksonville, FL",
-    "location": [
-      4160021
-    ],
-    "access_policy": "Circulating zine collection available to library cardholders; in-library browsing also supported.",
-    "hours": "Follows Jacksonville Public Library branch hours.",
-    "notes": "[\"One of the first and largest circulating zine collections in a U.S. public library.\", \"Covers arts\", \"music\", \"comics\", \"politics\", \"gender\", \"and advocacy topics.\"]"
-  }
-},
-{
-  "model": "repositories.repository",
-  "pk": 63,
-  "fields": {
-    "created_at": "2026-02-25T19:02:49.936Z",
-    "updated_at": "2026-02-26T00:20:42.949Z",
-    "repo_id": "greenfield-public-library-zines",
-    "name": "Greenfield Public Library Zine Collection",
-    "kind": [
-      "library"
-    ],
-    "address": "Greenfield, MA",
-    "location": [
-      4938378
-    ],
-    "access_policy": "Circulating collection available to local patrons with a library card.",
-    "hours": "Follows Greenfield Public Library hours.",
-    "notes": "[\"Growing collection with over 100 zines and expanding.\", \"Includes local creators and a range of personal\", \"political\", \"and artistic zines.\"]"
+    "notes": "[\"Holds thousands of zines with a focus on DIY\", \"radical politics\", \"personal writing\", \"and art.\", \"Frequently cited in academic and community guides as a major independent zine library.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -1296,27 +1235,56 @@
     ],
     "access_policy": "Circulating and in-library use collection for MIT community; some items may be available for on-site use only.",
     "hours": "Follows Rotch Library hours.",
-    "notes": "[\"Described as a small but growing zine collection at MIT.\", \"Focused on student interests\", \"art\", \"design\", \"and independent publishing.\"]"
+    "notes": "[\"Described as a small but growing zine collection at MIT.\", \"Focused on student interests\", \"art\", \"design\", \"and independent publishing.\"]",
+    "is_active": true,
+    "submission_allowed": true,
+    "submission_notes": "CONTACT BEFORE DONATING: Fill out Distinctive Collections donation offer form. Evaluation can take weeks to months. Materials must align with existing collections. Donors cover off-campus shipping. MIT does not provide monetary appraisals. Materials become MIT property upon donation. Contact: libanswers.mit.edu/donation-offer"
   }
 },
 {
   "model": "repositories.repository",
-  "pk": 65,
+  "pk": 57,
   "fields": {
     "created_at": "2026-02-25T19:02:49.936Z",
-    "updated_at": "2026-02-26T00:21:17.090Z",
-    "repo_id": "alfred-university-zines",
-    "name": "Zines at Alfred University Libraries",
+    "updated_at": "2026-02-26T00:19:37.993Z",
+    "repo_id": "university-miami-zines",
+    "name": "University of Miami Libraries Zine Collection",
     "kind": [
       "library"
     ],
-    "address": "Alfred, NY",
+    "address": "Coral Gables, FL",
     "location": [
-      5128638
+      4151871
     ],
-    "access_policy": "Circulating and in-library use collection for AU community and visitors subject to library policies.",
-    "hours": "Follows Alfred University Libraries hours.",
-    "notes": "[\"Policy emphasizes creators underrepresented in academic collections.\", \"Supports student interests and curricular use of zines.\"]"
+    "access_policy": "On-site use in Special Collections; some zines digitized and discoverable online.",
+    "hours": "Follows University of Miami Special Collections hours.",
+    "notes": "[\"Collection of over 5\", \"000 zines documenting zine culture with an emphasis on South Florida.\", \"Used for teaching\", \"outreach\", \"and research on DIY and independent publishing.\"]",
+    "is_active": true,
+    "submission_allowed": true,
+    "submission_notes": "SOUTH FLORIDA EMPHASIS: Must supply list with title/publication info BEFORE bringing materials. Curators consider format, condition, research value. No processing time guarantees. Will not accept gifts with conditions. 5,000+ items. Contact: Elizabeth Fish, efish@miami.edu, 305-284-4049."
+  }
+},
+{
+  "model": "repositories.repository",
+  "pk": 62,
+  "fields": {
+    "created_at": "2026-02-25T19:02:49.936Z",
+    "updated_at": "2026-02-26T00:20:34.119Z",
+    "repo_id": "jax-public-library-zines",
+    "name": "Jacksonville Public Library Zine Collection",
+    "kind": [
+      "library"
+    ],
+    "address": "Jacksonville, FL",
+    "location": [
+      4160021
+    ],
+    "access_policy": "Circulating zine collection available to library cardholders; in-library browsing also supported.",
+    "hours": "Follows Jacksonville Public Library branch hours.",
+    "notes": "[\"One of the first and largest circulating zine collections in a U.S. public library.\", \"Covers arts\", \"music\", \"comics\", \"politics\", \"gender\", \"and advocacy topics.\"]",
+    "is_active": true,
+    "submission_allowed": true,
+    "submission_notes": "ROLLING SUBMISSIONS: Accepts all formats (hand-drawn, photocopied, professionally printed). Include: author(s), volume number(s), year, email. Selection criteria: public interest, presentation, readability, quality, merit, scarcity, local authorship. May take up to 6 months to appear. Unselected materials go to Friends of Library. Mail to: Main Library, 303 Laura St. N, Jacksonville, FL 32202, c/o Zine Collection."
   }
 },
 {
@@ -1336,27 +1304,33 @@
     ],
     "access_policy": "On-site access via Hutchins Library; some zines available online in full text.",
     "hours": "Follows Berea College Hutchins Library hours.",
-    "notes": "[\"Used as a teaching and research collection.\", \"Highlights zines related to Appalachia\", \"social justice\", \"and student creative work.\"]"
+    "notes": "[\"Used as a teaching and research collection.\", \"Highlights zines related to Appalachia\", \"social justice\", \"and student creative work.\"]",
+    "is_active": true,
+    "submission_allowed": true,
+    "submission_notes": "CONTACT LIBRARY: Accepts gifts that meet collection development criteria. Donations accepted by Director of Library Services. Receives regular donations from student graphic design courses. Contact library directly for specific zine submission guidelines."
   }
 },
 {
   "model": "repositories.repository",
-  "pk": 67,
+  "pk": 54,
   "fields": {
     "created_at": "2026-02-25T19:02:49.936Z",
-    "updated_at": "2026-02-26T00:18:37.250Z",
-    "repo_id": "qzap",
-    "name": "Queer Zine Archive Project (QZAP)",
+    "updated_at": "2026-02-28T18:43:21.428Z",
+    "repo_id": "barnard-zine-library",
+    "name": "Barnard College Zine Library",
     "kind": [
-      "archive"
+      "library"
     ],
-    "address": "",
+    "address": "New York, NY",
     "location": [
-      5263045
+      5128581
     ],
-    "access_policy": "Digital archive freely accessible online; some physical holdings available by arrangement.",
-    "hours": "Online access 24/7; in-person access by appointment.",
-    "notes": "[\"Dedicated to preserving queer zines and related ephemera.\", \"Large and growing digital collection of scanned zines.\"]"
+    "access_policy": "Research and teaching collection with in-person access; some zines digitized and available online.",
+    "hours": "Follows Barnard Library / Archives & Special Collections hours; check website for current schedule.",
+    "notes": "[\"Focus on feminism\", \"gender\", \"activism\", \"and popular culture.\", \"Maintains an international list of zine libraries and collections.\"]",
+    "is_active": true,
+    "submission_allowed": true,
+    "submission_notes": "EMAIL FIRST: zines@barnard.edu BEFORE mailing. Prefer lower production scale (~$5 or less to make). Will pay for zines or trade for Barnard swag. Especially interested in zines by women and transfeminine people of color, trans women. Collection focus: gender, feminisms, identities, activism, pop culture. Will reimburse postage."
   }
 },
 {
@@ -1376,7 +1350,10 @@
     ],
     "access_policy": "Online access to selected digitized zines, metadata, and project documentation.",
     "hours": "Online materials available 24/7.",
-    "notes": "[\"Centers zines created by people of color.\", \"Combines archiving\", \"advocacy\", \"and education around POC zine culture.\"]"
+    "notes": "[\"Centers zines created by people of color.\", \"Combines archiving\", \"advocacy\", \"and education around POC zine culture.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -1396,47 +1373,10 @@
     ],
     "access_policy": "On-site use at DC Public Library Special Collections; selected materials available online.",
     "hours": "Follows DC Public Library Special Collections hours.",
-    "notes": "[\"Documents Washington\", \"DC punk through zines\", \"recordings\", \"and ephemera.\", \"Includes interviews\", \"concert and record reviews\", \"and photographs from the mid-1970s onward.\"]"
-  }
-},
-{
-  "model": "repositories.repository",
-  "pk": 70,
-  "fields": {
-    "created_at": "2026-02-25T19:02:49.936Z",
-    "updated_at": "2026-02-26T00:18:05.071Z",
-    "repo_id": "loc-zine-web-archive",
-    "name": "Library of Congress Zine Web Archive",
-    "kind": [
-      "archive"
-    ],
-    "address": "Washington, DC",
-    "location": [
-      4140963
-    ],
-    "access_policy": "Web archive accessible online; some content may have access or permissions restrictions.",
-    "hours": "Online access 24/7.",
-    "notes": "[\"Supplements the Library of Congress's physical zine holdings.\", \"Prioritizes zines by people of color\", \"women\", \"immigrants\", \"and LGBTQ+ creators.\"]"
-  }
-},
-{
-  "model": "repositories.repository",
-  "pk": 71,
-  "fields": {
-    "created_at": "2026-02-25T19:02:49.936Z",
-    "updated_at": "2026-02-26T00:17:56.471Z",
-    "repo_id": "internet-archive-zines",
-    "name": "Internet Archive Zine Collection",
-    "kind": [
-      "archive"
-    ],
-    "address": "San Francisco, CA",
-    "location": [
-      5391959
-    ],
-    "access_policy": "Open access to digitized zines for viewing and usually downloading, subject to rights and takedown policies.",
-    "hours": "Online access 24/7.",
-    "notes": "[\"Hosts tens of thousands of digitized zines across many topics.\", \"Includes contributions from multiple libraries\", \"archives\", \"and individuals.\"]"
+    "notes": "[\"Documents Washington\", \"DC punk through zines\", \"recordings\", \"and ephemera.\", \"Includes interviews\", \"concert and record reviews\", \"and photographs from the mid-1970s onward.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -1456,7 +1396,10 @@
     ],
     "access_policy": "Exhibition-based and project-based zine archive; access primarily through curated exhibitions and events, with selections shown in Turkey and abroad.",
     "hours": "Access hours depend on host venue and exhibition schedule.",
-    "notes": "[\"Zine archive project emerging from Heyt be! Fanzin\", \"documenting Turkish zines and self-publications from the 1990s to today. [web:31]\", \"Presented as exhibitions such as 'Heyt be! Zine Archive From Turkey' and 'Mini Zine Archive From Turkey'. [web:31][web:32]\"]"
+    "notes": "[\"Zine archive project emerging from Heyt be! Fanzin\", \"documenting Turkish zines and self-publications from the 1990s to today. [web:31]\", \"Presented as exhibitions such as 'Heyt be! Zine Archive From Turkey' and 'Mini Zine Archive From Turkey'. [web:31][web:32]\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -1476,7 +1419,10 @@
     ],
     "access_policy": "Curated traveling exhibition; access is via host galleries and project partners rather than a permanent reading room.",
     "hours": "Follows hours of host venues (e.g., Kijosk, Vienna, and other exhibition sites).",
-    "notes": "[\"Curated by Deniz Beşer as a mini zine archive and exhibition featuring selected zines and self-publications from Turkey dating back to the 1990s. [web:32]\", \"Related to the broader Heyt be! zine archive project focusing on Turkish fanzine culture. [web:31][web:32]\"]"
+    "notes": "[\"Curated by Deniz Beşer as a mini zine archive and exhibition featuring selected zines and self-publications from Turkey dating back to the 1990s. [web:32]\", \"Related to the broader Heyt be! zine archive project focusing on Turkish fanzine culture. [web:31][web:32]\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -1496,7 +1442,10 @@
     ],
     "access_policy": "Festival-based zine library and exhibition; visitors access zines on-site during the event, with some materials retained as a temporary library.",
     "hours": "Open during festival dates and hours only.",
-    "notes": "[\"International zine fest in Istanbul that has included a temporary zine library and exhibitions of local and international zines. [web:33]\", \"Functions as a recurring node for zine exchange\", \"distro tables\", \"and small-scale library-like access during the event. [web:33][web:35]\"]"
+    "notes": "[\"International zine fest in Istanbul that has included a temporary zine library and exhibitions of local and international zines. [web:33]\", \"Functions as a recurring node for zine exchange\", \"distro tables\", \"and small-scale library-like access during the event. [web:33][web:35]\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -1516,7 +1465,10 @@
     ],
     "access_policy": "Highly informal DIY distro; zines distributed for free or low cost via street stands, bars, cafes, concerts, and personal networks.",
     "hours": "Pop-up stands and informal distribution; no fixed opening hours.",
-    "notes": "[\"Article describes an Izmir-based zine maker running zine stands on the streets for around 20 years\", \"distributing their own and collaborators’ zines. [web:35]\", \"Mentions support and solidarity from Kadıköy-based zine 'Solucan' and other projects; emphasizes face-to-face distribution over online sales. [web:35]\"]"
+    "notes": "[\"Article describes an Izmir-based zine maker running zine stands on the streets for around 20 years\", \"distributing their own and collaborators’ zines. [web:35]\", \"Mentions support and solidarity from Kadıköy-based zine 'Solucan' and other projects; emphasizes face-to-face distribution over online sales. [web:35]\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
   }
 },
 {
@@ -1536,7 +1488,240 @@
     ],
     "access_policy": "DIY zine and small-press project distributing books and zines without ISBNs, primarily via informal networks, bars, cafes, and concerts.",
     "hours": "No fixed public hours; distribution through events and local venues.",
-    "notes": "[\"Described as a long-running zine based in Kadıköy\", \"Istanbul\", \"known for publishing books without labels or ISBNs. [web:35]\", \"Part of a tight-knit Turkish zine scene where zine racks are mainly found in bars\", \"cafes\", \"and concert venues. [web:35]\"]"
+    "notes": "[\"Described as a long-running zine based in Kadıköy\", \"Istanbul\", \"known for publishing books without labels or ISBNs. [web:35]\", \"Part of a tight-knit Turkish zine scene where zine racks are mainly found in bars\", \"cafes\", \"and concert venues. [web:35]\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
+  }
+},
+{
+  "model": "repositories.repository",
+  "pk": 71,
+  "fields": {
+    "created_at": "2026-02-25T19:02:49.936Z",
+    "updated_at": "2026-02-26T00:17:56.471Z",
+    "repo_id": "internet-archive-zines",
+    "name": "Internet Archive Zine Collection",
+    "kind": [
+      "archive"
+    ],
+    "address": "San Francisco, CA",
+    "location": [
+      5391959
+    ],
+    "access_policy": "Open access to digitized zines for viewing and usually downloading, subject to rights and takedown policies.",
+    "hours": "Online access 24/7.",
+    "notes": "[\"Hosts tens of thousands of digitized zines across many topics.\", \"Includes contributions from multiple libraries\", \"archives\", \"and individuals.\"]",
+    "is_active": true,
+    "submission_allowed": true,
+    "submission_notes": "PHYSICAL OR DIGITAL: Digital uploads: upload directly to Internet Archive, select appropriate collection, specify language for OCR. Physical donations: email donations@archive.org with tracking info. Small donations: pack in sturdy double-walled boxes. Large collections: fill out donation form first. Cannot accept water damage, mold, or hazardous materials."
+  }
+},
+{
+  "model": "repositories.repository",
+  "pk": 67,
+  "fields": {
+    "created_at": "2026-02-25T19:02:49.936Z",
+    "updated_at": "2026-02-26T00:18:37.250Z",
+    "repo_id": "qzap",
+    "name": "Queer Zine Archive Project (QZAP)",
+    "kind": [
+      "archive"
+    ],
+    "address": "",
+    "location": [
+      5263045
+    ],
+    "access_policy": "Digital archive freely accessible online; some physical holdings available by arrangement.",
+    "hours": "Online access 24/7; in-person access by appointment.",
+    "notes": "[\"Dedicated to preserving queer zines and related ephemera.\", \"Large and growing digital collection of scanned zines.\"]",
+    "is_active": true,
+    "submission_allowed": true,
+    "submission_notes": "COMMUNITY ARCHIVE: Dedicated to preserving queer zines and queer zine culture. Relies on donations for zines and overhead. Volunteers assist with scanning/cataloging. Contact via website qzap.org or Instagram @queerzines for current submission guidelines. Address: 2935 N Fratney St, Milwaukee, WI 53212."
+  }
+},
+{
+  "model": "repositories.repository",
+  "pk": 13,
+  "fields": {
+    "created_at": "2026-02-25T00:00:00Z",
+    "updated_at": "2026-02-28T18:32:31.241Z",
+    "repo_id": "r-archive-six",
+    "name": "Archive Six",
+    "kind": [
+      "distro"
+    ],
+    "address": "Seattle, WA",
+    "location": [
+      5809844
+    ],
+    "access_policy": "",
+    "hours": "",
+    "notes": "[\"Seattle-based small press and zine distributor that began as a way to distribute the personal work of its founder\", \"zinester and designer Rachelle Abellar\", \"and later expanded into a curated distro centering marginalized voices. Its catalog focuses on work about social justice\", \"feminism\", \"women of color and other underrepresented creators\", \"intersectionality\", \"fat activism\", \"survival\", \"and art\", \"with Archive Six frequently tabling at regional events like Seattle Zine Fest.\"]",
+    "is_active": true,
+    "submission_allowed": false,
+    "submission_notes": ""
+  }
+},
+{
+  "model": "repositories.repository",
+  "pk": 24,
+  "fields": {
+    "created_at": "2026-02-25T00:00:00Z",
+    "updated_at": "2026-02-28T18:53:12.872Z",
+    "repo_id": "r-mcmicken-freespace",
+    "name": "McMicken FreeSpace",
+    "kind": [
+      "zine-library"
+    ],
+    "address": "West McMicken Avenue, Cincinnati, OH",
+    "location": [
+      4508722
+    ],
+    "access_policy": "",
+    "hours": "",
+    "notes": "[\"McMicken FreeSpace is a non-profit\", \"volunteer-run community space and zine distro housed in a formerly foreclosed building on West McMicken Avenue in Cincinnati\", \"envisioned by founder Stephanie Kodakya Phillips as a safe\", \"accessible 'freespace' for people without a foundation. Evolving from an earlier project called SoapBox Books and Zines\", \"it now serves as Cincinnati's only explicit activist hub and solidarity center\", \"hosting groups like Cincinnati Allied Transgender Support\", \"Sex Worker Support\", \"Black Lives Matter\", \"and AA for Freethinkers/Art of Recovery.\"]",
+    "is_active": false,
+    "submission_allowed": false,
+    "submission_notes": ""
+  }
+},
+{
+  "model": "repositories.repository",
+  "pk": 41,
+  "fields": {
+    "created_at": "2026-02-25T00:00:00Z",
+    "updated_at": "2026-02-28T18:35:55.484Z",
+    "repo_id": "r-san-francisco-public-library-zine-collection",
+    "name": "San Francisco Public Library Zine Collection",
+    "kind": [
+      "public-library"
+    ],
+    "address": "100 Larkin St, San Francisco, CA 94102",
+    "location": [
+      5391959
+    ],
+    "access_policy": "",
+    "hours": "",
+    "notes": "[\"Library collection documenting the Bay Area underground/alternative press and its impact on the city's cultural\", \"social\", \"and political life (good institutional anchor for West Coast radical/queer material).\"]",
+    "is_active": true,
+    "submission_allowed": true,
+    "submission_notes": "BAY AREA FOCUS: Accepts donations that fall within SFPL Collection Development Plan. Focus on underground/alternative press of San Francisco Bay Area. Will not add outdated, poor condition, poorly reviewed, or duplicate materials. Contact: Andrea Grimes, agrimes@sfpl.org, 415-557-4560."
+  }
+},
+{
+  "model": "repositories.repository",
+  "pk": 58,
+  "fields": {
+    "created_at": "2026-02-25T19:02:49.936Z",
+    "updated_at": "2026-02-26T00:19:28.283Z",
+    "repo_id": "duke-sallie-bingham-zines",
+    "name": "Sallie Bingham Center Zine Collections",
+    "kind": [
+      "archive"
+    ],
+    "address": "Durham, NC",
+    "location": [
+      4464368
+    ],
+    "access_policy": "On-site access in the Rubenstein Library reading room; some finding aids and digitized materials available online.",
+    "hours": "Follows David M. Rubenstein Rare Book & Manuscript Library hours.",
+    "notes": "[\"Includes multiple named zine collections (e.g.\", \"Libby Gilbert\", \"Ailecia Ruscin).\", \"Strong emphasis on women's history\", \"gender\", \"sexuality\", \"and DIY publishing.\"]",
+    "is_active": true,
+    "submission_allowed": true,
+    "submission_notes": "WOMEN/NON-BINARY CREATORS ONLY: Collects zines by women, woman-identified, and non-binary individuals. REQUIRES pre-contact and written gift agreement. Cannot guarantee materials will be added. Does NOT accept unsolicited donations. 6,000+ zines (majority 1990-2005). Contact Sallie Bingham Center before donating."
+  }
+},
+{
+  "model": "repositories.repository",
+  "pk": 63,
+  "fields": {
+    "created_at": "2026-02-25T19:02:49.936Z",
+    "updated_at": "2026-02-26T00:20:42.949Z",
+    "repo_id": "greenfield-public-library-zines",
+    "name": "Greenfield Public Library Zine Collection",
+    "kind": [
+      "library"
+    ],
+    "address": "Greenfield, MA",
+    "location": [
+      4938378
+    ],
+    "access_policy": "Circulating collection available to local patrons with a library card.",
+    "hours": "Follows Greenfield Public Library hours.",
+    "notes": "[\"Growing collection with over 100 zines and expanding.\", \"Includes local creators and a range of personal\", \"political\", \"and artistic zines.\"]",
+    "is_active": true,
+    "submission_allowed": true,
+    "submission_notes": "VERY OPEN POLICY: Fill out online intake form. Especially encouraged: zines by Greenfield creators or about Greenfield/Franklin County. Accepts third-party donations. No restrictions accepted. Will not act as censor for any age/material/subject. Contact: Jesse Cole, jesse.cole@greenfield-ma.gov, 413-772-1544. Form: docs.google.com/forms/d/e/1FAIpQLSdUz2H0vhwFQ-p-DMdtB0kTV0lhBc85J9gSfyyQQHkafqpjJw/viewform"
+  }
+},
+{
+  "model": "repositories.repository",
+  "pk": 65,
+  "fields": {
+    "created_at": "2026-02-25T19:02:49.936Z",
+    "updated_at": "2026-02-26T00:21:17.090Z",
+    "repo_id": "alfred-university-zines",
+    "name": "Zines at Alfred University Libraries",
+    "kind": [
+      "library"
+    ],
+    "address": "Alfred, NY",
+    "location": [
+      5128638
+    ],
+    "access_policy": "Circulating and in-library use collection for AU community and visitors subject to library policies.",
+    "hours": "Follows Alfred University Libraries hours.",
+    "notes": "[\"Policy emphasizes creators underrepresented in academic collections.\", \"Supports student interests and curricular use of zines.\"]",
+    "is_active": true,
+    "submission_allowed": true,
+    "submission_notes": "LOCAL CREATORS PREFERRED: Provide TWO copies + donation form to any librarian. One copy goes to circulating collection, one to Special Collections. Prefer zines made in Alfred area. Does NOT collect digital zines. For non-local/questions: Maria Planansky, planansky@alfred.edu"
+  }
+},
+{
+  "model": "repositories.repository",
+  "pk": 59,
+  "fields": {
+    "created_at": "2026-02-25T19:02:49.936Z",
+    "updated_at": "2026-02-28T18:41:12.721Z",
+    "repo_id": "uiuc-abz-zines",
+    "name": "Artists' Books & Zines (ABZ) – University of Illinois Urbana-Champaign",
+    "kind": [
+      "library"
+    ],
+    "address": "Urbana-Champaign, IL",
+    "location": [
+      4914570
+    ],
+    "access_policy": "On-site access in participating UIUC libraries; policies vary by unit.",
+    "hours": "Follows hours for Ricker Library and other participating UIUC libraries.",
+    "notes": "[\"Distributed holdings across Ricker Library of Art + Architecture\", \"International & Area Studies\", \"Social Sciences/Health/Education\", \"and Rare Book & Manuscript Library.\", \"Covers artists' books\", \"zines\", \"and related art/design materials.\"]",
+    "is_active": true,
+    "submission_allowed": true,
+    "submission_notes": "DIVERSITY FOCUS: Prioritizing BIPOC scholars/practitioners as part of Anti-Racism Commitments. Focusing on range of construction techniques/methods. Follow general library gift procedures. Contact: libgifts@library.illinois.edu or rickerlibrary@library.illinois.edu, 217-333-0224."
+  }
+},
+{
+  "model": "repositories.repository",
+  "pk": 70,
+  "fields": {
+    "created_at": "2026-02-25T19:02:49.936Z",
+    "updated_at": "2026-02-26T00:18:05.071Z",
+    "repo_id": "loc-zine-web-archive",
+    "name": "Library of Congress Zine Web Archive",
+    "kind": [
+      "archive"
+    ],
+    "address": "Washington, DC",
+    "location": [
+      4140963
+    ],
+    "access_policy": "Web archive accessible online; some content may have access or permissions restrictions.",
+    "hours": "Online access 24/7.",
+    "notes": "[\"Supplements the Library of Congress's physical zine holdings.\", \"Prioritizes zines by people of color\", \"women\", \"immigrants\", \"and LGBTQ+ creators.\"]",
+    "is_active": true,
+    "submission_allowed": true,
+    "submission_notes": "FEDERAL ARCHIVE - DIVERSITY PRIORITY: Physical zines: contact zines@loc.gov or ship via Fed-Ex/UPS. Web archives: nominate via webarchiving@loc.gov. Collection priorities: zines by people of color, women, immigrants, LGBTQ+, transgender, gender non-conforming individuals/orgs; subjects underrepresented in mainstream media/libraries."
   }
 },
 {
@@ -1601,22 +1786,6 @@
       "internet-archive-zines"
     ],
     "value": "https://ror.org/01w2bk160"
-  }
-},
-{
-  "model": "core.externaluri",
-  "pk": 1,
-  "fields": {
-    "created_at": "2026-02-24T19:51:17.639Z",
-    "updated_at": "2026-02-24T19:51:17.639Z",
-    "uri_type": [
-      "homepage"
-    ],
-    "agent": [
-      "a-pink-rose-society"
-    ],
-    "repository": null,
-    "uri": "https://pinkrosesociety.org"
   }
 },
 {
@@ -1793,22 +1962,6 @@
       "r-bus-stop-press"
     ],
     "uri": "https://busstoppress.weebly.com"
-  }
-},
-{
-  "model": "core.externaluri",
-  "pk": 13,
-  "fields": {
-    "created_at": "2026-02-25T04:37:18.038Z",
-    "updated_at": "2026-02-25T04:37:18.038Z",
-    "uri_type": [
-      "homepage"
-    ],
-    "agent": [
-      "a-anonymous-queers"
-    ],
-    "repository": null,
-    "uri": "https://anonymousqueers.org/"
   }
 },
 {
@@ -2436,186 +2589,131 @@
   }
 },
 {
-  "model": "catalog.zine",
-  "pk": 1,
+  "model": "core.externaluri",
+  "pk": 56,
   "fields": {
-    "created_at": "2026-02-25T04:39:26.971Z",
-    "updated_at": "2026-02-25T04:41:17.862Z",
-    "zine_id": "z-queer-chaos-1",
-    "title": "Queer Chaos #1",
-    "series_title": "Queer Chaos",
-    "issue_designation": "1",
-    "edition_statement": "",
-    "alternative_title": "[]",
-    "abstract": "",
-    "table_of_contents": "",
-    "public_notes": "[]",
-    "publish_date": "2025-02-01",
-    "physical_dimensions": "",
-    "number_of_pages": "24",
-    "format": "PDF",
-    "binding_features": "",
-    "place_of_publication": [
-      5165418
+    "created_at": "2026-02-28T18:32:31.243Z",
+    "updated_at": "2026-02-28T18:32:31.243Z",
+    "uri_type": [
+      "homepage"
     ],
-    "coverage": "[]",
-    "source": "[]",
-    "relation": "[]",
-    "rights_statement": [
-      "cc-by"
+    "agent": null,
+    "repository": [
+      "r-archive-six"
     ],
-    "identifier": "[]",
-    "subjects": [
-      [
-        "activism"
-      ],
-      [
-        "anti-fascism"
-      ],
-      [
-        "anti-racism"
-      ],
-      [
-        "gender-and-sexuality"
-      ],
-      [
-        "queer-history"
-      ],
-      [
-        "queer-politics"
-      ]
-    ],
-    "genres": [
-      [
-        "political-zine"
-      ]
-    ],
-    "languages": [
-      [
-        "en"
-      ]
-    ]
+    "uri": "https://msha.ke/archivesix"
   }
 },
 {
-  "model": "catalog.zine",
-  "pk": 2,
+  "model": "core.externaluri",
+  "pk": 57,
   "fields": {
-    "created_at": "2026-02-25T04:43:44.166Z",
-    "updated_at": "2026-02-25T04:43:44.166Z",
-    "zine_id": "z-queer-chaos-2",
-    "title": "Queer Chaos #2",
-    "series_title": "Queer Chaos",
-    "issue_designation": "2",
-    "edition_statement": "",
-    "alternative_title": "[]",
-    "abstract": "",
-    "table_of_contents": "",
-    "public_notes": "[]",
-    "publish_date": "2025-08-15",
-    "physical_dimensions": "5.5 in x 8.5 in",
-    "number_of_pages": "24",
-    "format": "Offset, black ink; Hot pink cover card stock",
-    "binding_features": "Staple",
-    "place_of_publication": [
-      6252001
+    "created_at": "2026-02-28T18:32:31.245Z",
+    "updated_at": "2026-02-28T18:32:31.245Z",
+    "uri_type": [
+      "instagram"
     ],
-    "coverage": "[]",
-    "source": "[]",
-    "relation": "[]",
-    "rights_statement": null,
-    "identifier": "[]",
-    "subjects": [
-      [
-        "activism"
-      ],
-      [
-        "anti-fascism"
-      ],
-      [
-        "anti-racism"
-      ],
-      [
-        "gender-and-sexuality"
-      ],
-      [
-        "queer-history"
-      ],
-      [
-        "queer-politics"
-      ],
-      [
-        "race-and-racism"
-      ]
+    "agent": null,
+    "repository": [
+      "r-archive-six"
     ],
-    "genres": [
-      [
-        "political-zine"
-      ]
-    ],
-    "languages": [
-      [
-        "en"
-      ]
-    ]
+    "uri": "https://www.instagram.com/archivesix/"
   }
 },
 {
-  "model": "catalog.zinecreator",
-  "pk": 1,
+  "model": "core.externaluri",
+  "pk": 58,
   "fields": {
-    "zine": [
-      "z-queer-chaos-1"
+    "created_at": "2026-02-28T18:35:55.486Z",
+    "updated_at": "2026-02-28T18:35:55.486Z",
+    "uri_type": [
+      "homepage"
     ],
-    "agent": [
-      "a-pink-rose-society"
+    "agent": null,
+    "repository": [
+      "r-san-francisco-public-library-zine-collection"
     ],
-    "order": 0
+    "uri": "https://sfpl.org/locations/main-library/book-arts-special-collections/little-magazine-collection"
   }
 },
 {
-  "model": "catalog.zinecreator",
-  "pk": 2,
+  "model": "core.externaluri",
+  "pk": 59,
   "fields": {
-    "zine": [
-      "z-queer-chaos-2"
+    "created_at": "2026-02-28T18:41:12.726Z",
+    "updated_at": "2026-02-28T18:41:12.726Z",
+    "uri_type": [
+      "donate"
     ],
-    "agent": [
-      "a-pink-rose-society"
+    "agent": null,
+    "repository": [
+      "uiuc-abz-zines"
     ],
-    "order": 0
+    "uri": "https://www.library.illinois.edu/oak/gifts/donors/"
   }
 },
 {
-  "model": "catalog.zinecontributor",
-  "pk": 1,
+  "model": "core.externaluri",
+  "pk": 60,
   "fields": {
-    "zine": [
-      "z-queer-chaos-1"
+    "created_at": "2026-02-28T18:43:21.429Z",
+    "updated_at": "2026-02-28T18:43:21.429Z",
+    "uri_type": [
+      "donate"
     ],
-    "agent": [
-      "a-anonymous-queers"
+    "agent": null,
+    "repository": [
+      "barnard-zine-library"
     ],
-    "role": [
-      "editor"
-    ],
-    "order": 0
+    "uri": "https://zines.barnard.edu/donation"
   }
 },
 {
-  "model": "catalog.zinecontributor",
-  "pk": 2,
+  "model": "core.externaluri",
+  "pk": 61,
   "fields": {
-    "zine": [
-      "z-queer-chaos-2"
+    "created_at": "2026-02-28T18:55:55.416Z",
+    "updated_at": "2026-02-28T18:55:55.416Z",
+    "uri_type": [
+      "homepage"
     ],
-    "agent": [
-      "a-anonymous-queers"
+    "agent": null,
+    "repository": [
+      "r-neither-nor"
     ],
-    "role": [
-      "editor"
+    "uri": "https://goofballsk8boards.com/whatwedo/"
+  }
+},
+{
+  "model": "core.externaluri",
+  "pk": 62,
+  "fields": {
+    "created_at": "2026-02-28T18:55:55.419Z",
+    "updated_at": "2026-02-28T18:55:55.419Z",
+    "uri_type": [
+      "instagram"
     ],
-    "order": 0
+    "agent": null,
+    "repository": [
+      "r-neither-nor"
+    ],
+    "uri": "https://www.instagram.com/neither_nor_zine_distro/"
+  }
+},
+{
+  "model": "core.externaluri",
+  "pk": 63,
+  "fields": {
+    "created_at": "2026-02-28T18:55:55.420Z",
+    "updated_at": "2026-02-28T18:55:55.421Z",
+    "uri_type": [
+      "catalog"
+    ],
+    "agent": null,
+    "repository": [
+      "r-neither-nor"
+    ],
+    "uri": "https://www.librarycat.org/lib/neither-nor"
   }
 }
 ]

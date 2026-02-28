@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "repositories",
     "geography",
     "holdings",
+    "accounts",
 ]
 
 UNFOLD = {
@@ -74,9 +75,15 @@ UNFOLD = {
                         "icon": "inventory",
                         "link": "/admin/holdings/holding/",
                     },
+                    {
+                        "title": "Zine Submissions",
+                        "icon": "send",
+                        "link": "/admin/accounts/zinesubmission/",
+                    },
+
                 ],
             },
-{
+            {
                 "title": "Controlled Vocabularies",
                 "separator": True,
                 "collapsible": True,
@@ -141,7 +148,11 @@ UNFOLD = {
                         "icon": "public",
                         "link": "/admin/geography/geoplace/",
                     },
-
+                    {
+                        "title": "Submission Statuses",
+                        "icon": "pending_actions",
+                        "link": "/admin/accounts/submissionstatus/",
+                    },
                 ]
             },
             {
@@ -158,6 +169,11 @@ UNFOLD = {
                         "title": "Groups",
                         "icon": "groups",
                         "link": "/admin/auth/group/",
+                    },
+                    {
+                        "title": "Profiles",
+                        "icon": "account_circle",
+                        "link": "/admin/accounts/profile/",
                     },
                 ],
             },

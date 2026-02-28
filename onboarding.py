@@ -545,21 +545,20 @@ async def step_load_vocabularies(app: OnboardingApp, _user_said_yes: bool | None
             "[yellow]Warning: Some vocabularies failed to fetch from API[/yellow]"
         )
 
-    # Load external_id_systems and external_uri_types from local files
-    # (these are not available from the zinecore.org API)
-    app.log_message("Loading external identifier and URI vocabularies from local files...")
+    # Load external_id_systems and external_uri_types from data/ directory
+    app.log_message("Loading external identifier and URI vocabularies from data/ directory...")
     try:
         await app.run_command(
-            f"{MANAGE_PY} load_vocabularies --local --vocab external_id_systems"
+            f"{MANAGE_PY} load_vocabularies --local --vocab external_id_systems --vocab-dir data"
         )
         await app.run_command(
-            f"{MANAGE_PY} load_vocabularies --local --vocab external_uri_types"
+            f"{MANAGE_PY} load_vocabularies --local --vocab external_uri_types --vocab-dir data"
         )
         app.log_message("[green]\u2713 Vocabularies loaded[/green]")
     except RuntimeError:
         app.log_message(
-            "[yellow]Warning: Failed to load local vocabularies. "
-            "You can retry later with: ./manage.py load_vocabularies --local[/yellow]"
+            "[yellow]Warning: Failed to load local vocabularies from data/. "
+            "You can retry later with: ./manage.py load_vocabularies --local --vocab-dir data[/yellow]"
         )
         for s in app.steps:
             if s.name == "Load Vocabularies":

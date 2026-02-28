@@ -1,0 +1,34 @@
+[
+  {
+    "model": "accounts.submissionstatus",
+    "pk": 1,
+    "fields": {
+      "code": "planned",
+      "label": "Planned"
+    }
+  },
+  {
+    "model": "accounts.submissionstatus",
+    "pk": 2,
+    "fields": {
+      "code": "submitted",
+      "label": "Submitted"
+    }
+  },
+  {
+    "model": "accounts.submissionstatus",
+    "pk": 3,
+    "fields": {
+      "code": "accepted",
+      "label": "Accepted"
+    }
+  },
+  {
+    "model": "accounts.submissionstatus",
+    "pk": 4,
+    "fields": {
+      "code": "rejected",
+      "label": "Rejected"
+    }
+  }
+]

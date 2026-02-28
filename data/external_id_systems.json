@@ -1,0 +1,184 @@
+{
+  "id": "external_id_systems",
+  "title": "External Identifier Systems",
+  "description": "Controlled vocabulary of external identifier systems used for agents and repositories.",
+  "namespace": "https://zinecore.org/vocab/external-id-systems/",
+  "terms": [
+    {
+      "code": "marc_org",
+      "label": "MARC Organization Code (NUC)",
+      "description": "Library of Congress MARC Organization Code, also known as National Union Catalog (NUC) symbol.",
+      "lookup_uri": "https://www.loc.gov/marc/organizations/org-search.php",
+      "info_uri": "https://www.loc.gov/marc/organizations/",
+      "owner_uri": "https://www.loc.gov/",
+      "applicable_to": "repository",
+      "authority_scope_country_code": "US"
+    },
+    {
+      "code": "isil",
+      "label": "International Standard Identifier for Libraries (ISIL)",
+      "description": "ISO 15511 identifier for libraries and related organizations.",
+      "lookup_uri": "https://ld.zdb-services.de/resource/organisations/",
+      "info_uri": "https://www.iso.org/standard/77849.html",
+      "owner_uri": "https://www.iso.org/",
+      "applicable_to": "repository"
+    },
+    {
+      "code": "ror",
+      "label": "Research Organization Registry (ROR)",
+      "description": "Open, community-led registry of research organization identifiers.",
+      "lookup_uri": "https://ror.org/{value}",
+      "info_uri": "https://ror.org/about/",
+      "owner_uri": "https://ror.org/",
+      "applicable_to": "repository"
+    },
+    {
+      "code": "orcid",
+      "label": "ORCID",
+      "description": "Open Researcher and Contributor ID for uniquely identifying authors and contributors.",
+      "lookup_uri": "https://orcid.org/{value}",
+      "info_uri": "https://info.orcid.org/what-is-orcid/",
+      "owner_uri": "https://orcid.org/",
+      "applicable_to": "agent"
+    },
+    {
+      "code": "wikidata",
+      "label": "Wikidata ID",
+      "description": "Wikidata item identifier for linked open data.",
+      "lookup_uri": "https://www.wikidata.org/wiki/{value}",
+      "info_uri": "https://www.wikidata.org/wiki/Wikidata:Introduction",
+      "owner_uri": "https://www.wikidata.org/",
+      "applicable_to": "both"
+    },
+    {
+      "code": "worldcat_registry",
+      "label": "WorldCat Registry ID",
+      "description": "OCLC WorldCat Registry identifier for institutions.",
+      "lookup_uri": "https://www.worldcat.org/registry/Institutions/{value}",
+      "info_uri": "https://www.oclc.org/en/worldcat-registry.html",
+      "owner_uri": "https://www.oclc.org/",
+      "applicable_to": "repository"
+    },
+    {
+      "code": "nuc_au",
+      "label": "Australian National Union Catalog",
+      "description": "National Library of Australia ILRS symbol for Australian libraries.",
+      "lookup_uri": "https://www.nla.gov.au/ilrs/",
+      "info_uri": "https://www.nla.gov.au/ilrs/",
+      "owner_uri": "https://www.nla.gov.au/",
+      "applicable_to": "repository",
+      "authority_scope_country_code": "AU"
+    },
+    {
+      "code": "abn",
+      "label": "Australian Business Number",
+      "description": "Australian Business Number used for organizational identification.",
+      "lookup_uri": "https://abr.business.gov.au/ABN/View/{value}",
+      "info_uri": "https://www.abr.gov.au/",
+      "owner_uri": "https://www.abr.gov.au/",
+      "applicable_to": "repository",
+      "authority_scope_country_code": "AU"
+    },
+    {
+      "code": "bibsys",
+      "label": "BIBSYS Library Code (Norway)",
+      "description": "Norwegian library system code managed by BIBSYS/Sikt.",
+      "lookup_uri": "https://bibliotekregisteret.no/",
+      "info_uri": "https://www.bibsys.no/",
+      "owner_uri": "https://sikt.no/",
+      "applicable_to": "repository",
+      "authority_scope_country_code": "NO"
+    },
+    {
+      "code": "bl_code",
+      "label": "British Library Code",
+      "description": "British Library institution code.",
+      "info_uri": "https://www.bl.uk/",
+      "owner_uri": "https://www.bl.uk/",
+      "applicable_to": "repository",
+      "authority_scope_country_code": "GB"
+    },
+    {
+      "code": "fein",
+      "label": "Federal Employer Identification Number",
+      "description": "US IRS employer identification number.",
+      "info_uri": "https://www.irs.gov/businesses/small-businesses-self-employed/employer-id-numbers",
+      "owner_uri": "https://www.irs.gov/",
+      "applicable_to": "repository",
+      "authority_scope_country_code": "US"
+    },
+    {
+      "code": "nces_ipeds",
+      "label": "NCES IPEDS ID/UnitID",
+      "description": "National Center for Education Statistics Integrated Postsecondary Education Data System identifier.",
+      "lookup_uri": "https://nces.ed.gov/ipeds/datacenter/institutionprofile.aspx?unitId={value}",
+      "info_uri": "https://nces.ed.gov/ipeds/",
+      "owner_uri": "https://nces.ed.gov/",
+      "applicable_to": "repository",
+      "authority_scope_country_code": "US"
+    },
+    {
+      "code": "nces_fscs",
+      "label": "NCES Organization Code/FSCS ID",
+      "description": "NCES Federal-State Cooperative System for Public Library Data identifier.",
+      "info_uri": "https://nces.ed.gov/surveys/libraries/",
+      "owner_uri": "https://nces.ed.gov/",
+      "applicable_to": "repository",
+      "authority_scope_country_code": "US"
+    },
+    {
+      "code": "nces_libid",
+      "label": "NCES Library Code/LIBID",
+      "description": "NCES library identifier.",
+      "info_uri": "https://nces.ed.gov/surveys/libraries/",
+      "owner_uri": "https://nces.ed.gov/",
+      "applicable_to": "repository",
+      "authority_scope_country_code": "US"
+    },
+    {
+      "code": "nzls",
+      "label": "New Zealand Library Symbol",
+      "description": "Library symbol used in the New Zealand library system.",
+      "info_uri": "https://natlib.govt.nz/directory-of-new-zealand-libraries",
+      "owner_uri": "https://natlib.govt.nz/",
+      "applicable_to": "repository",
+      "authority_scope_country_code": "NZ"
+    },
+    {
+      "code": "nzuc",
+      "label": "New Zealand Union Catalog Name",
+      "description": "Name as used in the New Zealand Union Catalog.",
+      "info_uri": "https://natlib.govt.nz/directory-of-new-zealand-libraries",
+      "owner_uri": "https://natlib.govt.nz/",
+      "applicable_to": "repository",
+      "authority_scope_country_code": "NZ"
+    },
+    {
+      "code": "oclc_symbol",
+      "label": "OCLC Symbol",
+      "description": "OCLC institutional symbol used for interlibrary loan and cataloging.",
+      "lookup_uri": "https://www.worldcat.org/registry/Institutions?name={value}",
+      "info_uri": "https://www.oclc.org/en/contacts/libraries.html",
+      "owner_uri": "https://www.oclc.org/",
+      "applicable_to": "repository"
+    },
+    {
+      "code": "rcr",
+      "label": "RCR Code (France/ABES)",
+      "description": "Répertoire des Centres de Ressources code managed by ABES (France).",
+      "lookup_uri": "https://www.sudoc.fr/DB=2.2/SET=1/TTL=1/CMD?ACT=SRCHA&IKT=8888&SRT=RLV&TRM={value}",
+      "info_uri": "https://www.abes.fr/",
+      "owner_uri": "https://www.abes.fr/",
+      "applicable_to": "repository",
+      "authority_scope_country_code": "FR"
+    },
+    {
+      "code": "san",
+      "label": "Standard Address Number (SAN)",
+      "description": "ISO 18263 identifier for addresses in the book trade supply chain.",
+      "info_uri": "https://www.isbn-international.org/content/standard-address-number",
+      "owner_uri": "https://www.isbn-international.org/",
+      "applicable_to": "repository"
+    }
+  ]
+}
