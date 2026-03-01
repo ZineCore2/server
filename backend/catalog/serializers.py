@@ -67,7 +67,6 @@ class ZinePublisherSerializer(serializers.ModelSerializer):
 
 
 class ZineSerializer(serializers.ModelSerializer):
-    id = serializers.CharField(source="zine_id")
     subjects = SubjectSerializer(many=True, read_only=True)
     genres = GenreSerializer(many=True, read_only=True)
     languages = LanguageSerializer(many=True, read_only=True)
@@ -87,11 +86,14 @@ class ZineSerializer(serializers.ModelSerializer):
     contributor = serializers.SerializerMethodField()
     publisher = serializers.SerializerMethodField()
     rights = serializers.SerializerMethodField()
+    year_published = serializers.SerializerMethodField()
+    thumbnail_url = serializers.SerializerMethodField()
 
     class Meta:
         model = Zine
         fields = [
             "id",
+            "zine_id",
             "title",
             "series_title",
             "issue_designation",
@@ -111,6 +113,7 @@ class ZineSerializer(serializers.ModelSerializer):
             "publisher",
             "zinepublisher_set",
             "publish_date",
+            "year_published",
             "physical_dimensions",
             "number_of_pages",
             "format",
@@ -124,6 +127,7 @@ class ZineSerializer(serializers.ModelSerializer):
             "rights",
             "rights_statement",
             "identifier",
+            "thumbnail_url",
             "created_at",
             "updated_at",
         ]
@@ -133,9 +137,9 @@ class ZineSerializer(serializers.ModelSerializer):
     def get_subject(self, obj):
         return list(obj.subjects.values_list("label", flat=True))
 
-    @extend_schema_field(serializers.ListField(child=serializers.CharField()))
+    @extend_schema_field(serializers.ListField(child=serializers.DictField()))
     def get_genre(self, obj):
-        return list(obj.genres.values_list("label", flat=True))
+        return [{"id": g.id, "label": g.label} for g in obj.genres.all()]
 
     @extend_schema_field(serializers.ListField(child=serializers.CharField()))
     def get_language(self, obj):
@@ -144,21 +148,21 @@ class ZineSerializer(serializers.ModelSerializer):
     @extend_schema_field(serializers.ListField(child=serializers.CharField()))
     def get_creator(self, obj):
         return [
-            zc.agent.display_name
+            {"id": zc.agent.id, "display_name": zc.agent.display_name}
             for zc in obj.zinecreator_set.all().order_by("order")
         ]
 
-    @extend_schema_field(serializers.ListField(child=serializers.CharField()))
+    @extend_schema_field(serializers.ListField(child=serializers.DictField()))
     def get_contributor(self, obj):
         return [
-            zc.agent.display_name
+            {"id": zc.agent.id, "display_name": zc.agent.display_name}
             for zc in obj.zinecontributor_set.all().order_by("order")
         ]
 
-    @extend_schema_field(serializers.ListField(child=serializers.CharField()))
+    @extend_schema_field(serializers.ListField(child=serializers.DictField()))
     def get_publisher(self, obj):
         return [
-            zp.agent.display_name
+            {"id": zp.agent.id, "display_name": zp.agent.display_name}
             for zp in obj.zinepublisher_set.all().order_by("order")
         ]
 
@@ -167,6 +171,16 @@ class ZineSerializer(serializers.ModelSerializer):
         if obj.rights_statement:
             return [obj.rights_statement.label]
         return []
+
+    def get_year_published(self, obj):
+        """Extract year from publish_date for frontend compatibility."""
+        if obj.publish_date:
+            return obj.publish_date.year
+        return None
+
+    def get_thumbnail_url(self, obj):
+        """Placeholder for thumbnail URL - to be implemented when image handling is added."""
+        return None
 
 
 class ContributorDataSerializer(serializers.Serializer):

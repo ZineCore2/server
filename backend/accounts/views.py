@@ -1,16 +1,92 @@
+from django.contrib.auth import authenticate
 from drf_spectacular.utils import extend_schema, extend_schema_view
-from rest_framework import viewsets
-from rest_framework.permissions import IsAuthenticated
+from rest_framework import status, viewsets
+from rest_framework.authtoken.models import Token
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import AllowAny, IsAuthenticated
+from rest_framework.response import Response
 
-from .models import Profile, SubmissionStatus, ZineSubmission
+from .models import Profile, ProfileAgentClaim, ProfileRepositoryClaim, SubmissionStatus, ZineSubmission
 from .permissions import IsOwner, IsOwnerOrRepositoryStaff
 from .serializers import (
+    ProfileAgentClaimSerializer,
+    ProfileAgentClaimWriteSerializer,
+    ProfileRepositoryClaimSerializer,
+    ProfileRepositoryClaimWriteSerializer,
     ProfileSerializer,
     ProfileWriteSerializer,
     SubmissionStatusSerializer,
     ZineSubmissionSerializer,
     ZineSubmissionWriteSerializer,
 )
+
+
+@api_view(["POST"])
+@permission_classes([AllowAny])
+def login_view(request):
+    """
+    Authenticate user and return token + user data
+
+    POST /api/auth/login/
+    Body: { "username": "...", "password": "..." }
+    Returns: { "token": "...", "user": {...} }
+    """
+    username = request.data.get("username")
+    password = request.data.get("password")
+
+    if not username or not password:
+        return Response(
+            {"detail": "Username and password are required"},
+            status=status.HTTP_400_BAD_REQUEST,
+        )
+
+    user = authenticate(username=username, password=password)
+
+    if user is None:
+        return Response(
+            {"detail": "Invalid credentials"},
+            status=status.HTTP_401_UNAUTHORIZED,
+        )
+
+    # Get or create token
+    token, created = Token.objects.get_or_create(user=user)
+
+    # Get user profile if exists
+    try:
+        profile = Profile.objects.get(user=user)
+        profile_data = ProfileSerializer(profile).data
+    except Profile.DoesNotExist:
+        profile_data = None
+
+    return Response({
+        "token": token.key,
+        "user": {
+            "id": user.id,
+            "username": user.username,
+            "email": user.email,
+            "first_name": user.first_name,
+            "last_name": user.last_name,
+            "is_staff": user.is_staff,
+            "is_superuser": user.is_superuser,
+            "profile": profile_data,
+        },
+    })
+
+
+@api_view(["POST"])
+@permission_classes([IsAuthenticated])
+def logout_view(request):
+    """
+    Logout user by deleting their token
+
+    POST /api/auth/logout/
+    """
+    try:
+        request.user.auth_token.delete()
+    except Exception:
+        pass
+
+    return Response({"detail": "Successfully logged out"})
 
 
 @extend_schema_view(
@@ -108,3 +184,71 @@ class SubmissionStatusViewSet(viewsets.ReadOnlyModelViewSet):
     serializer_class = SubmissionStatusSerializer
     lookup_field = "code"
     pagination_class = None
+
+
+@extend_schema_view(
+    list=extend_schema(tags=["Accounts"], summary="List agent claims for profile"),
+    retrieve=extend_schema(tags=["Accounts"], summary="Retrieve an agent claim"),
+    create=extend_schema(tags=["Accounts"], summary="Create an agent claim"),
+    update=extend_schema(tags=["Accounts"], summary="Update an agent claim"),
+    partial_update=extend_schema(tags=["Accounts"], summary="Partially update an agent claim"),
+    destroy=extend_schema(tags=["Accounts"], summary="Delete an agent claim"),
+)
+class ProfileAgentClaimViewSet(viewsets.ModelViewSet):
+    """
+    CRUD operations for profile agent claims.
+
+    Users can manage claims on agent records (e.g., 'this is me').
+    """
+
+    queryset = ProfileAgentClaim.objects.select_related("profile__user", "agent__kind").all()
+    permission_classes = [IsAuthenticated, IsOwner]
+
+    def get_queryset(self):
+        """Filter to only show the authenticated user's profile claims."""
+        if self.request.user.is_authenticated and hasattr(self.request.user, "profile"):
+            return self.queryset.filter(profile=self.request.user.profile)
+        return self.queryset.none()
+
+    def get_serializer_class(self):
+        if self.action in ("create", "update", "partial_update"):
+            return ProfileAgentClaimWriteSerializer
+        return ProfileAgentClaimSerializer
+
+    def perform_create(self, serializer):
+        """Set the profile to the authenticated user's profile when creating a claim."""
+        serializer.save(profile=self.request.user.profile)
+
+
+@extend_schema_view(
+    list=extend_schema(tags=["Accounts"], summary="List repository claims for profile"),
+    retrieve=extend_schema(tags=["Accounts"], summary="Retrieve a repository claim"),
+    create=extend_schema(tags=["Accounts"], summary="Create a repository claim"),
+    update=extend_schema(tags=["Accounts"], summary="Update a repository claim"),
+    partial_update=extend_schema(tags=["Accounts"], summary="Partially update a repository claim"),
+    destroy=extend_schema(tags=["Accounts"], summary="Delete a repository claim"),
+)
+class ProfileRepositoryClaimViewSet(viewsets.ModelViewSet):
+    """
+    CRUD operations for profile repository claims.
+
+    Users can manage claims on repository records (e.g., 'I work at this repository').
+    """
+
+    queryset = ProfileRepositoryClaim.objects.select_related("profile__user", "repository__kind").all()
+    permission_classes = [IsAuthenticated, IsOwner]
+
+    def get_queryset(self):
+        """Filter to only show the authenticated user's profile claims."""
+        if self.request.user.is_authenticated and hasattr(self.request.user, "profile"):
+            return self.queryset.filter(profile=self.request.user.profile)
+        return self.queryset.none()
+
+    def get_serializer_class(self):
+        if self.action in ("create", "update", "partial_update"):
+            return ProfileRepositoryClaimWriteSerializer
+        return ProfileRepositoryClaimSerializer
+
+    def perform_create(self, serializer):
+        """Set the profile to the authenticated user's profile when creating a claim."""
+        serializer.save(profile=self.request.user.profile)

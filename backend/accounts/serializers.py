@@ -6,7 +6,7 @@ from catalog.models import Zine
 from repositories.models import Repository
 from repositories.serializers import RepositorySerializer
 
-from .models import Profile, SubmissionStatus, ZineSubmission
+from .models import Profile, ProfileAgentClaim, ProfileRepositoryClaim, SubmissionStatus, ZineSubmission
 
 
 class SubmissionStatusSerializer(serializers.ModelSerializer):
@@ -15,13 +15,91 @@ class SubmissionStatusSerializer(serializers.ModelSerializer):
         fields = ["code", "label"]
 
 
+class ProfileAgentClaimSerializer(serializers.ModelSerializer):
+    """Read serializer for ProfileAgentClaim with nested agent."""
+
+    agent = AgentSerializer(read_only=True)
+
+    class Meta:
+        model = ProfileAgentClaim
+        fields = [
+            "id",
+            "agent",
+            "status",
+            "note",
+            "created_at",
+            "updated_at",
+        ]
+        read_only_fields = ["created_at", "updated_at"]
+
+
+class ProfileAgentClaimWriteSerializer(serializers.ModelSerializer):
+    """Write serializer for ProfileAgentClaim using agent_id for FK resolution."""
+
+    agent_id = serializers.SlugRelatedField(
+        slug_field="agent_id",
+        queryset=Agent.objects.all(),
+        source="agent",
+    )
+
+    class Meta:
+        model = ProfileAgentClaim
+        fields = ["agent_id", "status", "note"]
+
+    def validate(self, data):
+        """Ensure profile is set from context."""
+        request = self.context.get("request")
+        if request and request.user and hasattr(request.user, "profile"):
+            data["profile"] = request.user.profile
+        return data
+
+
+class ProfileRepositoryClaimSerializer(serializers.ModelSerializer):
+    """Read serializer for ProfileRepositoryClaim with nested repository."""
+
+    repository = RepositorySerializer(read_only=True)
+
+    class Meta:
+        model = ProfileRepositoryClaim
+        fields = [
+            "id",
+            "repository",
+            "status",
+            "note",
+            "created_at",
+            "updated_at",
+        ]
+        read_only_fields = ["created_at", "updated_at"]
+
+
+class ProfileRepositoryClaimWriteSerializer(serializers.ModelSerializer):
+    """Write serializer for ProfileRepositoryClaim using repo_id for FK resolution."""
+
+    repository_id = serializers.SlugRelatedField(
+        slug_field="repo_id",
+        queryset=Repository.objects.all(),
+        source="repository",
+    )
+
+    class Meta:
+        model = ProfileRepositoryClaim
+        fields = ["repository_id", "status", "note"]
+
+    def validate(self, data):
+        """Ensure profile is set from context."""
+        request = self.context.get("request")
+        if request and request.user and hasattr(request.user, "profile"):
+            data["profile"] = request.user.profile
+        return data
+
+
 class ProfileSerializer(serializers.ModelSerializer):
-    """Read-only serializer for Profile with nested Agent and Repository."""
+    """Read-only serializer for Profile with nested claims."""
 
     username = serializers.CharField(source="user.username", read_only=True)
     email = serializers.EmailField(source="user.email", read_only=True)
-    agent = AgentSerializer(read_only=True)
-    repository = RepositorySerializer(read_only=True)
+    agent_claims = ProfileAgentClaimSerializer(many=True, read_only=True)
+    repository_claims = ProfileRepositoryClaimSerializer(many=True, read_only=True)
 
     class Meta:
         model = Profile
@@ -29,8 +107,8 @@ class ProfileSerializer(serializers.ModelSerializer):
             "username",
             "email",
             "profile_image",
-            "agent",
-            "repository",
+            "agent_claims",
+            "repository_claims",
             "created_at",
             "updated_at",
         ]
@@ -38,30 +116,11 @@ class ProfileSerializer(serializers.ModelSerializer):
 
 
 class ProfileWriteSerializer(serializers.ModelSerializer):
-    """Write serializer for Profile using agent_id and repo_id for FK resolution."""
-
-    agent_id = serializers.SlugRelatedField(
-        slug_field="agent_id",
-        queryset=Agent.objects.all(),
-        source="agent",
-        required=False,
-        allow_null=True,
-    )
-    repository_id = serializers.SlugRelatedField(
-        slug_field="repo_id",
-        queryset=Repository.objects.all(),
-        source="repository",
-        required=False,
-        allow_null=True,
-    )
+    """Write serializer for Profile (profile_image only, claims managed separately)."""
 
     class Meta:
         model = Profile
-        fields = [
-            "profile_image",
-            "agent_id",
-            "repository_id",
-        ]
+        fields = ["profile_image"]
 
 
 class ZineSubmissionSerializer(serializers.ModelSerializer):
